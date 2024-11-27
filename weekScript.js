@@ -17,22 +17,85 @@ const weekContent = {
         ]
     },
     2: {
-        heading: 'Introduction to Programming',
+        heading: 'Fundamentals of product management',
         points: [
-            'Basics of Python',
-            'Hands-on Exercises',
-            'Understanding Variables and Loops'
+            'What makes for a great PM',
+            'Day to day work of PMs in tech companies',
+            'Communicating with stakeholders',
         ]
     },
     3: {
-        heading: 'Web Development Fundamentals',
+        heading: 'Problem discovery, market and user research',
         points: [
-            'HTML & CSS',
-            'JavaScript Basics',
-            'Responsive Design'
+            'Define customer segments and personas',
+            'Types of user research',
+            'Understanding customer pain points',
+            'Extract key insights from user research'
+        ]
+    },
+    4: {
+        heading: 'Problem framing and prioritization',
+        points: [
+            'Define the right problem statement',
+            'Generate multiple possible ideas to solve the problem'
+        ]
+    },
+    5: {
+        heading: 'UX Design',
+        points: [
+            'What great UX looks like',
+            'Share ideas using wireframes',
+            'Give effective feedback to designers',
+            'Validate the right solution with users'
+        ]
+    },
+    6: {
+        heading: 'Analytics and metrics',
+        points: [
+            'Understanding different types of metrics',
+            'Define success metrics for your product',
+            'Funnel analysis',
+            'Cohort analysis'
+        ]
+    },
+    7: {
+        heading: 'Effective communication as a PM',
+        points: [
+            'Working with designers, engineers and business teams',
+            'Communicating via documentation'
+        ]
+    },
+    8: {
+        heading: 'Tech 101 & System Design',
+        points: [
+            'SQL, Database, APIs and app architectures',
+            'System design'
+        ]
+    },
+    9: {
+        heading: 'Product launch & adoption',
+        points: [
+            'Product launch checklist',
+            'Launching in phases',
+            'A/B testing',
+            'Product adoption'
+
+
+        ]
+    },
+    10: {
+        heading: 'Capstone project, Interview preparation & Demo Day',
+        points: [
+            'Work on your capstone project',
+            'Get feedback from mentors',
+            'Mock interviews with peers and mentors',
+            'Demo Day presentation'
         ]
     },
     // Add content for other weeks here
+    
+
+ 
 };
 
 // Event listener for week selection

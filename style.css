@@ -1,7 +1,6 @@
 body {
     margin: 0;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";    font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
@@ -91,7 +90,7 @@ footer {
     background: #171421;
     position: relative;
     overflow: hidden;
-    color: var(--white)
+    color: #fff;
 }
 
 .course-curriculum-container .content-container {
@@ -297,7 +296,6 @@ footer {
     }
 
     .course-curriculum-container .weeks-container .content .heading {
-        font-family: "Plus Jakarta Sans";
         font-weight: 800;
         font-size: 1.75rem;
         line-height: 130%;
@@ -499,13 +497,13 @@ footer {
 }
 
 @media only screen and (max-width: 1000px) {
-    .apply-btn[data-v-c7b251ae] {
+    .apply-btn {
         margin:0 auto 4rem
     }
 }
 
 @media only screen and (max-width: 512px) {
-    .apply-btn[data-v-c7b251ae] {
+    .apply-btn{
         padding:.75rem 2.5rem;
         font-size: .75rem;
         border-radius: .375rem;
@@ -518,7 +516,7 @@ footer {
     background: #171421;
     position: relative;
     overflow: hidden;
-    color: var(--white);
+    color: #fff;
     z-index: 2
 }
 
@@ -1037,16 +1035,315 @@ footer {
 
 
   .program-at-a-glance .main-content .left-container .items .item img.step-image {
-    width: 100%;
-    height: auto;
+    width: 100%;          /* Fill the container width */
+    height: auto;         /* Maintain aspect ratio */
+    max-width: 100%;      /* Prevent image from becoming larger than its container */
+    max-height: 300px;    /* Set a max height (you can adjust this value) */
     margin-top: 1rem;
-    display: none; /* Hide images by default */
+    display: none;        /* Hide by default */
+    object-fit: contain; 
   }
   
   .program-at-a-glance .main-content .left-container .items .item.active img.step-image {
     display: block; /* Show the image for the active item */
   }
-  
+
+  .program-at-a-glance .main-content .right-container  img{
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .program-at-a-glance .main-content .right-container img.step-image {
+        max-width: 100%;   /* Full width on smaller screens */
+        max-height: 250px; /* Adjust height on smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+.interview-prep-container {
+    background: #171421;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    z-index: 1
+}
+
+.interview-prep-container .content-container {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 calc(min(6.25rem, 6.94%)) 8.5rem
+}
+
+.interview-prep-container .separator{
+    width: .125rem;
+    height: 6rem;
+    flex-shrink: 0;
+    border-radius: .625rem;
+    background: linear-gradient(0deg,#d9d9d9,hsla(0,0%,85.1%,0));
+    margin: 0 auto 3.5rem
+}
+
+.interview-prep-container .fancy-heading {
+    color: #8665cc;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 140%;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-align: center
+}
+
+.interview-prep-container .heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 130%;
+    margin-bottom: 3rem;
+    color: #fff
+}
+
+.interview-prep-container .blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem
+}
+
+.interview-prep-container .blocks .block {
+    display: flex;
+    width: 18.75rem;
+    height: 11.25rem;
+    padding: 1.25rem 1.5rem 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    border-radius: .5rem;
+    background: #221d32
+}
+
+.interview-prep-container .blocks .block .block-header {
+    display: flex;
+    align-items: center;
+    gap: .625rem
+}
+
+.interview-prep-container .blocks .block .block-header img {
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0
+}
+
+.interview-prep-container .blocks .block .block-header .text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 140%
+}
+
+.interview-prep-container .blocks .block .block-description {
+    font-size: 1rem;
+    line-height: 150%
+}
+
+.interview-prep-container .bg-effect-left {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0
+}
+
+.interview-prep-container .bg-effect-right{
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0
+}
+
+@media only screen and (max-width: 768px) {
+    .interview-prep-container .content-container {
+        padding:0 calc(max(1.25rem, 5.34%)) 3.5rem
+    }
+
+    .interview-prep-container .separator {
+        height: 4.5rem;
+        margin: 0 auto 1.5rem
+    }
+
+    .interview-prep-container .fancy-heading {
+        font-size: .875rem;
+        margin-bottom: .5rem
+    }
+
+    .interview-prep-container .heading {
+        font-size: 1.5rem;
+        margin-bottom: 1.875rem
+    }
+
+    .interview-prep-container .blocks {
+        gap: 1.25rem
+    }
+
+    .interview-prep-container .blocks .block {
+        width: 18.75rem;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        padding: 1.25rem 1.25rem 2rem;
+        gap: 1rem
+    }
+
+    .interview-prep-container .blocks .block .block-header .text {
+        font-size: 1.125rem
+    }
+
+    .interview-prep-container .blocks .block .block-description {
+        font-size: .875rem
+    }
+
+    .interview-prep-container .bg-effect-left,.interview-prep-container .bg-effect-right {
+        width: 50%
+    }
+}
+
+
+
+
+
+
+.unique-offerings-container  {
+    background: #1c1929
+}
+
+.unique-offerings-container .max-width-container  {
+    padding: 7.5rem 12% 3.75rem
+}
+
+.unique-offerings-container .content-container  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem
+}
+
+.unique-offerings-container .content-container .heading  {
+    color: #fff;
+    color: var(--text-inverted,#fff);
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 130%
+}
+
+.unique-offerings-container .content-container .offerings  {
+    width: 100%;
+    height: auto
+}
+
+.unique-offerings-container .mobile  {
+    display: none!important
+}
+
+@media only screen and (max-width: 768px) {
+    .unique-offerings-container .max-width-container  {
+        padding:3.75rem 6%
+    }
+
+    .unique-offerings-container .desktop  {
+        display: none!important
+    }
+
+    .unique-offerings-container .mobile  {
+        display: block!important
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    .unique-offerings-container .max-width-container  {
+        padding:3.75rem 1.25rem
+    }
+
+    .unique-offerings-container .content-container  {
+        gap: 1.5rem
+    }
+
+    .unique-offerings-container .content-container .heading  {
+        font-size: 1.5rem;
+        font-weight: 700
+    }
+}
+
+
+
+
+.whatsapp-helper-container {
+    position: fixed;
+    bottom: 5rem;
+    right: 4.5rem;
+    z-index: 10
+}
+
+.whatsapp-helper-container .popper-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    background: #019c4b;
+    border: 1px solid rgba(78, 203, 91, .4);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .12);
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 10rem
+}
+
+.whatsapp-helper-container .popper-trigger .whatsapp-icon {
+    height: auto;
+    width: 4rem
+}
+
+.whatsapp-helper-container .popper {
+    padding: 1.5rem 1.25rem;
+    background: #fff;
+    border-radius: .75rem;
+    color: var(--text-default);
+    width: 15rem;
+    margin: 0 0 1.25rem -12rem
+}
+
+.whatsapp-helper-container .popper .heading {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 150%;
+    margin-bottom: .5rem
+}
+
+.whatsapp-helper-container .popper .text {
+    font-size: .875rem;
+    line-height: 150%;
+    margin-bottom: 1rem
+}
+
+.whatsapp-helper-container .popper .button-container {
+    width: 100%;
+    justify-content: center
+}
+
+.whatsapp-helper-container .popper .button-container .icon {
+    width: 1.25rem;
+    height: 1.25rem
+}
+
+@media only screen and (max-width:512px) {
+    .whatsapp-helper-container {
+        right: 1rem
+    }
+}
 
 
 

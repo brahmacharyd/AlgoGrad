@@ -41,25 +41,45 @@ document.addEventListener('DOMContentLoaded', function() {
     if (stepImage) {
       stepImage.style.display = 'block';  // Show the related image
     }
+
+    // Update the right-side image dynamically
+    const programImage = document.getElementById('program-image');
+    const newImageUrl = activeItem.getAttribute('data-image');
+    if (programImage && newImageUrl) {
+      programImage.src = newImageUrl;  // Update the image source dynamically
+    }
   }
 
-  // Function to activate the current step and update progress
   function activateStep() {
     // Remove 'active' class from all items
     items.forEach(item => item.classList.remove('active'));
-
+  
     // Add 'active' class to the current item
     items[currentStepIndex].classList.add('active');
-
-    // Update the progress bar for the active item
+  
+    // Reset the progress bar and update it
     updateProgressBar();
-
+  
     // Move to the next step (loop back to the first step if at the end)
     currentStepIndex = (currentStepIndex + 1) % totalSteps;
   }
+  
+
+  // Function to activate a specific step based on user click
+  function activateStepOnClick(index) {
+    currentStepIndex = index;  // Set the clicked item as the active step
+    activateStep();  // Call activateStep to update everything (progress bar, image, etc.)
+  }
+
+  // Add click event listeners to each item
+  items.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      activateStepOnClick(index);  // Manually activate the clicked step
+    });
+  });
 
   // Start the automatic loop, changing steps every 3 seconds
-  setInterval(activateStep, 3000); // 3000 ms = 3 seconds
+  setInterval(activateStep, 4000); // 3000 ms = 3 seconds
 
   // Initialize the first step
   activateStep();
