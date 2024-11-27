@@ -114,7 +114,7 @@ weeks.forEach(week => {
         if (weekContent[weekNumber]) {
             contentHeading.textContent = weekContent[weekNumber].heading;
             contentPoints.innerHTML = weekContent[weekNumber].points.map(point => {
-                return `<div class="point"><img src="./img/download_check.svg" alt="tick"> ${point}</div>`;
+                return `<div class="point"><img src="./assets/img/download_check.svg" alt="tick"> ${point}</div>`;
             }).join('');
         }
     });
