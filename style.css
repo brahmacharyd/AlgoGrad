@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";    font-size: 1rem;
-    font-weight: 400;
+    font-weight: 350;
     line-height: 1.5;
     color: #212529;
     text-align: left;
@@ -132,7 +132,7 @@ footer {
 
 .course-curriculum-container .weeks-container .weeks .week {
     margin: .75rem 0;
-    font-size: 1.25rem;
+    font-size: 1.20rem;
     line-height: 150%;
     color: #9e9e9e;
     cursor: pointer;
@@ -1346,6 +1346,897 @@ footer {
 }
 
 
+.horizontal-separator {
+    width: 16.6vw;
+    height: 2px;
+    background: linear-gradient(89.98deg,rgba(236,236,255,0) 1.1%,#402678 49.19%,rgba(236,236,255,0) 106.3%);
+    margin: 4rem auto
+}
 
 
 
+
+
+
+
+
+.faq-section-container {
+    padding: 6.25rem 7vw
+}
+
+
+
+.faq-section-container .horizontal-separator {
+    width: 16.6vw;
+    height: 2px;
+    background: linear-gradient(89.98deg,rgba(236,236,255,0) 1.1%,#402678 49.19%,rgba(236,236,255,0) 106.3%);
+    margin: 4rem auto
+}
+
+.faq-section-container .course-details-banner {
+    padding: 3rem 4.5rem;
+    margin: 0 4rem;
+    background: linear-gradient(145.07deg,#683fbe -2.83%,#493080 89%);
+    box-shadow: 0 0 4rem rgba(104,63,190,.27);
+    border-radius: 1.25rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    display: flex;
+    align-items: center
+}
+
+.faq-section-container .course-details-banner .ripple-effect {
+    position: absolute;
+    height: 35.375rem;
+    width: 35.375rem;
+    max-width: inherit;
+    z-index: -1;
+    right: -1.5rem
+}
+
+.faq-section-container .course-details-banner .left-container {
+    margin-right: 4vw;
+    width: 61vw
+}
+
+.faq-section-container .course-details-banner .left-container .heading {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    color: #fdfdfd;
+    margin-bottom: 1.5rem
+}
+
+.faq-section-container .course-details-banner .left-container .mobile-container {
+    display: none
+}
+
+.faq-section-container .course-details-banner .left-container .price-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 2rem
+}
+
+.faq-section-container .course-details-banner .left-container .price-container .mobile-only {
+    display: none
+}
+
+.faq-section-container .course-details-banner .left-container .price-container .price {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    color: #fdfdfd
+}
+
+.faq-section-container .course-details-banner .left-container .price-container .price.invalid {
+    font-weight: 500;
+    font-size: 1.25rem;
+    text-decoration: line-through;
+    line-height: 1.75rem;
+    color: #f2f2f2;
+    margin-right: .25rem
+}
+
+.faq-section-container .course-details-banner .left-container .price-container .price .plus-gst {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 140%
+}
+
+.faq-section-container .course-details-banner .left-container .apply-btn {
+    padding: .875rem 5.625rem;
+    display: flex;
+    align-items: center;
+    background: #e8ddff;
+    border-radius: 6.61765px;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #171421;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    text-decoration: none
+}
+
+.faq-section-container .course-details-banner .left-container .apply-btn img {
+    height: 1rem;
+    width: 1rem;
+    max-width: inherit;
+    margin-left: .25rem;
+    filter: brightness(0) saturate(100%)
+}
+
+.faq-section-container .course-details-banner .left-container .urgency-nudge {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    display: flex;
+    align-items: flex-start
+}
+
+.faq-section-container .course-details-banner .left-container .urgency-nudge span {
+    font-weight: 600
+}
+
+.faq-section-container .course-details-banner .left-container .urgency-nudge img {
+    height: 1.25rem;
+    width: 1.25rem;
+    max-width: inherit;
+    margin-right: .375rem
+}
+
+.faq-section-container .course-details-banner .right-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end
+}
+
+.faq-section-container .course-details-banner .right-container .content {
+    padding: 1.25rem 1.5rem;
+    width: 14.5vw
+}
+
+.faq-section-container .course-details-banner .right-container .content .heading {
+    font-size: 1rem;
+    line-height: 175%;
+    color: #cccad2;
+    margin-bottom: .75rem
+}
+
+.faq-section-container .course-details-banner .right-container .content .value {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 130%;
+    color: #f6f6ff
+}
+
+@media only screen and (max-width: 1210px) {
+   
+
+    .faq-section-container .faq {
+        width: 50rem
+    }
+
+    .faq-section-container .course-details-banner .left-container {
+        margin-right: 2vw
+    }
+
+    .faq-section-container .course-details-banner .right-container .content {
+        width: 13.1vw
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    
+
+    .faq-section-container .course-details-banner {
+        padding: 2rem 1.5rem;
+        border-radius: .5rem
+    }
+
+    .faq-section-container .course-details-banner .ripple-effect {
+        position: absolute;
+        height: 15.625rem;
+        width: 15.625rem;
+        max-width: inherit;
+        z-index: -1;
+        right: -7.5rem
+    }
+
+    .faq-section-container .course-details-banner .left-container {
+        margin-right: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: flex
+    }
+
+    .faq-section-container .course-details-banner .left-container .heading {
+        text-align: center
+    }
+
+    .faq-section-container .course-details-banner .left-container .mobile-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        margin-bottom: 2rem
+    }
+
+    .faq-section-container .course-details-banner .left-container .mobile-container .content {
+        padding: 1.25rem 1.5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+    .faq-section-container .course-details-banner .left-container .mobile-container .content .heading {
+        font-size: 1rem;
+        line-height: 175%;
+        color: #cccad2;
+        margin-bottom: .75rem
+    }
+
+    .faq-section-container .course-details-banner .left-container .mobile-container .content .value {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: 130%;
+        color: #f6f6ff
+    }
+
+    .faq-section-container .course-details-banner .left-container .price-container {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 2rem;
+        justify-content: space-evenly;
+        width: 100%
+    }
+
+    .faq-section-container .course-details-banner .left-container .price-container .mobile-only {
+        display: flex;
+        color: #fff;
+        font-size: 2.25rem
+    }
+
+    .faq-section-container .course-details-banner .left-container .price-container .mobile-only.invalid {
+        font-size: 1.25rem
+    }
+
+    .faq-section-container .course-details-banner .left-container .price-container .mobile-price-container {
+        display: flex;
+        align-items: flex-end
+    }
+
+    .faq-section-container .course-details-banner .left-container .price-container .price {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        color: #fdfdfd
+    }
+
+    .faq-section-container .course-details-banner .left-container .price-container .price.invalid {
+        font-weight: 500;
+        font-size: 1.25rem;
+        text-decoration: line-through;
+        line-height: 1.75rem;
+        color: #f2f2f2;
+        margin-right: .25rem
+    }
+
+    .faq-section-container .course-details-banner .left-container .apply-btn {
+        padding: .875rem 5.625rem;
+        display: flex;
+        align-items: center;
+        background: #e8ddff;
+        border-radius: 6.61765px;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #171421;
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content
+    }
+
+    .faq-section-container .course-details-banner .left-container .apply-btn img {
+        height: 1rem;
+        width: 1rem;
+        max-width: inherit;
+        margin-left: .25rem;
+        filter: brightness(0) saturate(100%)
+    }
+
+    .faq-section-container .course-details-banner .left-container .urgency-nudge {
+        margin-top: 1.5rem;
+        font-size: 1rem;
+        color: #fff;
+        display: flex;
+        align-items: flex-start
+    }
+
+    .faq-section-container .course-details-banner .left-container .urgency-nudge span {
+        font-weight: 600
+    }
+
+    .faq-section-container .course-details-banner .left-container .urgency-nudge img {
+        height: 1.25rem;
+        width: 1.25rem;
+        max-width: inherit;
+        margin-right: .375rem
+    }
+
+    .faq-section-container .course-details-banner .right-container {
+        display: none
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    .faq-section-container {
+        padding:2.5rem 7vw
+    }
+
+ 
+
+    .faq-section-container .horizontal-separator {
+        display: none
+    }
+
+    .faq-section-container .course-details-banner {
+        padding: 2rem 1.25rem;
+        margin: 2.5rem 0 0;
+        box-shadow: 0 0 1.5rem rgba(104,63,190,.27);
+        border-radius: .5rem
+    }
+
+    .faq-section-container .course-details-banner .ripple-effect {
+        height: 15.625rem;
+        width: 15.625rem;
+        right: -7.8125rem
+    }
+
+    .faq-section-container .course-details-banner .left-container .heading {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        margin-bottom: 1.15rem;
+        text-align: left
+    }
+
+    .faq-section-container .course-details-banner .left-container .mobile-container .content {
+        padding: .75rem 0;
+        width: 100%
+    }
+
+    .faq-section-container .course-details-banner .left-container .mobile-container .content .heading {
+        font-size: .75rem;
+        line-height: 1.75rem;
+        margin-bottom: 0;
+        font-weight: 400
+    }
+
+    .faq-section-container .course-details-banner .left-container .mobile-container .content .value {
+        font-size: 1rem;
+        line-height: 130%
+    }
+
+    .faq-section-container .course-details-banner .left-container .price-container {
+        margin-bottom: 1.5rem;
+        justify-content: space-between
+    }
+
+    .faq-section-container .course-details-banner .left-container .price-container .mobile-only {
+        font-size: 1rem;
+        line-height: 1.75rem
+    }
+
+    .faq-section-container .course-details-banner .left-container .price-container .price {
+        font-size: 1.25rem;
+        line-height: 133%;
+        white-space: nowrap
+    }
+
+    .faq-section-container .course-details-banner .left-container .price-container .price.invalid {
+        font-size: .75rem;
+        margin-right: .25rem
+    }
+
+    .faq-section-container .course-details-banner .left-container .price-container .price .plus-gst {
+        font-size: .75rem
+    }
+
+    .faq-section-container .course-details-banner .left-container .apply-btn {
+        padding: .75rem;
+        font-size: .75rem;
+        line-height: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+
+    .faq-section-container .course-details-banner .left-container .apply-btn img {
+        height: 1rem;
+        width: 1rem;
+        max-width: inherit;
+        margin-left: .25rem;
+        filter: brightness(0) saturate(100%)
+    }
+
+    .faq-section-container .course-details-banner .left-container .urgency-nudge {
+        margin-top: 1rem;
+        font-size: .875rem
+    }
+
+    .faq-section-container .course-details-banner .left-container .urgency-nudge img {
+        height: 1rem;
+        width: 1rem;
+        max-width: inherit;
+        margin-right: .25rem
+    }
+}
+
+
+/* Sticky Course Info Container */
+.sticky-course-info-container {
+    z-index: 8;
+    background: rgba(30, 26, 43, 0.9);
+    -webkit-backdrop-filter: blur(1.25rem);
+    backdrop-filter: blur(1.25rem);
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Restrict width for the container */
+.sticky-course-info-container .restrict-width {
+    max-width: 90rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+/* Sticky position at the bottom when scrolled */
+.sticky-course-info-container.sticky {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;  /* Ensures it's full-width */
+    z-index: 9;
+}
+
+.sticky-course-info-container .info-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Each Info Box */
+.sticky-course-info-container .info-summary .info {
+    margin-right: 4vw;
+}
+
+/* Type Styles */
+.sticky-course-info-container .info-summary .info .type {
+    font-size: 0.875rem;
+    line-height: 175%;
+    color: #cccad2;
+    margin-bottom: 0.25rem;
+}
+
+/* Content Styles */
+.sticky-course-info-container .info-summary .info .content {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 130%;
+    color: #f6f6ff;
+}
+
+/* Bottom Hurry Nudge Container Styles */
+.sticky-course-info-container .bottom-hurry-nudge-container {
+    color: #fff;
+    margin-right: 1.5rem;
+}
+
+/* Bottom Hurry Nudge Text */
+.sticky-course-info-container .bottom-hurry-nudge-container .bottom-hurry-nudge {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 130%;
+}
+
+/* Bottom Hurry Nudge Text Style */
+.sticky-course-info-container .bottom-hurry-nudge-container .bottom-hurry-nudge span {
+    font-weight: 600;
+}
+
+/* Bottom Hurry Nudge Image Style */
+.sticky-course-info-container .bottom-hurry-nudge-container .bottom-hurry-nudge img {
+    height: 1.25rem;
+    margin-right: 0.25rem;
+}
+
+/* Apply Button Style */
+.sticky-course-info-container .apply-btn {
+    font-size: 1rem;
+}
+
+/* Ensure Apply Button and Hurry Nudge are side by side */
+.sticky-course-info-container .tw-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Space the elements inside tw-flex */
+.sticky-course-info-container .tw-flex .bottom-hurry-nudge-container {
+    margin-right: 2rem; /* Adjust spacing */
+}
+
+.sticky-course-info-container .tw-flex .apply-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align the button to the right */
+}
+
+/* Hidden Class for the Info Container */
+.sticky-course-info-container.hidden {
+    display: none;
+}
+
+
+
+
+
+
+.modal-open {
+    overflow: hidden
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: .5rem;
+    pointer-events: none
+}
+
+.modal.fade .modal-dialog {
+    transition: transform .3s ease-out;
+    transform: translateY(-50px)
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .modal.fade .modal-dialog {
+        transition: none
+    }
+}
+
+.modal.show .modal-dialog {
+    transform: none
+}
+
+.modal.modal-static .modal-dialog {
+    transform: scale(1.02)
+}
+
+.modal-dialog-scrollable {
+    display: flex;
+    max-height: calc(100% - 1rem)
+}
+
+.modal-dialog-scrollable .modal-content {
+    max-height: calc(100vh - 1rem);
+    overflow: hidden
+}
+
+.modal-dialog-scrollable .modal-footer,.modal-dialog-scrollable .modal-header {
+    flex-shrink: 0
+}
+
+.modal-dialog-scrollable .modal-body {
+    overflow-y: auto
+}
+
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem)
+}
+
+.modal-dialog-centered:before {
+    display: block;
+    height: calc(100vh - 1rem);
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    content: ""
+}
+
+.modal-dialog-centered.modal-dialog-scrollable {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%
+}
+
+.modal-dialog-centered.modal-dialog-scrollable .modal-content {
+    max-height: none
+}
+
+.modal-dialog-centered.modal-dialog-scrollable:before {
+    content: none
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000
+}
+
+.modal-backdrop.fade {
+    opacity: 0
+}
+
+.modal-backdrop.show {
+    opacity: .5
+}
+
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(.3rem - 1px);
+    border-top-right-radius: calc(.3rem - 1px)
+}
+
+.modal-header .close {
+    padding: 1rem;
+    margin: -1rem -1rem -1rem auto
+}
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5
+}
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem
+}
+
+.modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding: .75rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom-right-radius: calc(.3rem - 1px);
+    border-bottom-left-radius: calc(.3rem - 1px)
+}
+
+.modal-footer>* {
+    margin: .25rem
+}
+
+.modal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width:500px;
+        margin: 1.75rem auto
+    }
+
+    .modal-dialog-scrollable {
+        max-height: calc(100% - 3.5rem)
+    }
+
+    .modal-dialog-scrollable .modal-content {
+        max-height: calc(100vh - 3.5rem)
+    }
+
+    .modal-dialog-centered {
+        min-height: calc(100% - 3.5rem)
+    }
+
+    .modal-dialog-centered:before {
+        height: calc(100vh - 3.5rem);
+        height: -webkit-min-content;
+        height: -moz-min-content;
+        height: min-content
+    }
+
+    .modal-sm {
+        max-width: 300px
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-lg,.modal-xl {
+        max-width:800px
+    }
+}
+
+@media (min-width: 1200px) {
+    .modal-xl {
+        max-width:1140px
+    }
+}
+
+
+
+/* Prevent Body Scroll */
+body.no-scroll {
+    overflow: hidden; /* Prevent scrolling on the body when modal is open */
+}
+
+/* Modal Background */
+#modal.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Ensure it's on top of other elements */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    align-items: center; /* Center align vertically */
+    justify-content: center; /* Center align horizontally */
+}
+
+/* Modal Content */
+#modal .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 40%;
+    position: relative;
+}
+
+/* Close Button */
+#modal .close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+#modal .close-btn:hover,
+#modal .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Header */
+#modal .modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Body */
+#modal .modal-body {
+    margin-top: 20px;
+}
+
+/* Modal Footer */
+#modal .modal-footer {
+    margin-top: 20px;
+}
+
+/* Apply Button */
+#modal .apply-btn {
+    background-color: #504ff5;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Input Fields */
+#modal .input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+#modal .input-field {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ebcca9;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#modal .label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #70665a;
+}
+
+#modal .purple-filled {
+    background-color: #504ff5;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#modal .login-with-google {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #504ff5;
+    color: #504ff5;
+    padding: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+#modal .login-with-google img {
+    width: 20px;
+    margin-right: 10px;
+}

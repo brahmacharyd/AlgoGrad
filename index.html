@@ -33,7 +33,7 @@
         <div class="row applyBtn mb-5">
             <div class="col-12">
                 <div class="cta-buttons-container text-center">        
-                    <a href="#" target="_blank" class="apply-btn">
+                    <a href="#" target="_blank" class="apply-btn" data-modal="modal">
                         Apply now
                         <i class="fa-solid fa-arrow-right ms-2"></i></a>
                 </div>
@@ -336,7 +336,7 @@
 
 
 
-    <div class="unique-offerings-container"  >
+    <div class="unique-offerings-container mb-4"  >
         <div class="max-width-container"  >
             <div class="content-container"  >
                 <div class="heading"  >
@@ -352,20 +352,189 @@
 
 
 
+
+
+
+
+
+    <div class="faq-section-container">
+        <div class="max-width-container">           
+            <div class="horizontal-separator"></div>
+            <div class="course-details-banner"><img
+                    src="./assets/img/courseContainerBg.svg"
+                    class="ripple-effect">
+                <div class="left-container">
+                    <h1 class="heading">Product Management Launchpad</h1>
+                    <div class="mobile-container">
+                        <div class="content">
+                            <div class="heading">
+                                Enrolment ends on
+                            </div>
+                            <div class="value">
+                                30 Nov
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="heading">Course starts on</div>
+                            <div class="value">
+                                30 Nov
+                            </div>
+                        </div> <!---->
+                        <div class="content">
+                            <div class="heading">Time commitment</div>
+                            <div class="value">
+                                10-12
+                                hours/week
+                            </div>
+                        </div>
+                    </div> <!---->
+                    <div style="width:100%;" ><!---->
+                        <div class="apply-button-container">
+                            <a href="#" target="_blank" class="apply-btn" data-modal="modal">
+                                Apply now
+                                <img alt="right_arrow" src="./assets/img/arrowRight.da20d75.svg">
+                            </a>
+                        </div>
+                    </div> <!---->
+                </div>
+                <div class="right-container">
+                    <div class="content">
+                        <div class="heading">
+                            Enrolment ends on
+                        </div>
+                        <div class="value">
+                            30 Nov
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="heading">Course starts on</div>
+                        <div class="value">
+                            30 Nov
+                        </div>
+                    </div> <!---->
+                    <div class="content">
+                        <div class="heading">Time commitment</div>
+                        <div class="value">
+                            10-12
+                            hours/week
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+<div id="stickyCourseInfo" class="sticky-course-info-container sticky">
+    <div class="restrict-width">
+        <div class="info-summary">
+            <div class="info">
+                <div class="type">
+                    Enrolment ends on
+                </div>
+                <div class="content">
+                    30 Nov
+                </div>
+            </div>
+            <div class="info">
+                <div class="type">Course starting on</div>
+                <div class="content">
+                    30 Nov
+                </div>
+            </div> <!---->
+            <div class="info">
+                <div class="type">Time commitment</div>
+                <div class="content">
+                    10-12 hours/week
+                </div>
+            </div>
+        </div>
+        <div class="tw-flex tw-items-center">
+            <div class="bottom-hurry-nudge-container">
+                <div class="bottom-hurry-nudge">
+                    <img
+                        src="./assets/img/flashImg.svg"
+                        alt="hurry">
+                    Limited seats available!
+                </div>
+            </div>
+            <div style="width:auto;">
+                <div class="apply-button-container">
+                    <a href="" target="_blank" class="apply-btn" data-modal="modal">
+                        Apply now
+                        <img alt="right_arrow" src="./assets/img/arrowRight.da20d75.svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+
+
+    
+    
+
     <div class="whatsapp-helper-container"><span><span class="" style="display: none;">
                 <div class="popper">
                     <div class="heading">Hey there 👋</div>
                     <div class="text">
                         Chat with us on Whatsapp if you have any queries about the program.
-                    </div> <button   class="button-container default filled primary">
+                    </div> <button data-modal="modal" class="button-container default filled primary">
                         <div   class="left-icon"><img  
                                 src="./assets ./assets/img/whatsapp_white.3257182.svg" alt="icon" class="icon"></div>
                         <div  >Start chatting</div> <!----> <!---->
                     </button>
                 </div>
-            </span> <a class="popper-trigger"><img src="./assets/img/whatsapp_white.3257182.svg" alt=""
+            </span> <a class="popper-trigger" data-modal="modal"><img src="./assets/img/whatsapp_white.3257182.svg" alt=""
                     class="whatsapp-icon"></a></span></div>
 
+
+
+
+
+
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span id="close-btn" class="close-btn">&times;</span>
+                                <h2>Create Account</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div class="input-container">
+                                    <input type="text" required="required" class="input-field">
+                                    <span class="label">Name</span>
+                                </div>
+                                <div class="input-container">
+                                    <input type="email" required="required" class="input-field">
+                                    <span class="label">Email</span>
+                                </div>
+                                <div class="input-container">
+                                    <input type="tel" required="required" class="input-field">
+                                    <span class="label">Phone</span>
+                                </div>
+                                
+                                
+                                <button disabled="disabled" class="purple-filled">
+                                    Let's go
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
     
   
     <!-- Bootstrap JS -->
@@ -374,6 +543,8 @@
     <script src="./js/slider.js"></script>
     <script src="./js/weekScript.js"></script>
     <script src="./js/program-glance.js"></script>
+    <script src="./js/stickey.js"></script>
+    <script src="./js/model.js"></script>
 
 </body>
 
