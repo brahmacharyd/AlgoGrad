@@ -2181,7 +2181,7 @@ body.no-scroll {
 
 /* Apply Button */
 #modal .apply-btn {
-    background-color: #504ff5;
+    background-color: #683fbe;
     color: white;
     padding: 15px 30px;
     border-radius: 8px;
@@ -2212,7 +2212,7 @@ body.no-scroll {
 }
 
 #modal .purple-filled {
-    background-color: #504ff5;
+    background-color: #683fbe;
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -2226,8 +2226,8 @@ body.no-scroll {
 #modal .login-with-google {
     width: 100%;
     background-color: #fff;
-    border: 1px solid #504ff5;
-    color: #504ff5;
+    border: 1px solid #683fbe;
+    color: #683fbe;
     padding: 15px;
     font-weight: bold;
     display: flex;
