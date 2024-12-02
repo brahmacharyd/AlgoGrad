@@ -436,20 +436,27 @@
         </div>
     </div>
 
-    <!-- whatsapp-helper-container -->
-    <div class="whatsapp-helper-container"><span><span class="" style="display: none;">
-                <div class="popper">
-                    <div class="heading">Hey there 👋</div>
-                    <div class="text">
-                        Chat with us on Whatsapp if you have any queries about the program.
-                    </div> <button data-modal="modal" class="button-container default filled primary">
-                        <div class="left-icon"><img src="./assets ./assets/img/whatsapp_white.3257182.svg" alt="icon"
-                                class="icon"></div>
-                        <div>Start chatting</div> <!----> <!---->
-                    </button>
+  <!-- scroll-to-top-container -->
+<div class="scroll-to-top-container">
+    <span>
+        <span class="" style="display: none;">
+            <div class="popper">
+                <div class="heading">Scroll to Top</div>
+                <div class="text">
+                    Click the button below to quickly return to the top of the page.
                 </div>
-            </span> <a class="popper-trigger" data-modal="modal"><img src="./assets/img/whatsapp_white.3257182.svg"
-                    alt="" class="whatsapp-icon"></a></span></div>
+                <button class="button-container default filled primary" onclick="scrollToTop()">
+                    <div class="left-icon"><img src="./assets/img/scroll_to_top_icon.svg" alt="icon" class="icon"></div>
+                    <div>Scroll to Top</div>
+                </button>
+            </div>
+        </span>
+        <a class="popper-trigger" onclick="scrollToTop()">
+            <img src="./assets/img/icons8-scroll-up-50.png" alt="" class="scroll-to-top-icon">
+        </a>
+    </span>
+</div>
+
 
     <!-- modal -->
     <div id="modal" class="modal">
@@ -504,6 +511,7 @@
     <script src="./js/program-glance.js"></script>
     <script src="./js/stickey.js"></script>
     <script src="./js/model.js"></script>
+    <script src="./js/scrollToTop.js"></script>
 
 </body>
 
