@@ -32,6 +32,7 @@ footer {
 }
 
 .hero-bg-container .heading {
+    width: 60%;
     font-weight: 700;
     font-size: 3.5rem;
     line-height: 130%;
@@ -45,6 +46,7 @@ footer {
 }
 
 .hero-bg-container .sub-heading {
+    width: 70%;
     font-size: 1.125rem;
     line-height: 150%;
     padding: 0 5rem;
@@ -129,7 +131,8 @@ footer {
 
 @media only screen and (max-width: 512px) {
     .hero-bg-container .heading {
-        font-size:2.8rem
+        font-size:2.5rem;
+        padding-top:70px;
     }
 
     .hero-bg-container .sub-heading {
