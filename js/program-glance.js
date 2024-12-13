@@ -84,3 +84,47 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize the first step
   activateStep();
 });
+
+
+
+window.addEventListener('scroll', function() {
+  const steps = document.querySelectorAll('.mobile-step');
+  const progressBar = document.getElementById('progress');
+  const windowHeight = window.innerHeight;
+  const windowMiddle = window.scrollY + windowHeight / 2; // Middle of the viewport
+  let activatedSteps = 0;  // Track the number of active steps
+
+  steps.forEach((step, index) => {
+      const stepTop = step.getBoundingClientRect().top + window.scrollY;
+      const stepBottom = stepTop + step.offsetHeight;
+      const stepMiddle = stepTop + step.offsetHeight / 2; // Middle of the step
+
+      // Check if the middle of the step is within the viewport's middle
+      if (stepMiddle <= windowMiddle && stepMiddle >= windowMiddle - windowHeight) {
+          activatedSteps = index + 1;  // Mark the current step as active
+          // Activate the step
+          step.classList.add('active');
+          step.querySelector('.bullet').classList.add('active');
+          step.querySelector('.mobile-step-content .heading').style.color = '#fff';
+          step.querySelector('.mobile-step-content .description').style.color = '#fff';
+      } else {
+          // Deactivate the step
+          step.classList.remove('active');
+          step.querySelector('.bullet').classList.remove('active');
+          step.querySelector('.mobile-step-content .heading').style.color = 'hsla(0, 0%, 100%, .7)';
+          step.querySelector('.mobile-step-content .description').style.color = 'hsla(0, 0%, 100%, .6)';
+      }
+  });
+
+  // Calculate the progress based on activated steps
+  const progressHeight = (activatedSteps / steps.length) * 100;
+  progressBar.style.height = progressHeight + '%'; // Update the height of the progress bar
+
+  // Optionally, for a smoother effect, you could also change the width or position based on scroll progress
+  // const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - windowHeight)) * 100;
+  // progressBar.style.width = scrollPercentage + '%'; // If you prefer a horizontal progress bar
+});
+
+
+
+
