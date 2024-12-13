@@ -59,7 +59,7 @@ footer {
 
     .main-logo-container .logo img {
         width: 1.5rem;
-        min-width: 1.5rem;
+        min-width: 3rem;
         max-width: 1.5rem
     }
 
@@ -118,7 +118,8 @@ footer {
 .home-header-container .header-container .nav-items {
     display: flex;
     flex: 1;
-    gap: .25rem
+    gap: .25rem;
+    justify-content: flex-end;
 }
 
 .home-header-container .header-container .nav-items .item {
@@ -612,7 +613,7 @@ footer {
 /* Default side menu state */
 .side-menu {
     position: fixed;
-    top: 40px; /* Align from the top of the screen */
+    top: 55px; /* Align from the top of the screen */
     right: -100%; /* Initially, the menu is hidden off-screen to the right */
     width: 100%; /* Full screen width */
     height: 100%; /* Full height of the screen */
