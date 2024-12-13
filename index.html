@@ -18,7 +18,67 @@
 </head>
 
 <body>
-
+    <div class="home-header-container non-sticky top-margin">
+        <div class="header-container">
+            <div class="main-logo-container">
+                <a href="/" class="logo nuxt-link-active">
+                    <img alt="logo" src="./assets/img/AlgoLogo.png" class="main-logo">
+                    <span class="hide-on-mobile">ALGOGRADE</span>
+                </a>
+            </div>
+            <div class="nav-items">
+                <span>
+                    <a class="popper-trigger">
+                        <div class="item">
+                            <div class="item-name"> Programs </div>
+                            <img src="./assets/img/dropdownArrow.svg" class="chevron">
+                        </div>
+                    </a>
+                </span>
+                <a href="/" class="item">
+                    <div class="item-name"> Events </div>
+                </a>
+                <span>
+                    <a class="popper-trigger">
+                        <a href="/" class="item">
+                            <div class="item-name"> Upskill for free </div>
+                            <img src="./assets/img/dropdownArrow.svg" class="chevron">
+                        </a>
+                    </span>
+                <a href="/" class="item">
+                    <div class="item-name"> Reviews </div>
+                </a>
+                <a href="/" class="item">
+                    <div class="item-name"> Job board </div>
+                </a>
+            </div>
+    
+            <div class="right-ctas">
+                <a href="/" class="referral-icon-container">
+                    <img src="./assets/img/gift_icon.7e0ebef.svg" alt="gift" class="gift-icon">
+                </a>
+                <button class="button-container default filled primary" data-modal="modal">
+                    Sign up <i class="fa-solid fa-arrow-right ms-2"></i>
+                </button>
+                <div class="mobile-nav-buttons">
+                    <button class="mobile-nav-toggle collapsed" aria-expanded="false" aria-controls="sidebar" onclick="toggleMenu()">
+                        <img src="./assets/img/sideNavLines.svg" alt="options" class="hamburger">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Side Menu -->
+    <div id="sidebar" class="side-menu">
+        <a href="/" class="item">Programs</a>
+        <a href="/" class="item">Events</a>
+        <a href="/" class="item">Upskill for free</a>
+        <a href="/" class="item">Reviews</a>
+        <a href="/" class="item">Job board</a>
+    </div>
+    
+    
     <!-- container hero-bg-container -->
      
     <div class="hero-bg-container">
@@ -32,7 +92,7 @@
        
                 <div class="cta-buttons-container mb-4 text-center">
                     <a href="#" target="_blank" class="apply-btn" data-modal="modal">
-                        Apply now
+                       Sign Up
                         <i class="fa-solid fa-arrow-right ms-2"></i></a>
                 </div>
            
@@ -393,7 +453,7 @@
                     <div style="width:100%;"><!---->
                         <div class="apply-button-container">
                             <a href="#" target="_blank" class="apply-btn" data-modal="modal">
-                                Apply now
+                               Sign Up
                                 <img alt="right_arrow" src="./assets/img/arrowRight.da20d75.svg">
                             </a>
                         </div>
@@ -461,7 +521,7 @@
                 <div style="width:auto;">
                     <div class="apply-button-container">
                         <a href="" target="_blank" class="apply-btn" data-modal="modal">
-                            Apply now
+                           Sign Up
                             <img alt="right_arrow" src="./assets/img/arrowRight.da20d75.svg">
                         </a>
                     </div>
@@ -547,6 +607,7 @@
     <script src="./js/stickey.js"></script>
     <script src="./js/model.js"></script>
     <script src="./js/scrollToTop.js"></script>
+    <script src="./js/sideBar.js"></script>
 
 </body>
 
