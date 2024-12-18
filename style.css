@@ -613,20 +613,27 @@ footer {
 /* Default side menu state */
 .side-menu {
     position: fixed;
-    top: 55px; /* Align from the top of the screen */
-    right: -100%; /* Initially, the menu is hidden off-screen to the right */
-    width: 100%; /* Full screen width */
-    height: 100%; /* Full height of the screen */
+    top: 55px;
+    /* Align from the top of the screen */
+    right: -100%;
+    /* Initially, the menu is hidden off-screen to the right */
+    width: 100%;
+    /* Full screen width */
+    height: 100%;
+    /* Full height of the screen */
     background-color: #171421;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Shadow on the left side of the menu */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    /* Shadow on the left side of the menu */
     z-index: 1000;
-    transition: transform 0.3s ease-in-out; /* Smooth slide-in and slide-out effect */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth slide-in and slide-out effect */
     text-align: center;
 }
 
 /* Position the side menu on the screen when active */
 .side-menu.open {
-    transform: translateX(-100%); /* Slide the menu in from the right (100% of the screen width) */
+    transform: translateX(-100%);
+    /* Slide the menu in from the right (100% of the screen width) */
 }
 
 /* Side menu items styles */
@@ -648,7 +655,8 @@ footer {
     background: transparent;
     border: none;
     cursor: pointer;
-    z-index: 1001; /* Ensure it stays on top of other content */
+    z-index: 1001;
+    /* Ensure it stays on top of other content */
 }
 
 /* Optional: Hamburger icon animation */
@@ -658,7 +666,8 @@ footer {
 }
 
 .mobile-nav-toggle.open img {
-    transform: rotate(90deg); /* Rotates hamburger when menu is open */
+    transform: rotate(90deg);
+    /* Rotates hamburger when menu is open */
 }
 
 
@@ -700,7 +709,7 @@ footer {
 
 @media only screen and (min-width: 1440px) {
     .hero-bg-container {
-        max-width:90rem;
+        max-width: 90rem;
         margin: 0 auto;
         padding: 0 calc(min(11rem, 12%)) 4.1%
     }
@@ -708,7 +717,7 @@ footer {
 
 @media only screen and (min-width: 1024px)and (max-width:1440px) {
     .hero-bg-container {
-        margin:0 auto;
+        margin: 0 auto;
         padding: 0 calc(min(10.75rem, 8.8%)) 4.1%;
     }
 
@@ -723,13 +732,13 @@ footer {
 
 @media only screen and (max-width: 512px) {
     .hero-bg-container .desktop {
-        display:none
+        display: none
     }
 }
 
 @media only screen and (max-width: 1024px) {
     .hero-bg-container {
-        max-width:90rem;
+        max-width: 90rem;
         margin: 0 auto;
         padding: 0 calc(max(1.25rem, 5.34%)) 4.1% !important;
     }
@@ -757,14 +766,14 @@ footer {
         align-items: center;
         gap: 1rem;
     }
-   
+
     .course-dates-container .description {
         padding: 0 !important;
         margin: 0 0 1.5rem;
         width: 85% !important;
     }
 
-   .course-dates-container .dates-container {
+    .course-dates-container .dates-container {
         width: 104%;
         min-width: 0;
         justify-content: center
@@ -774,8 +783,8 @@ footer {
 
 @media only screen and (max-width: 512px) {
     .hero-bg-container .heading {
-        font-size:2.5rem;
-        padding-top:70px;
+        font-size: 2.5rem;
+        padding-top: 70px;
     }
 
     .hero-bg-container .sub-heading {
@@ -802,7 +811,7 @@ footer {
         font-size: .875rem
     }
 
-   .course-dates-container .description .section-heading {
+    .course-dates-container .description .section-heading {
         font-size: 1.5rem;
         margin-bottom: 1rem
     }
@@ -813,55 +822,58 @@ footer {
         min-width: 8.25rem
     }
 
-     .course-dates-container .dates-container .item.dates {
+    .course-dates-container .dates-container .item.dates {
         font-size: .75rem;
         line-height: 175%;
         padding: 1rem 2.5rem;
-        width: max(8rem,80%)
+        width: max(8rem, 80%)
     }
 
-     .course-dates-container .dates-container .item.dates .date-container .date {
+    .course-dates-container .dates-container .item.dates .date-container .date {
         font-size: 2.25rem;
         line-height: 125%
     }
 
-     .course-dates-container .dates-container .item.dates .date-container .month {
+    .course-dates-container .dates-container .item.dates .date-container .month {
         font-size: 1rem;
         line-height: 175%
     }
 
-   .course-dates-container .dates-container .item.dates .separator {
+    .course-dates-container .dates-container .item.dates .separator {
         margin-top: -1rem
     }
 
-     .course-dates-container .dates-container .item.experts .count,.course-dates-container .dates-container .item.sessions .count {
+    .course-dates-container .dates-container .item.experts .count,
+    .course-dates-container .dates-container .item.sessions .count {
         font-size: 2.5rem;
         line-height: 125%
     }
 
-     .course-dates-container .dates-container .item.experts .count img,.course-dates-container .dates-container .item.sessions .count img {
+    .course-dates-container .dates-container .item.experts .count img,
+    .course-dates-container .dates-container .item.sessions .count img {
         height: 1rem;
         width: 1rem
     }
 
-     .course-dates-container .dates-container .item.experts .label,.course-dates-container .dates-container .item.sessions .label {
+    .course-dates-container .dates-container .item.experts .label,
+    .course-dates-container .dates-container .item.sessions .label {
         font-size: .625rem;
         line-height: 120%
     }
-  
+
 
 }
 
 
 @media only screen and (max-width: 1000px) {
     .apply-btn[data-v-c7b251ae] {
-        margin:0 auto 4rem
+        margin: 0 auto 4rem
     }
 }
 
 @media only screen and (max-width: 512px) {
     .apply-btn[data-v-c7b251ae] {
-        padding:.75rem 2.5rem;
+        padding: .75rem 2.5rem;
         font-size: .75rem;
         border-radius: .375rem;
         margin-bottom: 2rem
@@ -1735,7 +1747,7 @@ footer {
 
 @media only screen and (max-width: 768px) {
     .program-at-a-glance .content-container {
-        padding:3.5rem calc(max(1.25rem, 5.34%))
+        padding: 3.5rem calc(max(1.25rem, 5.34%))
     }
 
     .program-at-a-glance .desktop {
@@ -1767,7 +1779,7 @@ footer {
         width: 3px;
         z-index: -1;
         transition: height .3s ease-out;
-        background-color: hsla(0,0%,100%,.6)
+        background-color: hsla(0, 0%, 100%, .6)
     }
 
     .program-at-a-glance .inactive {
@@ -1804,14 +1816,14 @@ footer {
     }
 
     .program-at-a-glance .mobile-step .mobile-step-content .heading {
-        color: hsla(0,0%,100%,.7);
+        color: hsla(0, 0%, 100%, .7);
         font-size: 1.25rem;
         font-weight: 800;
         line-height: 150%
     }
 
     .program-at-a-glance .mobile-step .mobile-step-content .description {
-        color: hsla(0,0%,100%,.6);
+        color: hsla(0, 0%, 100%, .6);
         font-size: 1rem;
         line-height: 150%
     }
@@ -1820,7 +1832,8 @@ footer {
         background: #ffffff
     }
 
-    .program-at-a-glance .mobile-step.active .mobile-step-content .description,.program-at-a-glance .mobile-step.active .mobile-step-content .heading {
+    .program-at-a-glance .mobile-step.active .mobile-step-content .description,
+    .program-at-a-glance .mobile-step.active .mobile-step-content .heading {
         color: #fff
     }
 }
@@ -2065,75 +2078,6 @@ footer {
     }
 }
 
-
-
-
-
-
-.unique-offerings-container {
-    background: #1c1929
-}
-
-.unique-offerings-container .max-width-container {
-    padding: 7.5rem 12% 3.75rem
-}
-
-.unique-offerings-container .content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2.5rem
-}
-
-.unique-offerings-container .content-container .heading {
-    color: #fff;
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 800;
-    line-height: 130%
-}
-
-.unique-offerings-container .content-container .offerings {
-    width: 100%;
-    height: auto
-}
-
-.unique-offerings-container .mobile {
-    display: none !important
-}
-
-@media only screen and (max-width: 768px) {
-    .unique-offerings-container .max-width-container {
-        padding: 3.75rem 6%
-    }
-
-    .unique-offerings-container .desktop {
-        display: none !important
-    }
-
-    .unique-offerings-container .mobile {
-        display: block !important
-    }
-}
-
-@media only screen and (max-width: 512px) {
-    .unique-offerings-container .max-width-container {
-        padding: 3.75rem 1.25rem
-    }
-
-    .unique-offerings-container .content-container {
-        gap: 1.5rem
-    }
-
-    .unique-offerings-container .content-container .heading {
-        font-size: 1.5rem;
-        font-weight: 700
-    }
-}
-
-
-
-
 .scroll-to-top-container {
     position: fixed;
     bottom: 5rem;
@@ -2148,8 +2092,10 @@ footer {
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
-    background: #27A2F7; /* Change to a suitable color for the button */
-    border: 1px solid rgba(0, 123, 255, 0.4); /* Adjust border color */
+    background: #27A2F7;
+    /* Change to a suitable color for the button */
+    border: 1px solid rgba(0, 123, 255, 0.4);
+    /* Adjust border color */
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.12);
     overflow: hidden;
     cursor: pointer;
@@ -2157,7 +2103,8 @@ footer {
 
 .scroll-to-top-container .popper-trigger .scroll-to-top-icon {
     height: auto;
-    width: 3rem; /* Adjust icon size */
+    width: 3rem;
+    /* Adjust icon size */
 }
 
 .scroll-to-top-container .popper {
@@ -2214,7 +2161,7 @@ footer {
 
 
 .faq-section-container {
-    padding: 6.25rem 7vw
+    padding: 0rem 7vw
 }
 
 
@@ -3111,8 +3058,8 @@ body.no-scroll {
 
 
 @media only screen and (max-width: 512px) {
-    #modal .modal-content{
-width: 85%;
+    #modal .modal-content {
+        width: 85%;
     }
 }
 
@@ -3172,5 +3119,127 @@ width: 85%;
 
     .copyright-main-container .copyright-container .legal-links .link .separator {
         display: none
+    }
+}
+
+.what-sets-us-apart-container {
+    background: #171421;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    z-index: 1
+}
+
+.what-sets-us-apart-container .content-container {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 calc(min(6.25rem, 6.94%)) 8.5rem
+}
+
+.what-sets-us-apart-container .separator {
+    width: .125rem;
+    height: 6rem;
+    flex-shrink: 0;
+    border-radius: .625rem;
+    background: linear-gradient(0deg, #d9d9d9, hsla(0, 0%, 85.1%, 0));
+    margin: 0 auto 3.5rem
+}
+
+.what-sets-us-apart-container .heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 130%;
+    margin-bottom: 3rem;
+    color: #fff
+}
+
+.what-sets-us-apart-container .blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /* Align items to the left */
+    gap: 2.5rem;
+}
+
+.what-sets-us-apart-container .blocks .block {
+    display: flex;
+    width: calc(25% - 2rem);
+    /* Each block takes up 20% of the container width */
+    height: 6rem;
+    padding: 1.25rem 1.5rem 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    border-radius: .5rem;
+    background: #3b609e;
+
+}
+
+.what-sets-us-apart-container .blocks .block .block-header {
+    display: flex;
+    align-items: center;
+    gap: .625rem
+}
+
+.what-sets-us-apart-container .blocks .block .block-header img {
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0
+}
+
+.what-sets-us-apart-container .blocks .block .block-header .text {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 140%
+}
+
+.what-sets-us-apart-container .bg-effect-left {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0
+}
+
+.what-sets-us-apart-container .bg-effect-right {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0
+}
+
+@media only screen and (max-width: 768px) {
+    .what-sets-us-apart-container .content-container {
+        padding: 0 calc(max(1.25rem, 5.34%)) 3.5rem
+    }
+
+    .what-sets-us-apart-container .separator {
+        height: 4.5rem;
+        margin: 0 auto 1.5rem
+    }
+
+    .what-sets-us-apart-container .heading {
+        font-size: 1.5rem;
+        margin-bottom: 1.875rem
+    }
+
+    .what-sets-us-apart-container .blocks {
+        gap: 1.25rem
+    }
+
+    .what-sets-us-apart-container .blocks .block {
+        width: 100%;
+        /* Stack blocks vertically on smaller screens */
+        padding: 1.25rem 1.25rem 2rem;
+        gap: 1rem;
+    }
+
+    .what-sets-us-apart-container .blocks .block .block-header .text {
+        font-size: 1.125rem
+    }
+
+    .what-sets-us-apart-container .bg-effect-left,
+    .what-sets-us-apart-container .bg-effect-right {
+        width: 50%
     }
 }
