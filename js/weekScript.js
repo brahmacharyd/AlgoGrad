@@ -8,94 +8,59 @@ const contentPoints = document.getElementById('content-points');
 // Define content for each week (you can replace with actual content)
 const weekContent = {
     1: {
-        heading: 'Offline Orientation',
+        heading: 'Building Foundations',
         points: [
-            'Product Teardown',
-            'Fireside Chat',
-            'Team Bonding Activities',
-            'Panel Discussion with Mentors'
+            'HTML & CSS: Structuring and Styling Websites',
+            'JavaScript Essentials: Programming for the Web',
+            'Version Control with Git and GitHub',
+            'Responsive Design and Accessibility',
         ]
     },
     2: {
-        heading: 'Fundamentals of product management',
+        heading: 'Frontend Development',
         points: [
-            'What makes for a great PM',
-            'Day to day work of PMs in tech companies',
-            'Communicating with stakeholders',
+            'Advanced JavaScript Concepts',
+            'React Basics: Components, State, and Props',
+            'Introduction to Angular: Modules and Components',
+            'Building Dynamic User Interfaces with Frontend Frameworks',
         ]
     },
     3: {
-        heading: 'Problem discovery, market and user research',
+        heading: 'Backend Development',
         points: [
-            'Define customer segments and personas',
-            'Types of user research',
-            'Understanding customer pain points',
-            'Extract key insights from user research'
+            'Introduction to Node.js and Express.js',
+            'Database Management with MongoDB',
+            'Creating RESTful APIs',
+            'Authentication and Authorization with JWT',
         ]
     },
     4: {
-        heading: 'Problem framing and prioritization',
+        heading: 'Full-Stack Development',
         points: [
-            'Define the right problem statement',
-            'Generate multiple possible ideas to solve the problem'
+            'Integrating Frontend and Backend',
+            'Building End-to-End Features',
+            'Error Handling and Debugging Techniques',
+            'Deployment Basics with Heroku and AWS',
         ]
     },
     5: {
-        heading: 'UX Design',
+        heading: 'Certification Phase',
         points: [
-            'What great UX looks like',
-            'Share ideas using wireframes',
-            'Give effective feedback to designers',
-            'Validate the right solution with users'
+            'Deep Dive into Your Chosen Technology Stack (MERN or MEAN)',
+            'Mock Certification Projects and Assessments',
+            'Hands-on Practice with Industry-Standard Tools',
+            'Prepare for Certification in Your Selected Technology',
         ]
     },
     6: {
-        heading: 'Analytics and metrics',
+        heading: 'Real-Time Project',
         points: [
-            'Understanding different types of metrics',
-            'Define success metrics for your product',
-            'Funnel analysis',
-            'Cohort analysis'
+            'Work on a Live Full-Stack Project',
+            'Collaborate with a Mentor for Real-World Problem Solving',
+            'Deploy and Showcase Your Project',
+            'Final Presentation and Portfolio Building',
         ]
-    },
-    7: {
-        heading: 'Effective communication as a PM',
-        points: [
-            'Working with designers, engineers and business teams',
-            'Communicating via documentation'
-        ]
-    },
-    8: {
-        heading: 'Tech 101 & System Design',
-        points: [
-            'SQL, Database, APIs and app architectures',
-            'System design'
-        ]
-    },
-    9: {
-        heading: 'Product launch & adoption',
-        points: [
-            'Product launch checklist',
-            'Launching in phases',
-            'A/B testing',
-            'Product adoption'
-
-
-        ]
-    },
-    10: {
-        heading: 'Capstone project, Interview preparation & Demo Day',
-        points: [
-            'Work on your capstone project',
-            'Get feedback from mentors',
-            'Mock interviews with peers and mentors',
-            'Demo Day presentation'
-        ]
-    },
-    // Add content for other weeks here
-    
-
- 
+    }
 };
 
 // Event listener for week selection
