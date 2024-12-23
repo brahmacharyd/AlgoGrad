@@ -3080,7 +3080,10 @@ body.no-scroll {
 
 .copyright-main-container .copyright-container .copyright-text {
     font-size: .875rem;
-    font-weight: 600
+    font-weight: 600;
+    text-align: center; /* Center-align the text */
+    line-height: 1.5rem; /* Adjust line height for readability */
+    word-break: break-word; /* Ensure long words break */
 }
 
 .copyright-main-container .copyright-container .legal-links {
