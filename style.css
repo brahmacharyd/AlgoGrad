@@ -672,7 +672,7 @@ footer {
 
 
 
-.hero-bg-container {
+.Transform-Your-Career {
     position: relative;
     margin: 0 auto;
     padding: 10.5rem 5rem 4.75rem;
@@ -683,7 +683,7 @@ footer {
     overflow: hidden
 }
 
-.hero-bg-container .heading {
+.Transform-Your-Career .heading {
     width: 85%;
     font-weight: 700;
     font-size: 3.5rem;
@@ -697,7 +697,7 @@ footer {
     margin-bottom: 1.5rem
 }
 
-.hero-bg-container .sub-heading {
+.Transform-Your-Career .sub-heading {
     width: 87%;
     font-size: 1.125rem;
     line-height: 150%;
@@ -708,7 +708,7 @@ footer {
 }
 
 @media only screen and (min-width: 1440px) {
-    .hero-bg-container {
+    .Transform-Your-Career {
         max-width: 90rem;
         margin: 0 auto;
         padding: 0 calc(min(11rem, 12%)) 4.1%
@@ -716,42 +716,42 @@ footer {
 }
 
 @media only screen and (min-width: 1024px)and (max-width:1440px) {
-    .hero-bg-container {
+    .Transform-Your-Career {
         margin: 0 auto;
         padding: 0 calc(min(10.75rem, 8.8%)) 4.1%;
     }
 
-    .hero-bg-container {
+    .Transform-Your-Career {
         padding: 10.5rem 3rem 4.75rem
     }
 
-    .hero-bg-container .sub-heading {
+    .Transform-Your-Career .sub-heading {
         padding: 0 3rem
     }
 }
 
 @media only screen and (max-width: 512px) {
-    .hero-bg-container .desktop {
+    .Transform-Your-Career .desktop {
         display: none
     }
 }
 
 @media only screen and (max-width: 1024px) {
-    .hero-bg-container {
+    .Transform-Your-Career {
         max-width: 90rem;
         margin: 0 auto;
         padding: 0 calc(max(1.25rem, 5.34%)) 4.1% !important;
     }
 
-    .hero-bg-container {
+    .Transform-Your-Career {
         padding: 3.5rem 0 4.5rem;
     }
 
-    .hero-bg-container .sub-heading {
+    .Transform-Your-Career .sub-heading {
         padding: 0
     }
 
-    .hero-bg-container .hero-section-bg {
+    .Transform-Your-Career .hero-section-bg {
         position: absolute;
         left: -6.5rem;
         right: -6.5rem;
@@ -782,26 +782,26 @@ footer {
 }
 
 @media only screen and (max-width: 512px) {
-    .hero-bg-container .heading {
+    .Transform-Your-Career .heading {
         font-size: 2.5rem;
         padding-top: 70px;
     }
 
-    .hero-bg-container .sub-heading {
+    .Transform-Your-Career .sub-heading {
         font-size: 1rem;
         line-height: 150%;
         margin-bottom: 1.5rem
     }
 
-    .hero-bg-container .hero-bg-container .cta-buttons-container {
+    .Transform-Your-Career .Transform-Your-Career .cta-buttons-container {
         width: 100%
     }
 
-    .hero-bg-container .hero-bg-container .cta-buttons-container .apply-btn {
+    .Transform-Your-Career .Transform-Your-Career .cta-buttons-container .apply-btn {
         font-size: 1rem
     }
 
-    .hero-bg-container .callback-request-cta {
+    .Transform-Your-Career .callback-request-cta {
         margin-top: 1rem;
         padding: .875rem 2.5rem;
         font-size: .875rem
@@ -923,20 +923,20 @@ footer {
     }
 }
 
-.course-curriculum-container {
+.program-curriculum-container {
     background: #171421;
     position: relative;
     overflow: hidden;
     color: #fff;
 }
 
-.course-curriculum-container .content-container {
+.program-curriculum-container .content-container {
     max-width: 90rem;
     margin: 0 auto;
     padding: 3.75rem calc(min(7.5rem, 8.34%))
 }
 
-.course-curriculum-container .section-heading {
+.program-curriculum-container .section-heading {
     font-weight: 700;
     font-size: 2.5rem;
     line-height: 130%;
@@ -945,21 +945,21 @@ footer {
     color: #fff
 }
 
-.course-curriculum-container .weeks-container {
+.program-curriculum-container .weeks-container {
     display: flex;
     min-height: 25rem;
     overflow: hidden
 }
 
-.course-curriculum-container .weeks-container ::-webkit-scrollbar {
+.program-curriculum-container .weeks-container ::-webkit-scrollbar {
     width: 0
 }
 
-.course-curriculum-container .weeks-container ::-webkit-scrollbar-thumb {
+.program-curriculum-container .weeks-container ::-webkit-scrollbar-thumb {
     background: hsla(0, 0%, 100%, .2)
 }
 
-.course-curriculum-container .weeks-container .weeks {
+.program-curriculum-container .weeks-container .weeks {
     display: flex;
     flex-direction: column;
     margin: -.75rem 0;
@@ -967,7 +967,7 @@ footer {
     overflow-y: scroll
 }
 
-.course-curriculum-container .weeks-container .weeks .week {
+.program-curriculum-container .weeks-container .weeks .week {
     margin: .75rem 0;
     font-size: 1.20rem;
     line-height: 150%;
@@ -976,22 +976,22 @@ footer {
     white-space: nowrap
 }
 
-.course-curriculum-container .weeks-container .weeks .week.active {
+.program-curriculum-container .weeks-container .weeks .week.active {
     font-weight: 700;
     color: #fff
 }
 
-.course-curriculum-container .weeks-container .separator {
+.program-curriculum-container .weeks-container .separator {
     width: 1px;
     margin: 0 2.5rem 0 2rem
 }
 
-.course-curriculum-container .weeks-container .content {
+.program-curriculum-container .weeks-container .content {
     overflow-y: scroll;
     width: 50%
 }
 
-.course-curriculum-container .weeks-container .content .heading {
+.program-curriculum-container .weeks-container .content .heading {
     font-weight: 700;
     font-size: 1.75rem;
     line-height: 130%;
@@ -999,12 +999,12 @@ footer {
     margin-bottom: 2rem
 }
 
-.course-curriculum-container .weeks-container .content .points {
+.program-curriculum-container .weeks-container .content .points {
     margin: 0 0 -2rem;
     width: 88%
 }
 
-.course-curriculum-container .weeks-container .content .points .point {
+.program-curriculum-container .weeks-container .content .points .point {
     display: flex;
     align-items: flex-start;
     font-weight: 500;
@@ -1013,7 +1013,7 @@ footer {
     margin: 2rem 0
 }
 
-.course-curriculum-container .weeks-container .content .points .point img {
+.program-curriculum-container .weeks-container .content .points .point img {
     height: 1.25rem;
     width: 1.25rem;
     margin-right: .75rem;
@@ -1021,7 +1021,7 @@ footer {
     filter: hue-rotate(300deg);
 }
 
-.course-curriculum-container .weeks-container .curriculum-download-section {
+.program-curriculum-container .weeks-container .curriculum-download-section {
     margin-left: 4.5rem;
     width: 31.2%;
     min-width: 22rem;
@@ -1039,15 +1039,15 @@ footer {
     height: fit-content
 }
 
-.course-curriculum-container .weeks-container .curriculum-download-section .text-section,
-.course-curriculum-container .weeks-container .curriculum-download-section .text-section .image-heading-container {
+.program-curriculum-container .weeks-container .curriculum-download-section .text-section,
+.program-curriculum-container .weeks-container .curriculum-download-section .text-section .image-heading-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: .75rem
 }
 
-.course-curriculum-container .weeks-container .curriculum-download-section .text-section .image-heading-container .image-container {
+.program-curriculum-container .weeks-container .curriculum-download-section .text-section .image-heading-container .image-container {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
@@ -1058,12 +1058,12 @@ footer {
     justify-content: center
 }
 
-.course-curriculum-container .weeks-container .curriculum-download-section .text-section .image-heading-container .image-container img {
+.program-curriculum-container .weeks-container .curriculum-download-section .text-section .image-heading-container .image-container img {
     height: 2.25rem;
     width: 2.25rem
 }
 
-.course-curriculum-container .weeks-container .curriculum-download-section .text-section .image-heading-container .heading {
+.program-curriculum-container .weeks-container .curriculum-download-section .text-section .image-heading-container .heading {
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 140%;
@@ -1073,68 +1073,68 @@ footer {
     -webkit-text-fill-color: transparent
 }
 
-.course-curriculum-container .weeks-container .curriculum-download-section .text-section .text {
+.program-curriculum-container .weeks-container .curriculum-download-section .text-section .text {
     color: hsla(0, 0%, 100%, .7);
     font-size: .875rem;
     line-height: 145%
 }
 
-.course-curriculum-container .mobile {
+.program-curriculum-container .mobile {
     display: none
 }
 
 @media only screen and (max-width: 1024px) {
-    .course-curriculum-container .content-container {
+    .program-curriculum-container .content-container {
         padding: 3.5rem calc(max(1.25rem, 5.34%))
     }
 
-    .course-curriculum-container .desktop {
+    .program-curriculum-container .desktop {
         display: none
     }
 
-    .course-curriculum-container .mobile {
+    .program-curriculum-container .mobile {
         display: block
     }
 
-    .course-curriculum-container .weeks-container {
+    .program-curriculum-container .weeks-container {
         flex-direction: column;
         min-height: auto;
         height: auto !important;
         overflow: visible
     }
 
-    .course-curriculum-container .weeks-container .weeks {
+    .program-curriculum-container .weeks-container .weeks {
         flex-direction: row;
         width: 100%;
         padding: 0 .25rem 1.24rem;
         overflow: scroll
     }
 
-    .course-curriculum-container .weeks-container .weeks .week {
+    .program-curriculum-container .weeks-container .weeks .week {
         margin: 0 .75rem
     }
 
-    .course-curriculum-container .weeks-container .weeks .week:first-of-type {
+    .program-curriculum-container .weeks-container .weeks .week:first-of-type {
         margin-left: 0
     }
 
-    .course-curriculum-container .weeks-container .weeks .week:last-of-type {
+    .program-curriculum-container .weeks-container .weeks .week:last-of-type {
         margin-right: 0
     }
 
-    .course-curriculum-container .weeks-container .separator {
+    .program-curriculum-container .weeks-container .separator {
         width: 100%;
         height: 1px;
         margin: 0 0 2rem
     }
 
-    .course-curriculum-container .weeks-container .content {
+    .program-curriculum-container .weeks-container .content {
         overflow: inherit;
         margin-bottom: 4rem;
         width: 100%
     }
 
-    .course-curriculum-container .weeks-container .content .heading {
+    .program-curriculum-container .weeks-container .content .heading {
         font-weight: 800;
         font-size: 1.75rem;
         line-height: 130%;
@@ -1142,47 +1142,47 @@ footer {
         margin-bottom: 2rem
     }
 
-    .course-curriculum-container .weeks-container .content .points {
+    .program-curriculum-container .weeks-container .content .points {
         margin: 0;
         width: 100%
     }
 
-    .course-curriculum-container .weeks-container .curriculum-download-section {
+    .program-curriculum-container .weeks-container .curriculum-download-section {
         margin-left: 0;
         width: 100%
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .course-curriculum-container .section-heading {
+    .program-curriculum-container .section-heading {
         font-size: 1.5rem;
         line-height: 125%;
         margin-bottom: 1.5rem
     }
 
-    .course-curriculum-container .weeks-container .weeks .week {
+    .program-curriculum-container .weeks-container .weeks .week {
         font-size: .875rem
     }
 
-    .course-curriculum-container .weeks-container .content .heading {
+    .program-curriculum-container .weeks-container .content .heading {
         font-size: 1.125rem;
         line-height: 140%;
         margin-bottom: 1.5rem
     }
 
-    .course-curriculum-container .weeks-container .content .points .point {
+    .program-curriculum-container .weeks-container .content .points .point {
         font-size: .875rem;
         margin: .625rem 0
     }
 
-    .course-curriculum-container .weeks-container .content .points .point img {
+    .program-curriculum-container .weeks-container .content .points .point img {
         height: 1rem;
         width: 1rem;
         margin-right: .5rem;
         margin-top: .125rem
     }
 
-    .course-curriculum-container .weeks-container .curriculum-download-section {
+    .program-curriculum-container .weeks-container .curriculum-download-section {
         margin-left: 0;
         display: flex;
         width: 100%;
@@ -1191,32 +1191,32 @@ footer {
         gap: 1.5rem
     }
 
-    .course-curriculum-container .weeks-container .curriculum-download-section .text-section .image-heading-container {
+    .program-curriculum-container .weeks-container .curriculum-download-section .text-section .image-heading-container {
         flex-direction: row;
         gap: .625rem;
         align-items: center
     }
 
-    .course-curriculum-container .weeks-container .curriculum-download-section .text-section .image-heading-container .image-container {
+    .program-curriculum-container .weeks-container .curriculum-download-section .text-section .image-heading-container .image-container {
         width: 3rem;
         height: 3rem;
         filter: drop-shadow(0 1.5px 15px rgba(99, 52, 200, .06))
     }
 
-    .course-curriculum-container .weeks-container .curriculum-download-section .text-section .image-heading-container .image-container img {
+    .program-curriculum-container .weeks-container .curriculum-download-section .text-section .image-heading-container .image-container img {
         height: 1.625rem;
         width: 1.625rem
     }
 
-    .course-curriculum-container .weeks-container .curriculum-download-section .text-section .image-heading-container .heading {
+    .program-curriculum-container .weeks-container .curriculum-download-section .text-section .image-heading-container .heading {
         font-size: 1.125rem
     }
 
-    .course-curriculum-container .weeks-container .curriculum-download-section .text-section .text {
+    .program-curriculum-container .weeks-container .curriculum-download-section .text-section .text {
         font-size: .75rem
     }
 
-    .course-curriculum-container .weeks-container .curriculum-download-section .button-container {
+    .program-curriculum-container .weeks-container .curriculum-download-section .button-container {
         padding: .75rem 1.5rem;
         font-size: .875rem;
         width: 100%
@@ -1288,19 +1288,19 @@ footer {
     color: white ! important;
 }
 
-.hero-bg-container .cta-buttons-container .btn {
+.Transform-Your-Career .cta-buttons-container .btn {
     font-size: 1.1rem;
     /* Adjust font size */
     text-align: center;
 }
 
-.hero-bg-container .cta-buttons-container .btn img {
+.Transform-Your-Career .cta-buttons-container .btn img {
     width: 16px;
     /* Set the arrow image size */
     height: 16px;
 }
 
-.hero-bg-container .cta-buttons-container .fa-arrow-right {
+.Transform-Your-Career .cta-buttons-container .fa-arrow-right {
     font-size: 1.2rem;
     /* Increase the size of the arrow icon */
 }
@@ -1631,24 +1631,24 @@ footer {
 }
 
 
-.program-at-a-glance {
+.the-program-at-a-glance-container {
     background: #171421;
     position: relative;
     overflow: hidden;
     color: #fff;
 }
 
-.program-at-a-glance .content-container {
+.the-program-at-a-glance-container .content-container {
     max-width: 90rem;
     margin: 0 auto;
     padding: 5rem calc(min(5rem, 5.6%)) 5rem calc(min(6.25rem, 6.94%))
 }
 
-.program-at-a-glance .mobile {
+.the-program-at-a-glance-container .mobile {
     display: none
 }
 
-.program-at-a-glance .main-heading {
+.the-program-at-a-glance-container .main-heading {
     font-style: normal;
     font-weight: 700;
     font-size: 2.5rem;
@@ -1657,21 +1657,21 @@ footer {
     text-align: center
 }
 
-.program-at-a-glance .main-content {
+.the-program-at-a-glance-container .main-content {
     display: flex;
     align-items: flex-start;
     justify-content: space-between
 }
 
-.program-at-a-glance .main-content .left-container {
+.the-program-at-a-glance-container .main-content .left-container {
     width: 42%
 }
 
-.program-at-a-glance .main-content .left-container .items {
+.the-program-at-a-glance-container .main-content .left-container .items {
     margin: -.5rem 0
 }
 
-.program-at-a-glance .main-content .left-container .items .item {
+.the-program-at-a-glance-container .main-content .left-container .items .item {
     margin: .5rem 0;
     border: 1px solid rgba(237, 232, 247, .17);
     border-radius: .5rem;
@@ -1680,7 +1680,7 @@ footer {
     cursor: pointer
 }
 
-.program-at-a-glance .main-content .left-container .items .item .heading {
+.the-program-at-a-glance-container .main-content .left-container .items .item .heading {
     font-weight: 700;
     font-size: 1.25rem;
     line-height: 150%;
@@ -1688,7 +1688,7 @@ footer {
     margin-bottom: 0
 }
 
-.program-at-a-glance .main-content .left-container .items .item .description {
+.the-program-at-a-glance-container .main-content .left-container .items .item .description {
     display: none;
     margin-top: .75rem;
     font-size: .875rem;
@@ -1696,31 +1696,31 @@ footer {
     color: #fff;
 }
 
-.program-at-a-glance .main-content .left-container .items .item:hover {
+.the-program-at-a-glance-container .main-content .left-container .items .item:hover {
     background: #1d162e
 }
 
-.program-at-a-glance .main-content .left-container .items .item:hover .heading {
+.the-program-at-a-glance-container .main-content .left-container .items .item:hover .heading {
     color: #fff
 }
 
-.program-at-a-glance .main-content .left-container .items .item.active {
+.the-program-at-a-glance-container .main-content .left-container .items .item.active {
     background: #3b609e;
     padding: 1.5rem 2rem 1.75rem;
     border: 1px solid #27A2F7;
     border: 1px solid #27A2F7;
 }
 
-.program-at-a-glance .main-content .left-container .items .item.active .heading {
+.the-program-at-a-glance-container .main-content .left-container .items .item.active .heading {
     font-weight: 800;
     color: #fff;
 }
 
-.program-at-a-glance .main-content .left-container .items .item.active .description {
+.the-program-at-a-glance-container .main-content .left-container .items .item.active .description {
     display: block
 }
 
-.program-at-a-glance .main-content .left-container .items .item .progress {
+.the-program-at-a-glance-container .main-content .left-container .items .item .progress {
     display: none;
     /* Hide the progress bar by default */
     position: absolute;
@@ -1733,12 +1733,12 @@ footer {
     background: transparent;
 }
 
-.program-at-a-glance .main-content .left-container .items .item .progress .progress-container {
+.the-program-at-a-glance-container .main-content .left-container .items .item .progress .progress-container {
     height: .25rem;
     border-radius: 0 !important
 }
 
-.program-at-a-glance .main-content .right-container {
+.the-program-at-a-glance-container .main-content .right-container {
     width: 53.8%;
     display: flex;
     justify-content: center;
@@ -1746,15 +1746,15 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-    .program-at-a-glance .content-container {
+    .the-program-at-a-glance-container .content-container {
         padding: 3.5rem calc(max(1.25rem, 5.34%))
     }
 
-    .program-at-a-glance .desktop {
+    .the-program-at-a-glance-container .desktop {
         display: none
     }
 
-    .program-at-a-glance .mobile {
+    .the-program-at-a-glance-container .mobile {
         display: flex;
         width: 100%;
         flex-direction: column;
@@ -1764,13 +1764,13 @@ footer {
         z-index: 1
     }
 
-    .program-at-a-glance .main-heading {
+    .the-program-at-a-glance-container .main-heading {
         font-size: 1.5rem;
         line-height: 125%;
         margin-bottom: 2rem
     }
 
-    .program-at-a-glance .progress {
+    .the-program-at-a-glance-container .progress {
         position: absolute;
         top: .75rem;
         left: .28rem;
@@ -1782,18 +1782,18 @@ footer {
         background-color: hsla(0, 0%, 100%, .6)
     }
 
-    .program-at-a-glance .inactive {
+    .the-program-at-a-glance-container .inactive {
         background-color: #3b609e;
         height: 86%
     }
 
-    .program-at-a-glance .mobile-step {
+    .the-program-at-a-glance-container .mobile-step {
         width: 100%;
         display: flex;
         gap: 1rem
     }
 
-    .program-at-a-glance .mobile-step .bullet {
+    .the-program-at-a-glance-container .mobile-step .bullet {
         width: .75rem;
         height: .75rem;
         flex-shrink: 0;
@@ -1803,37 +1803,37 @@ footer {
         margin-top: .625rem
     }
 
-    .program-at-a-glance .mobile-step .bullet.active {
+    .the-program-at-a-glance-container .mobile-step .bullet.active {
         background: #eee;
         border: none
     }
 
-    .program-at-a-glance .mobile-step .mobile-step-content {
+    .the-program-at-a-glance-container .mobile-step .mobile-step-content {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: .5rem
     }
 
-    .program-at-a-glance .mobile-step .mobile-step-content .heading {
+    .the-program-at-a-glance-container .mobile-step .mobile-step-content .heading {
         color: hsla(0, 0%, 100%, .7);
         font-size: 1.25rem;
         font-weight: 800;
         line-height: 150%
     }
 
-    .program-at-a-glance .mobile-step .mobile-step-content .description {
+    .the-program-at-a-glance-container .mobile-step .mobile-step-content .description {
         color: hsla(0, 0%, 100%, .6);
         font-size: 1rem;
         line-height: 150%
     }
 
-    .program-at-a-glance .mobile-step.active .bullet {
+    .the-program-at-a-glance-container .mobile-step.active .bullet {
         background: #ffffff
     }
 
-    .program-at-a-glance .mobile-step.active .mobile-step-content .description,
-    .program-at-a-glance .mobile-step.active .mobile-step-content .heading {
+    .the-program-at-a-glance-container .mobile-step.active .mobile-step-content .description,
+    .the-program-at-a-glance-container .mobile-step.active .mobile-step-content .heading {
         color: #fff
     }
 }
@@ -1854,7 +1854,7 @@ footer {
 }
 
 
-.program-at-a-glance .main-content .left-container .items .item.active .progress {
+.the-program-at-a-glance-container .main-content .left-container .items .item.active .progress {
     display: block;
     /* Show the progress bar when the item is active */
 }
@@ -1877,7 +1877,7 @@ footer {
     height: 86%;
 }
 
-.program-at-a-glance .mobile #progress {
+.the-program-at-a-glance-container .mobile #progress {
     background-color: #fff;
     width: 3px;
     transition: height 3s ease-in-out;
@@ -1893,7 +1893,7 @@ footer {
 }
 
 
-.program-at-a-glance .main-content .left-container .items .item img.step-image {
+.the-program-at-a-glance-container .main-content .left-container .items .item img.step-image {
     width: 100%;
     /* Fill the container width */
     height: auto;
@@ -1908,17 +1908,17 @@ footer {
     object-fit: contain;
 }
 
-.program-at-a-glance .main-content .left-container .items .item.active img.step-image {
+.the-program-at-a-glance-container .main-content .left-container .items .item.active img.step-image {
     display: block;
     /* Show the image for the active item */
 }
 
-.program-at-a-glance .main-content .right-container img {
+.the-program-at-a-glance-container .main-content .right-container img {
     width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
-    .program-at-a-glance .main-content .right-container img.step-image {
+    .the-program-at-a-glance-container .main-content .right-container img.step-image {
         max-width: 100%;
         /* Full width on smaller screens */
         max-height: 250px;
@@ -1933,7 +1933,7 @@ footer {
 
 
 
-.interview-prep-container {
+.preparation-of-interview-container {
     background: #171421;
     position: relative;
     overflow: hidden;
@@ -1941,13 +1941,13 @@ footer {
     z-index: 1
 }
 
-.interview-prep-container .content-container {
+.preparation-of-interview-container .content-container {
     max-width: 90rem;
     margin: 0 auto;
     padding: 0 calc(min(6.25rem, 6.94%)) 8.5rem
 }
 
-.interview-prep-container .separator {
+.preparation-of-interview-container .separator {
     width: .125rem;
     height: 6rem;
     flex-shrink: 0;
@@ -1956,7 +1956,7 @@ footer {
     margin: 0 auto 3.5rem
 }
 
-.interview-prep-container .fancy-heading {
+.preparation-of-interview-container .fancy-heading {
     color: #27A2F7;
     font-size: 1.125rem;
     font-weight: 600;
@@ -1966,7 +1966,7 @@ footer {
     text-align: center
 }
 
-.interview-prep-container .heading {
+.preparation-of-interview-container .heading {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 800;
@@ -1975,14 +1975,14 @@ footer {
     color: #fff
 }
 
-.interview-prep-container .blocks {
+.preparation-of-interview-container .blocks {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2.5rem
 }
 
-.interview-prep-container .blocks .block {
+.preparation-of-interview-container .blocks .block {
     display: flex;
     width: 18.75rem;
     height: 11.25rem;
@@ -1994,37 +1994,37 @@ footer {
     background: #3b609e
 }
 
-.interview-prep-container .blocks .block .block-header {
+.preparation-of-interview-container .blocks .block .block-header {
     display: flex;
     align-items: center;
     gap: .625rem
 }
 
-.interview-prep-container .blocks .block .block-header img {
+.preparation-of-interview-container .blocks .block .block-header img {
     width: 2rem;
     height: 2rem;
     flex-shrink: 0
 }
 
-.interview-prep-container .blocks .block .block-header .text {
+.preparation-of-interview-container .blocks .block .block-header .text {
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 140%
 }
 
-.interview-prep-container .blocks .block .block-description {
+.preparation-of-interview-container .blocks .block .block-description {
     font-size: 1rem;
     line-height: 150%
 }
 
-.interview-prep-container .bg-effect-left {
+.preparation-of-interview-container .bg-effect-left {
     position: absolute;
     z-index: -1;
     top: 0;
     left: 0
 }
 
-.interview-prep-container .bg-effect-right {
+.preparation-of-interview-container .bg-effect-right {
     position: absolute;
     z-index: -1;
     right: 0;
@@ -2032,30 +2032,30 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-    .interview-prep-container .content-container {
+    .preparation-of-interview-container .content-container {
         padding: 0 calc(max(1.25rem, 5.34%)) 3.5rem
     }
 
-    .interview-prep-container .separator {
+    .preparation-of-interview-container .separator {
         height: 4.5rem;
         margin: 0 auto 1.5rem
     }
 
-    .interview-prep-container .fancy-heading {
+    .preparation-of-interview-container .fancy-heading {
         font-size: .875rem;
         margin-bottom: .5rem
     }
 
-    .interview-prep-container .heading {
+    .preparation-of-interview-container .heading {
         font-size: 1.5rem;
         margin-bottom: 1.875rem
     }
 
-    .interview-prep-container .blocks {
+    .preparation-of-interview-container .blocks {
         gap: 1.25rem
     }
 
-    .interview-prep-container .blocks .block {
+    .preparation-of-interview-container .blocks .block {
         width: 18.75rem;
         height: -webkit-fit-content;
         height: -moz-fit-content;
@@ -2064,16 +2064,16 @@ footer {
         gap: 1rem
     }
 
-    .interview-prep-container .blocks .block .block-header .text {
+    .preparation-of-interview-container .blocks .block .block-header .text {
         font-size: 1.125rem
     }
 
-    .interview-prep-container .blocks .block .block-description {
+    .preparation-of-interview-container .blocks .block .block-description {
         font-size: .875rem
     }
 
-    .interview-prep-container .bg-effect-left,
-    .interview-prep-container .bg-effect-right {
+    .preparation-of-interview-container .bg-effect-left,
+    .preparation-of-interview-container .bg-effect-right {
         width: 50%
     }
 }

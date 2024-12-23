@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const items = document.querySelectorAll('.program-at-a-glance .main-content .left-container .items .item');
+  const items = document.querySelectorAll('.the-program-at-a-glance-container .main-content .left-container .items .item');
   const totalSteps = items.length;
   let currentStepIndex = 0;
 
