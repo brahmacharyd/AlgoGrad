@@ -1,19 +1,24 @@
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     var stickyCourseInfoContainer = document.getElementById('stickyCourseInfo');
-    var scrollPosition = window.scrollY || document.documentElement.scrollTop;
-    var pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (!stickyCourseInfoContainer) return; // Ensure the element exists
 
-    // If the user is at the bottom of the page, remove the 'sticky' class
-    if (scrollPosition >= pageHeight) {
+    var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    var pageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    // Define a margin to handle fractional scroll positions
+    var margin = 5;
+
+    // If the user is at or very close to the bottom of the page
+    if (scrollPosition >= pageHeight - margin) {
         stickyCourseInfoContainer.classList.remove('sticky');
-        stickyCourseInfoContainer.style.display = 'none'; // Hide the sticky element at the bottom
+        stickyCourseInfoContainer.style.display = 'none';
     } else if (scrollPosition > pageHeight / 6) {
-        // If scrolled more than 1/6th of the page height, make the sticky element visible
+        // Make the sticky element visible for sufficient scrolling
         stickyCourseInfoContainer.classList.add('sticky');
-        stickyCourseInfoContainer.style.display = 'block'; // Ensure it stays visible
+        stickyCourseInfoContainer.style.display = 'block';
     } else {
-        // If scroll position is less than 1/6th of the page height, hide the sticky element
+        // Hide the sticky element for minimal scrolling
         stickyCourseInfoContainer.classList.remove('sticky');
-        stickyCourseInfoContainer.style.display = 'none'; // Hide the sticky element
+        stickyCourseInfoContainer.style.display = 'none';
     }
 });
