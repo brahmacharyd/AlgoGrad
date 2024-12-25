@@ -550,32 +550,38 @@
     </div>
 
 
-    <!-- modal -->
+    
     <div id="modal" class="modal">
         <div class="modal-content">
-            <div class="modal-header">
-                <span id="close-btn" class="close-btn">&times;</span>
-                <h2>Sign Up</h2>
-            </div>
-            <div class="modal-body">
-                <div class="input-container">
-                    <input type="text" required="required" class="input-field" placeholder="Name">
-                </div>
-                <div class="input-container">
-                    <input type="email" required="required" class="input-field" placeholder="E-mail">
-                </div>
-                <div class="input-container">
-                    <input type="tel" required="required" class="input-field" placeholder="Phone">
-                </div>
-
-
-                <button disabled="disabled" class="purple-filled">
-                    Let's go
-                </button>
-            </div>
+          <div class="modal-header">
+            <span id="close-btn" class="close-btn">&times;</span>
+            <h2>Sign Up</h2>
+          </div>
+          <div class="modal-body">
+            <form id="signup-form">
+              <div class="input-container">
+                <input type="text" class="input-field" id="name" placeholder="Name">
+                <p class="error-message" id="name-error"></p>
+              </div>
+              <div class="input-container">
+                <input type="email" class="input-field" id="email" placeholder="E-mail">
+                <p class="error-message" id="email-error"></p>
+              </div>
+              <div class="input-container">
+                <input type="tel" class="input-field" id="phone" placeholder="Phone">
+                <p class="error-message" id="phone-error"></p>
+              </div>
+              <div class="input-container">
+                <label for="math-challenge">Solve: <span id="math-question"></span></label>
+                <input type="text" class="input-field" id="math-challenge" placeholder="Your answer">
+                <p class="error-message" id="math-error"></p>
+              </div>
+              <button id="submit-btn" disabled class="purple-filled">Let's go</button>
+            </form>
+          </div>
         </div>
-    </div>
-
+      </div>
+      
 
     <div class="copyright-main-container">
         <div class="copyright-container">
@@ -604,6 +610,7 @@
     <script src="./js/model.js"></script>
     <script src="./js/scrollToTop.js"></script>
     <script src="./js/sideBar.js"></script>
+    <script src="./js/formSpamValidation.js"></script>
 
 </body>
 
