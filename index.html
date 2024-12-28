@@ -558,25 +558,20 @@
             <h2>Sign Up</h2>
           </div>
           <div class="modal-body">
-            <form id="signup-form">
+            <form id="signup-form" action="https://formspree.io/f/xwppbvgz" method="POST">
               <div class="input-container">
-                <input type="text" class="input-field" id="name" placeholder="Name">
+                <input type="text" name="name" class="input-field" id="name" placeholder="Name">
                 <p class="error-message" id="name-error"></p>
               </div>
               <div class="input-container">
-                <input type="email" class="input-field" id="email" placeholder="E-mail">
+                <input type="email" name="email" class="input-field" id="email" placeholder="E-mail">
                 <p class="error-message" id="email-error"></p>
               </div>
               <div class="input-container">
-                <input type="tel" class="input-field" id="phone" placeholder="Phone">
+                <input type="tel" name="phone" class="input-field" id="phone" placeholder="Phone">
                 <p class="error-message" id="phone-error"></p>
               </div>
-              <div class="input-container">
-                <label for="math-challenge">Solve: <span id="math-question"></span></label>
-                <input type="text" class="input-field" id="math-challenge" placeholder="Your answer">
-                <p class="error-message" id="math-error"></p>
-              </div>
-              <button id="submit-btn" disabled class="purple-filled">Let's go</button>
+              <button id="submit-btn" class="purple-filled">Let's go</button>
             </form>
           </div>
         </div>

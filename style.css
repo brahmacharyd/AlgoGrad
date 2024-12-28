@@ -2699,6 +2699,29 @@ footer {
 }
 
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .sticky-course-info-container .info-summary,
+    .sticky-course-info-container .bottom-hurry-nudge-container {
+        display: none;
+    }
+    .sticky-course-info-container .apply-button-container {
+        justify-content: center;
+        width:calc(100vw - 2.25rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .sticky-course-info-container.sticky{
+        height: 80px;
+    }
+    .sticky-course-info-container .apply-btn {
+        font-size: 0.875rem;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
 
 
 
