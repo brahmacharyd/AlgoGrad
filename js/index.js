@@ -67,7 +67,7 @@ document.getElementById('signup-form').addEventListener('submit', (event) => {
 });
 
 
-// Modal
+// Modal-Start
 // Function to open the modal dynamically based on data-modal attribute
 function openModal(event) {
     event.preventDefault(); // Prevent default link behavior (scrolling)
@@ -110,11 +110,11 @@ window.addEventListener('click', function (event) {
     }
 });
 
-// Modal
+// Modal-Ends
 
 
 
-// program glance
+// program glance-Start
 document.addEventListener('DOMContentLoaded', function () {
     const items = document.querySelectorAll('.the-program-at-a-glance-container .main-content .left-container .items .item');
     const totalSteps = items.length;
@@ -242,11 +242,11 @@ window.addEventListener('scroll', function () {
     // progressBar.style.width = scrollPercentage + '%'; // If you prefer a horizontal progress bar
 });
 
-// program glance
+// program glance-Ends
 
 
 
-// scrolltop
+// scrolltop-Start
 
 // Function to scroll to the top
 function scrollToTop() {
@@ -265,9 +265,9 @@ window.onscroll = function () {
         scrollToTopBtn.style.display = 'none'; // Hide button
     }
 };
-// scrolltop
+// scrolltop-Ends
 
-// sidebar
+// sidebar-Start
 // Function to toggle the side menu
 function toggleMenu() {
     const sidebar = document.getElementById('sidebar');
@@ -280,12 +280,11 @@ function toggleMenu() {
     toggleButton.classList.toggle('collapsed');
     toggleButton.classList.toggle('open');
 }
-
-// sidebar
-
+// sidebar-Ends
 
 
-// sticky
+
+// sticky-start
 window.addEventListener('scroll', function () {
     var stickyCourseInfoContainer = document.getElementById('stickyCourseInfo');
     if (!stickyCourseInfoContainer) return; // Ensure the element exists
@@ -310,11 +309,9 @@ window.addEventListener('scroll', function () {
         stickyCourseInfoContainer.style.display = 'none';
     }
 });
+// sticky-Ends
 
-// sticky
-
-
-// weekScript
+//week content-start
 // Select all week divs
 const weeks = document.querySelectorAll('.week');
 
@@ -322,7 +319,6 @@ const weeks = document.querySelectorAll('.week');
 const contentHeading = document.getElementById('content-heading');
 const contentPoints = document.getElementById('content-points');
 
-// Define content for each week (you can replace with actual content)
 const weekContent = {
     1: {
         heading: 'Building Foundations',
@@ -380,7 +376,219 @@ const weekContent = {
     }
 };
 
-// Event listener for week selection
+const guidanceContent = {
+    1: {
+        heading: 'Career Development',
+        points: [
+            'Building a Strong Developer Portfolio',
+            'Understanding the Job Market and Roles in Tech',
+            'Crafting a Professional Resume for Web Development',
+            'Networking and Growing Your Professional Presence',
+        ]
+    },
+    2: {
+        heading: 'Interview Preparation',
+        points: [
+            'Technical Interview Questions and How to Prepare for Them',
+            'Whiteboard Coding Challenges and Problem Solving',
+            'Behavioral Interview Preparation and STAR Method',
+            'Mock Interviews and Constructive Feedback',
+        ]
+    },
+    3: {
+        heading: 'Soft Skills and Collaboration',
+        points: [
+            'Effective Communication in Development Teams',
+            'Collaborating Using Tools like GitHub and Slack',
+            'Time Management and Handling Deadlines',
+            'Problem-Solving and Debugging as a Team',
+        ]
+    },
+    4: {
+        heading: 'Building Real-World Projects',
+        points: [
+            'Working on Open-Source Projects and Contributing',
+            'Building Personal Projects to Showcase Your Skills',
+            'Team-Based Projects: Working Together to Solve Problems',
+            'Deploying and Maintaining Real-World Applications',
+        ]
+    },
+    5: {
+        heading: 'Career Growth & Continuing Education',
+        points: [
+            'Continuing Your Learning Journey After Certification',
+            'Exploring New Technologies and Frameworks',
+            'Advancing Your Career: From Junior to Senior Developer',
+            'Tech Industry Trends and How to Stay Updated',
+        ]
+    },
+    6: {
+        heading: 'Post-Certification: Landing Your First Job',
+        points: [
+            'How to Approach Job Searching and Applying for Roles',
+            'Building a Personal Brand and Online Presence',
+            'Understanding Job Offers, Salary Negotiations, and Benefits',
+            'Preparing for the First Day at Your New Job',
+        ]
+    }
+};
+
+const projectsContent = {
+    1: {
+        heading: 'Beginner Projects',
+        points: [
+            'Building Your First Personal Website',
+            'Portfolio Website with HTML & CSS',
+            'JavaScript-Based Interactive Features',
+            'Simple Projects to Showcase Your Skills',
+        ]
+    },
+    2: {
+        heading: 'Intermediate Projects',
+        points: [
+            'Developing an Interactive Todo List with React',
+            'Building a Weather App with APIs',
+            'Integrating a Database into a Web Application',
+            'Collaborative GitHub Projects',
+        ]
+    },
+    3: {
+        heading: 'Advanced Projects',
+        points: [
+            'Creating a Full-Stack Blogging Platform',
+            'Building a Real-Time Chat Application',
+            'Project Deployment and Hosting',
+            'GitHub Repository and Version Control Management',
+        ]
+    },
+    4: {
+        heading: 'Portfolio Development',
+        points: [
+            'Refining Your Portfolio with Projects',
+            'Showcasing Your Work through GitHub',
+            'Final Review of All Projects',
+            'Preparing Projects for Job Applications',
+        ]
+    },
+    5: {
+        heading: 'Capstone Project',
+        points: [
+            'Working on a Large-Scale Full-Stack Application',
+            'Collaborating with Peers for Real-World Application',
+            'Preparing for the Final Presentation',
+            'Deploying and Showcasing Your Capstone Project',
+        ]
+    },
+    6: {
+        heading: 'Post-Program Projects',
+        points: [
+            'Open Source Contributions and Personal Projects',
+            'Exploring Freelance and Contract Work',
+            'Collaborative Team Projects in the Industry',
+            'Leveraging Projects for Job Applications',
+        ]
+    }
+};
+
+const toolsContent = {
+    1: {
+        heading: 'Foundational Tools',
+        points: [
+            'Version Control with Git and GitHub',
+            'Text Editors: VS Code, Sublime Text',
+            'Browser Developer Tools for Debugging',
+            'Basic Command Line Usage',
+        ]
+    },
+    2: {
+        heading: 'Frontend Tools',
+        points: [
+            'Working with React and Redux',
+            'Frontend Build Tools: Webpack, Babel',
+            'CSS Frameworks: Bootstrap, Tailwind',
+            'Responsive Design with Media Queries',
+        ]
+    },
+    3: {
+        heading: 'Backend Tools',
+        points: [
+            'Node.js and Express.js for Backend Development',
+            'Database Tools: MongoDB, MySQL',
+            'API Development and Testing Tools: Postman',
+            'Server Management and Deployment Tools: Heroku, AWS',
+        ]
+    },
+    4: {
+        heading: 'Collaborative Tools',
+        points: [
+            'GitHub for Version Control and Collaboration',
+            'Project Management Tools: Trello, Jira',
+            'Communication Tools: Slack, Microsoft Teams',
+            'Continuous Integration and Deployment: Jenkins, Travis CI',
+        ]
+    },
+    5: {
+        heading: 'Advanced Tools',
+        points: [
+            'Testing Tools: Jest, Mocha',
+            'Containerization with Docker',
+            'Web Application Security Tools',
+            'Automation and Scripting Tools',
+        ]
+    },
+    6: {
+        heading: 'Career Tools',
+        points: [
+            'Portfolio Building Tools: GitHub Pages, Netlify',
+            'Resume Building Tools',
+            'Job Search Platforms: LinkedIn, Indeed',
+            'Networking Platforms for Developers',
+        ]
+    }
+};
+
+// Function to update content based on week number and content type
+function updateContent(contentData, weekNumber) {
+    const content = contentData[weekNumber];
+    if (content) {
+        contentHeading.textContent = content.heading;
+        contentPoints.innerHTML = content.points.map(point => {
+            return `<div class="point"><img src="./assets/img/download_check.svg" alt="tick"> ${point}</div>`;
+        }).join('');
+    }
+}
+
+// Set the default content for Program Overview or Guidance & Mentorship
+function setDefaultContent(contentType) {
+    // Make sure the content buttons are updated
+    if (contentType === 'overview') {
+        document.querySelector('.content-button[data-content="overview"]').classList.add('active');
+        document.querySelector('.content-button[data-content="guidance"]').classList.remove('active');
+        document.querySelector('.content-button[data-content="projects"]').classList.remove('active');
+        document.querySelector('.content-button[data-content="tools"]').classList.remove('active');
+        updateContent(weekContent, 1); // Set default Week 1 content for Program Overview
+    } else if (contentType === 'guidance') {
+        document.querySelector('.content-button[data-content="guidance"]').classList.add('active');
+        document.querySelector('.content-button[data-content="overview"]').classList.remove('active');
+        document.querySelector('.content-button[data-content="projects"]').classList.remove('active');
+        document.querySelector('.content-button[data-content="tools"]').classList.remove('active');
+        updateContent(guidanceContent, 1); // Set default Week 1 content for Guidance & Mentorship
+    } else if (contentType === 'projects') {
+        document.querySelector('.content-button[data-content="projects"]').classList.add('active');
+        document.querySelector('.content-button[data-content="overview"]').classList.remove('active');
+        document.querySelector('.content-button[data-content="guidance"]').classList.remove('active');
+        document.querySelector('.content-button[data-content="tools"]').classList.remove('active');
+        updateContent(projectsContent, 1); // Set default Week 1 content for Projects
+    } else if (contentType === 'tools') {
+        document.querySelector('.content-button[data-content="tools"]').classList.add('active');
+        document.querySelector('.content-button[data-content="overview"]').classList.remove('active');
+        document.querySelector('.content-button[data-content="guidance"]').classList.remove('active');
+        document.querySelector('.content-button[data-content="projects"]').classList.remove('active');
+        updateContent(toolsContent, 1); // Set default Week 1 content for Tools & Technologies
+    }
+}
+
+// Event listener for week selection (Program Overview, Guidance & Mentorship, Projects, Tools)
 weeks.forEach(week => {
     week.addEventListener('click', () => {
         // Remove active class from all weeks
@@ -392,32 +600,50 @@ weeks.forEach(week => {
         // Get the week number
         const weekNumber = week.getAttribute('data-week');
 
-        // Update content dynamically
-        if (weekContent[weekNumber]) {
-            contentHeading.textContent = weekContent[weekNumber].heading;
-            contentPoints.innerHTML = weekContent[weekNumber].points.map(point => {
-                return `<div class="point"><img src="./assets/img/download_check.svg" alt="tick"> ${point}</div>`;
-            }).join('');
+        // Check which content type is currently active and update accordingly
+        const activeButton = document.querySelector('.content-button.active');
+        if (activeButton) {
+            const contentType = activeButton.getAttribute('data-content');
+            if (contentType === 'overview') {
+                updateContent(weekContent, weekNumber); // Update Program Overview
+            } else if (contentType === 'guidance') {
+                updateContent(guidanceContent, weekNumber); // Update Guidance & Mentorship
+            } else if (contentType === 'projects') {
+                updateContent(projectsContent, weekNumber); // Update Projects
+            } else if (contentType === 'tools') {
+                updateContent(toolsContent, weekNumber); // Update Tools & Technologies
+            }
         }
     });
 });
 
-// Set Week 1 as the default active week
+// Set default content to Program Overview (Week 1) on page load
 document.addEventListener('DOMContentLoaded', () => {
-    // Select the first week (Week 1)
-    const firstWeek = document.querySelector('.week[data-week="1"]');
-
-    // Trigger click event on Week 1 to set it as active and load its content
-    if (firstWeek) {
-        firstWeek.click();
-    }
+    setDefaultContent('overview'); // Default content is Program Overview (Week 1)
 });
 
-// weekScript
+// Event listener for content buttons (Program Overview, Guidance, Projects, Tools)
+const contentButtons = document.querySelectorAll('.content-button');
+
+contentButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Get the content type (Program Overview, Guidance, Projects, or Tools)
+        const contentType = button.getAttribute('data-content');
+
+        // Set default content for the selected type
+        setDefaultContent(contentType);
+
+        // Set the default week (Week 1) when changing between sections
+        const firstWeek = document.querySelector('.week[data-week="1"]');
+        if (firstWeek) {
+            firstWeek.click();
+        }
+    });
+});
+//week content-End
 
 
-// slider
-
+// slider-start
 document.addEventListener("DOMContentLoaded", function () {
     const sliderItems = document.querySelectorAll(".slider-item");
 
@@ -444,4 +670,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// slider
+// slider-Ends
