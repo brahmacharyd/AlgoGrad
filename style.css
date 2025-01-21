@@ -1162,7 +1162,7 @@ footer {
 
 @media only screen and (max-width: 1024px) {
     .program-curriculum-container .content-container {
-        padding: 3.5rem calc(max(1.25rem, 5.34%))
+        padding: 0rem calc(max(1.25rem, 5.34%))
     }
 
     .program-curriculum-container .desktop {
