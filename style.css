@@ -610,33 +610,24 @@ footer {
     filter: brightness(0) saturate(100%) !important
 }
 
-/* Default side menu state */
+
 .side-menu {
     position: fixed;
     top: 55px;
-    /* Align from the top of the screen */
     right: -100%;
-    /* Initially, the menu is hidden off-screen to the right */
     width: 100%;
-    /* Full screen width */
     height: 100%;
-    /* Full height of the screen */
     background-color: #171421;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    /* Shadow on the left side of the menu */
     z-index: 1000;
     transition: transform 0.3s ease-in-out;
-    /* Smooth slide-in and slide-out effect */
     text-align: center;
 }
 
-/* Position the side menu on the screen when active */
 .side-menu.open {
     transform: translateX(-100%);
-    /* Slide the menu in from the right (100% of the screen width) */
 }
 
-/* Side menu items styles */
 .side-menu a {
     display: block;
     padding: 15px;
@@ -644,11 +635,97 @@ footer {
     color: #fff;
     font-size: 18px;
 }
-
-/* Hover effect for side menu items */
-.side-menu a:hover {
-    background-color: #f1f1f1;
+.side-menu .dropdown-menu {
+    display: none;
+    margin: 0 auto; /* Centers the menu */
+    background-color: #171421;
+    box-shadow: none;
+    text-align: center;
+    padding: 10px 0;
+    list-style: none;
+    width: fit-content;
+    position: relative; /* For positioning within the menu */
 }
+
+.side-menu .dropdown-menu li {
+    padding: 10px;
+    padding-left: 110px;
+    border-bottom: 1px solid #333;
+}
+
+.side-menu .dropdown-menu li:hover {
+    background-color: #333;
+}
+
+.side-menu .menu-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .side-menu {
+        position: fixed;
+        top: 55px;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #171421;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+        text-align: center;
+    }
+
+    .side-menu.open {
+        transform: translateX(-100%);
+    }
+
+    .side-menu .item {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #fff;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    .side-menu .dropdown-menu {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 10px 0;
+        list-style: none;
+        width: fit-content;
+        background-color: #171421;
+        position: relative;
+        text-align: center;
+        padding-left: 90px;
+    }
+
+    .side-menu .dropdown-menu li {
+        padding: 10px;
+        border-bottom: 1px solid #333;
+    }
+
+    .side-menu .dropdown-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .side-menu .dropdown-menu li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+    }
+  
+
+    .side-menu .menu-item:hover .dropdown-menu {
+        display: flex;
+    }
+}
+
+
 
 /* Mobile navigation button */
 .mobile-nav-toggle {
@@ -3296,16 +3373,39 @@ body.no-scroll {
 button.content-button.apply-btn {
     height: 40px;
     font-size: 15px;
+    background-color: #27A2F7; /* Default background */
+    color: #fff; /* Default text color */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
+/* Active button styling - Slightly darker background */
+button.content-button.apply-btn.active {
+    background-color: #016dba; /* Darken the default background when active */
+    color: #fff; /* Keep text color same */
+}
+
+/* Hover effect for better UX */
+button.content-button.apply-btn:hover {
+    background-color: #016dba; /* Light grey hover background */
+    color: #fff;
+}
+
+/* Media query for screens up to 1000px wide */
 @media only screen and (max-width: 1000px) {
     .content-buttons .apply-btn {
-        margin: 0; 
-        height: 40px; 
-        border-radius: 10px; 
+        margin: 0;
+        height: 40px;
+        border-radius: 10px;
+    }
+
+    button.content-button.apply-btn.active {
+        background-color: #016dba; /* Slightly darker active background for medium screens */
     }
 }
 
+/* Media query for screens up to 512px wide */
 @media only screen and (max-width: 512px) {
     .content-buttons {
         flex-direction: column;
@@ -3313,13 +3413,71 @@ button.content-button.apply-btn {
     }
     
     .content-buttons .apply-btn {
-        font-size: .75rem;
-        border-radius: .375rem;
+        font-size: 0.75rem;
+        border-radius: 0.375rem;
         margin-bottom: 1rem;
         width: 100%;
         justify-content: center;
     }
+
+    button.content-button.apply-btn.active {
+        background-color: #016dba; /* Slightly darker active background for small screens */
+    }
 }
+
+
+/* Style the dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style the dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -13%;
+    background-color: #27A2F7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    border-radius: 4px;
+    width: 160px;
+    font-weight: 450;
+    font-size: 13px;
+}
+
+/* Style dropdown items */
+.dropdown-menu li {
+    padding: 10px;
+    border-bottom: 1px solid #508db9;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.dropdown-menu li:hover {
+    background-color: #508db9;
+    border-radius: 6px;
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Add a hover effect for the Programs item */
+.dropdown .item {
+    cursor: pointer;
+}
+
+
 
 
 

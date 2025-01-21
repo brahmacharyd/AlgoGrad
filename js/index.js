@@ -67,6 +67,16 @@ document.getElementById('signup-form').addEventListener('submit', (event) => {
 });
 
 
+
+// mobile side-menu start
+
+
+
+// mobile side-menu close
+
+
+
+
 // Modal-Start
 // Function to open the modal dynamically based on data-modal attribute
 function openModal(event) {
@@ -376,173 +386,116 @@ const weekContent = {
     }
 };
 
-const guidanceContent = {
+const dataScienceContent = {
     1: {
-        heading: 'Career Development',
-        points: [
-            'Building a Strong Developer Portfolio',
-            'Understanding the Job Market and Roles in Tech',
-            'Crafting a Professional Resume for Web Development',
-            'Networking and Growing Your Professional Presence',
-        ]
+        heading: "Introduction to Data Science & Python Fundamentals",
+       points: [
+           "Understand the role and scope of data science in modern industries.",
+           "Learn Python programming essentials, including data types, loops, and functions.",
+           "Introduction to Jupyter Notebook and data science libraries like NumPy and Pandas.",
+           "Perform basic data cleaning and manipulation tasks."
+       ]
     },
     2: {
-        heading: 'Interview Preparation',
+        heading: "Data Visualization & Exploratory Data Analysis",
         points: [
-            'Technical Interview Questions and How to Prepare for Them',
-            'Whiteboard Coding Challenges and Problem Solving',
-            'Behavioral Interview Preparation and STAR Method',
-            'Mock Interviews and Constructive Feedback',
+            "Learn to visualize data with Matplotlib and Seaborn.",
+            "Understand the importance of Exploratory Data Analysis (EDA) in data projects.",
+            "Generate insights by identifying patterns, trends, and correlations.",
+            "Work on case studies to perform EDA on real-world datasets."
         ]
     },
     3: {
-        heading: 'Soft Skills and Collaboration',
+        heading: "Statistics & Probability for Data Science",
         points: [
-            'Effective Communication in Development Teams',
-            'Collaborating Using Tools like GitHub and Slack',
-            'Time Management and Handling Deadlines',
-            'Problem-Solving and Debugging as a Team',
+            "Master fundamental concepts of descriptive and inferential statistics.",
+            "Learn probability distributions and hypothesis testing.",
+            "Apply statistical techniques to analyze datasets.",
+            "Understand confidence intervals and p-values."
         ]
     },
     4: {
-        heading: 'Building Real-World Projects',
+        heading: "Machine Learning Fundamentals",
         points: [
-            'Working on Open-Source Projects and Contributing',
-            'Building Personal Projects to Showcase Your Skills',
-            'Team-Based Projects: Working Together to Solve Problems',
-            'Deploying and Maintaining Real-World Applications',
+            "Introduction to supervised and unsupervised learning techniques.",
+            "Understand the concepts of regression, classification, and clustering.",
+            "Learn to build and evaluate machine learning models using Scikit-learn.",
+            "Hands-on practice with datasets to implement machine learning algorithms."
         ]
     },
     5: {
-        heading: 'Career Growth & Continuing Education',
+        heading: "Specialization: Get Certified in Advanced Data Science Tools",
         points: [
-            'Continuing Your Learning Journey After Certification',
-            'Exploring New Technologies and Frameworks',
-            'Advancing Your Career: From Junior to Senior Developer',
-            'Tech Industry Trends and How to Stay Updated',
+            "Choose a specialization: Natural Language Processing (NLP), Computer Vision, or Time Series Analysis.",
+            "Learn advanced tools like TensorFlow, PyTorch, or Spark (depending on specialization).",
+            "Work on mini-projects to apply the advanced tools to specific domains.",
+            "Prepare for relevant certification exams."
         ]
     },
     6: {
-        heading: 'Post-Certification: Landing Your First Job',
+        heading: "Real-Time Data Science Project",
         points: [
-            'How to Approach Job Searching and Applying for Roles',
-            'Building a Personal Brand and Online Presence',
-            'Understanding Job Offers, Salary Negotiations, and Benefits',
-            'Preparing for the First Day at Your New Job',
+            "Collaborate on a capstone project involving a real-world problem.",
+            "Perform end-to-end data science workflows: Data collection, cleaning, modeling, and deployment.",
+            "Document findings and build a comprehensive project report.",
+            "Present your work to mentors and industry experts for feedback."
         ]
     }
 };
 
-const projectsContent = {
+const devOpsContent = {
     1: {
-        heading: 'Beginner Projects',
+        heading: "Foundations of DevOps & Linux Essentials",
         points: [
-            'Building Your First Personal Website',
-            'Portfolio Website with HTML & CSS',
-            'JavaScript-Based Interactive Features',
-            'Simple Projects to Showcase Your Skills',
+            "Introduction to DevOps: Principles, tools, and workflows.",
+            "Learn Linux fundamentals and shell scripting for automation.",
+            "Understand version control with Git and GitHub.",
+            "Build a basic CI/CD pipeline using GitHub Actions."
         ]
     },
     2: {
-        heading: 'Intermediate Projects',
+        heading: "Continuous Integration & Continuous Deployment (CI/CD)",
         points: [
-            'Developing an Interactive Todo List with React',
-            'Building a Weather App with APIs',
-            'Integrating a Database into a Web Application',
-            'Collaborative GitHub Projects',
+            "Deep dive into CI/CD concepts and workflows.",
+            "Set up Jenkins and integrate with source control.",
+            "Automate testing and deployment pipelines.",
+            "Hands-on practice deploying applications to a local environment."
         ]
     },
     3: {
-        heading: 'Advanced Projects',
+        heading: "Infrastructure as Code & Configuration Management",
         points: [
-            'Creating a Full-Stack Blogging Platform',
-            'Building a Real-Time Chat Application',
-            'Project Deployment and Hosting',
-            'GitHub Repository and Version Control Management',
+            "Learn Infrastructure as Code (IaC) with tools like Terraform.",
+            "Understand configuration management with Ansible.",
+            "Set up automated server provisioning and configuration.",
+            "Work on practical exercises to deploy scalable infrastructure."
         ]
     },
     4: {
-        heading: 'Portfolio Development',
+        heading: "Containerization with Docker & Orchestration with Kubernetes",
         points: [
-            'Refining Your Portfolio with Projects',
-            'Showcasing Your Work through GitHub',
-            'Final Review of All Projects',
-            'Preparing Projects for Job Applications',
+            "Introduction to Docker: Building and managing containers.",
+            "Learn container orchestration concepts with Kubernetes.",
+            "Deploy and manage multi-container applications using Kubernetes.",
+            "Hands-on with Helm charts and Kubernetes networking."
         ]
     },
     5: {
-        heading: 'Capstone Project',
+        heading: "Specialization: Cloud Platforms & Monitoring Tools",
         points: [
-            'Working on a Large-Scale Full-Stack Application',
-            'Collaborating with Peers for Real-World Application',
-            'Preparing for the Final Presentation',
-            'Deploying and Showcasing Your Capstone Project',
+            "Choose a specialization: AWS, Azure, or Google Cloud.",
+            "Learn cloud-native tools and services for deploying DevOps pipelines.",
+            "Understand monitoring and logging using tools like Prometheus, Grafana, and ELK Stack.",
+            "Work on real-world scenarios, such as auto-scaling and disaster recovery."
         ]
     },
     6: {
-        heading: 'Post-Program Projects',
+        heading: "Real-Time DevOps Project",
         points: [
-            'Open Source Contributions and Personal Projects',
-            'Exploring Freelance and Contract Work',
-            'Collaborative Team Projects in the Industry',
-            'Leveraging Projects for Job Applications',
-        ]
-    }
-};
-
-const toolsContent = {
-    1: {
-        heading: 'Foundational Tools',
-        points: [
-            'Version Control with Git and GitHub',
-            'Text Editors: VS Code, Sublime Text',
-            'Browser Developer Tools for Debugging',
-            'Basic Command Line Usage',
-        ]
-    },
-    2: {
-        heading: 'Frontend Tools',
-        points: [
-            'Working with React and Redux',
-            'Frontend Build Tools: Webpack, Babel',
-            'CSS Frameworks: Bootstrap, Tailwind',
-            'Responsive Design with Media Queries',
-        ]
-    },
-    3: {
-        heading: 'Backend Tools',
-        points: [
-            'Node.js and Express.js for Backend Development',
-            'Database Tools: MongoDB, MySQL',
-            'API Development and Testing Tools: Postman',
-            'Server Management and Deployment Tools: Heroku, AWS',
-        ]
-    },
-    4: {
-        heading: 'Collaborative Tools',
-        points: [
-            'GitHub for Version Control and Collaboration',
-            'Project Management Tools: Trello, Jira',
-            'Communication Tools: Slack, Microsoft Teams',
-            'Continuous Integration and Deployment: Jenkins, Travis CI',
-        ]
-    },
-    5: {
-        heading: 'Advanced Tools',
-        points: [
-            'Testing Tools: Jest, Mocha',
-            'Containerization with Docker',
-            'Web Application Security Tools',
-            'Automation and Scripting Tools',
-        ]
-    },
-    6: {
-        heading: 'Career Tools',
-        points: [
-            'Portfolio Building Tools: GitHub Pages, Netlify',
-            'Resume Building Tools',
-            'Job Search Platforms: LinkedIn, Indeed',
-            'Networking Platforms for Developers',
+            "Collaborate on a capstone project to implement an end-to-end DevOps pipeline.",
+            "Include IaC, CI/CD, containerization, and cloud deployment.",
+            "Integrate security practices in your DevOps workflows (DevSecOps).",
+            "Present your project to industry mentors and get valuable feedback."
         ]
     }
 };
@@ -563,32 +516,22 @@ function setDefaultContent(contentType) {
     // Make sure the content buttons are updated
     if (contentType === 'overview') {
         document.querySelector('.content-button[data-content="overview"]').classList.add('active');
-        document.querySelector('.content-button[data-content="guidance"]').classList.remove('active');
-        document.querySelector('.content-button[data-content="projects"]').classList.remove('active');
-        document.querySelector('.content-button[data-content="tools"]').classList.remove('active');
+        document.querySelector('.content-button[data-content="dataScience"]').classList.remove('active');
+        document.querySelector('.content-button[data-content="devOps"]').classList.remove('active');
         updateContent(weekContent, 1); // Set default Week 1 content for Program Overview
-    } else if (contentType === 'guidance') {
-        document.querySelector('.content-button[data-content="guidance"]').classList.add('active');
+    } else if (contentType === 'dataScience') {
+        document.querySelector('.content-button[data-content="dataScience"]').classList.add('active');
         document.querySelector('.content-button[data-content="overview"]').classList.remove('active');
-        document.querySelector('.content-button[data-content="projects"]').classList.remove('active');
-        document.querySelector('.content-button[data-content="tools"]').classList.remove('active');
-        updateContent(guidanceContent, 1); // Set default Week 1 content for Guidance & Mentorship
-    } else if (contentType === 'projects') {
-        document.querySelector('.content-button[data-content="projects"]').classList.add('active');
+        document.querySelector('.content-button[data-content="devOps"]').classList.remove('active');
+        updateContent(dataScienceContent, 1); // Set default Week 1 content for Guidance & Mentorship
+    } else if (contentType === 'devOps') {
+        document.querySelector('.content-button[data-content="devOps"]').classList.add('active');
         document.querySelector('.content-button[data-content="overview"]').classList.remove('active');
-        document.querySelector('.content-button[data-content="guidance"]').classList.remove('active');
-        document.querySelector('.content-button[data-content="tools"]').classList.remove('active');
-        updateContent(projectsContent, 1); // Set default Week 1 content for Projects
-    } else if (contentType === 'tools') {
-        document.querySelector('.content-button[data-content="tools"]').classList.add('active');
-        document.querySelector('.content-button[data-content="overview"]').classList.remove('active');
-        document.querySelector('.content-button[data-content="guidance"]').classList.remove('active');
-        document.querySelector('.content-button[data-content="projects"]').classList.remove('active');
-        updateContent(toolsContent, 1); // Set default Week 1 content for Tools & Technologies
-    }
+        document.querySelector('.content-button[data-content="dataScience"]').classList.remove('active');
+        updateContent(devOpsContent, 1); // Set default Week 1 content for Projects
+    } 
 }
 
-// Event listener for week selection (Program Overview, Guidance & Mentorship, Projects, Tools)
 weeks.forEach(week => {
     week.addEventListener('click', () => {
         // Remove active class from all weeks
@@ -606,28 +549,23 @@ weeks.forEach(week => {
             const contentType = activeButton.getAttribute('data-content');
             if (contentType === 'overview') {
                 updateContent(weekContent, weekNumber); // Update Program Overview
-            } else if (contentType === 'guidance') {
-                updateContent(guidanceContent, weekNumber); // Update Guidance & Mentorship
-            } else if (contentType === 'projects') {
-                updateContent(projectsContent, weekNumber); // Update Projects
-            } else if (contentType === 'tools') {
-                updateContent(toolsContent, weekNumber); // Update Tools & Technologies
-            }
+            } else if (contentType === 'dataScience') {
+                updateContent(dataScienceContent, weekNumber); // Update Guidance & Mentorship
+            } else if (contentType === 'devOps') {
+                updateContent(devOpsContent, weekNumber); // Update Projects
+            } 
         }
     });
 });
 
-// Set default content to Program Overview (Week 1) on page load
 document.addEventListener('DOMContentLoaded', () => {
     setDefaultContent('overview'); // Default content is Program Overview (Week 1)
 });
 
-// Event listener for content buttons (Program Overview, Guidance, Projects, Tools)
 const contentButtons = document.querySelectorAll('.content-button');
 
 contentButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Get the content type (Program Overview, Guidance, Projects, or Tools)
         const contentType = button.getAttribute('data-content');
 
         // Set default content for the selected type
@@ -640,6 +578,88 @@ contentButtons.forEach(button => {
         }
     });
 });
+
+// Select all the links inside the dropdown
+const dropdownLinks = document.querySelectorAll('.dropdown-menu li a');
+const contentContainer = document.querySelector('.program-curriculum-container'); // The target section to navigate to
+
+dropdownLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+        // Prevent default link behavior
+        event.preventDefault();
+
+        // Get the content type from the clicked link
+        const contentType = link.getAttribute('data-content') || link.getAttribute('href').substring(1); // For links like #dataScience
+
+        // Find the corresponding content button and add the active class to it
+        const contentButton = document.querySelector(`.content-button[data-content="${contentType}"]`);
+        if (contentButton) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.content-button').forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to the clicked button
+            contentButton.classList.add('active');
+
+            // Add the fade-out class to current content and fade-in the new content
+            const currentContent = document.querySelector('.content');
+            currentContent.classList.add('fade-out');
+
+            setTimeout(() => {
+                // Set the default content for the selected content type
+                setDefaultContent(contentType);
+
+                // Remove fade-out class and trigger fade-in
+                currentContent.classList.remove('fade-out');
+                currentContent.classList.add('fade-in');
+            }, 300); // Allow time for fade-out to complete before changing content
+
+            // Set the default week (Week 1) when changing between sections
+            const firstWeek = document.querySelector('.week[data-week="1"]');
+            if (firstWeek) {
+                firstWeek.click();
+            }
+        }
+
+        // Smoothly scroll to the content section
+        contentContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sideMenu = document.querySelector(".side-menu");
+    const dropdownLinks = document.querySelectorAll(".dropdown-link");
+    const menuItem = document.querySelector(".item");
+
+    // Function to check if screen size is responsive
+    const isResponsive = () => window.innerWidth <= 768;
+
+    // Toggle side menu only in responsive view
+    menuItem.addEventListener("click", (e) => {
+        if (isResponsive()) {
+            e.preventDefault();
+            sideMenu.classList.toggle("open");
+        }
+    });
+
+    // Close the side menu when a dropdown link is clicked
+    dropdownLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            if (isResponsive()) {
+                sideMenu.classList.remove("open");
+            }
+        });
+    });
+
+    // Ensure the side menu closes if resized to a larger screen
+    window.addEventListener("resize", () => {
+        if (!isResponsive()) {
+            sideMenu.classList.remove("open");
+        }
+    });
+});
+
 //week content-End
 
 

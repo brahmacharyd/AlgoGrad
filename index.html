@@ -32,21 +32,21 @@
 
 
             <div class="right-ctas">
-                <!-- <div class="nav-items">
-                    <span>
+                <div class="nav-items">
+                    <span class="dropdown">
                         <a class="popper-trigger">
                             <div class="item">
-                                <div class="item-name"> Programs </div>
+                                <div class="item-name">Programs</div>
                                 <img src="./assets/img/dropdownArrow.svg" class="chevron">
                             </div>
                         </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#overview">Web/App Development</a></li>
+                            <li><a href="#dataScience">Data Science</a></li>
+                            <li><a href="#devOps">DevOps</a></li>
+                        </ul>
                     </span>
-
-
-                    <a href="#" class="item">
-                        <div class="item-name"> About Us </div>
-                    </a>
-                </div> -->
+                </div>
                 <button class="button-container default filled primary" data-modal="modal">
                     Sign up <i class="fa-solid fa-arrow-right ms-2"></i>
                 </button>
@@ -61,10 +61,22 @@
     </div>
 
     <!-- Side Menu -->
-    <!-- <div id="sidebar" class="side-menu">
-        <a href="#" class="item">Programs</a>
-        <a href="#" class="item">About Us</a>
-    </div> -->
+    <div id="sidebar" class="side-menu">
+        <div class="menu-item">
+            <a href="#" class="item">
+                Programs
+                <img src="./assets/img/dropdownArrow.svg" class="chevron" alt="Dropdown Arrow">
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#overview" class="dropdown-link">Web/App Development</a></li>
+                <li><a href="#dataScience" class="dropdown-link">Data Science</a></li>
+                <li><a href="#devOps" class="dropdown-link">DevOps</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    
+    
 
 
     <!-- container Transform-Your-Career -->
@@ -270,14 +282,13 @@
     <!-- program-curriculum-container -->
     <div class="program-curriculum-container">
         <div class="content-container">
-            <h1 class="section-heading">Program Curriculum</h1>
+            <h1 class="section-heading" id="webApp">Program Curriculum</h1>
             
                 <!-- Buttons to toggle content -->
                 <div class="content-buttons">
-                    <button class="content-button apply-btn" data-content="overview">Program Overview is default</button>
-                    <button class="content-button apply-btn" data-content="guidance">sample 1</button>
-                    <button class="content-button apply-btn" data-content="projects">sample 2</button>
-                    <button class="content-button apply-btn" data-content="tools">sample 3</button>
+                    <button class="content-button apply-btn" data-content="overview">Web/App Development</button>
+                    <button class="content-button apply-btn" data-content="dataScience">Data Science</button>
+                    <button class="content-button apply-btn" data-content="devOps">DevOps</button>
                 </div>
             <div class="weeks-container" style="height:calc(170px + 216px);">
                 <div class="weeks">
