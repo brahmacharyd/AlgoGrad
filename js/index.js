@@ -286,10 +286,47 @@ function toggleMenu() {
     // Toggle 'open' class for the side menu
     sidebar.classList.toggle('open');
 
-    // Toggle 'collapsed' class for the button to change its appearance (optional)
+    // Toggle 'collapsed' class for the button to change its appearance
     toggleButton.classList.toggle('collapsed');
     toggleButton.classList.toggle('open');
+    
+    // Adjust aria-expanded attribute to reflect the state of the side menu
+    const isOpen = sidebar.classList.contains('open');
+    toggleButton.setAttribute('aria-expanded', isOpen.toString());
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sideMenu = document.querySelector(".side-menu");
+    const dropdownLinks = document.querySelectorAll(".dropdown-link");
+    const menuItem = document.querySelector(".item");
+    const toggleButton = document.querySelector(".mobile-nav-toggle");
+
+    // Function to check if screen size is responsive
+    const isResponsive = () => window.innerWidth <= 768;
+
+    // Close the side menu when a dropdown link is clicked
+    dropdownLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            if (isResponsive()) {
+                sideMenu.classList.remove("open");
+                toggleButton.classList.add("collapsed");
+                toggleButton.classList.remove("open");
+                toggleButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+
+    // Ensure the side menu closes if resized to a larger screen
+    window.addEventListener("resize", () => {
+        if (!isResponsive()) {
+            sideMenu.classList.remove("open");
+            toggleButton.classList.add("collapsed");
+            toggleButton.classList.remove("open");
+            toggleButton.setAttribute('aria-expanded', 'false');
+        }
+    });
+});
+
 // sidebar-Ends
 
 
