@@ -289,7 +289,7 @@ function toggleMenu() {
     // Toggle 'collapsed' class for the button to change its appearance
     toggleButton.classList.toggle('collapsed');
     toggleButton.classList.toggle('open');
-    
+
     // Adjust aria-expanded attribute to reflect the state of the side menu
     const isOpen = sidebar.classList.contains('open');
     toggleButton.setAttribute('aria-expanded', isOpen.toString());
@@ -426,12 +426,12 @@ const weekContent = {
 const dataScienceContent = {
     1: {
         heading: "Introduction to Data Science & Python Fundamentals",
-       points: [
-           "Understand the role and scope of data science in modern industries.",
-           "Learn Python programming essentials, including data types, loops, and functions.",
-           "Introduction to Jupyter Notebook and data science libraries like NumPy and Pandas.",
-           "Perform basic data cleaning and manipulation tasks."
-       ]
+        points: [
+            "Understand the role and scope of data science in modern industries.",
+            "Learn Python programming essentials, including data types, loops, and functions.",
+            "Introduction to Jupyter Notebook and data science libraries like NumPy and Pandas.",
+            "Perform basic data cleaning and manipulation tasks."
+        ]
     },
     2: {
         heading: "Data Visualization & Exploratory Data Analysis",
@@ -566,7 +566,7 @@ function setDefaultContent(contentType) {
         document.querySelector('.content-button[data-content="overview"]').classList.remove('active');
         document.querySelector('.content-button[data-content="dataScience"]').classList.remove('active');
         updateContent(devOpsContent, 1); // Set default Week 1 content for Projects
-    } 
+    }
 }
 
 weeks.forEach(week => {
@@ -590,7 +590,7 @@ weeks.forEach(week => {
                 updateContent(dataScienceContent, weekNumber); // Update Guidance & Mentorship
             } else if (contentType === 'devOps') {
                 updateContent(devOpsContent, weekNumber); // Update Projects
-            } 
+            }
         }
     });
 });
@@ -633,7 +633,7 @@ dropdownLinks.forEach(link => {
         if (contentButton) {
             // Remove active class from all buttons
             document.querySelectorAll('.content-button').forEach(btn => btn.classList.remove('active'));
-            
+
             // Add active class to the clicked button
             contentButton.classList.add('active');
 
@@ -731,30 +731,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const testimonials = [
     {
-        name: 'John Doe',
-        position: 'CEO, Company A',
+        name: '- John Doe',
+        // position: 'CEO, Company A',
         image: './assets/img/source1.jpeg',
-        quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."'
+        quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."'
     },
     {
-        name: 'Jane Smith',
-        position: 'Founder, Company B',
+        name: '- Jane Smith',
+        // position: 'Founder, Company B',
         image: './assets/img/source2.jpeg',
-        quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."'
+        quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."'
 
     },
     {
-        name: 'Sam Johnson',
-        position: 'CTO, Company C',
+        name: '- Sam Johnson',
+        // position: 'CTO, Company C',
         image: './assets/img/source3.jpeg',
-        quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."'
+        quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."'
 
     },
     {
-        name: 'Sam Johnson',
-        position: 'CTO, Company C',
+        name: '- Sam Johnson',
+        // position: 'CTO, Company C',
         image: './assets/img/source4.jpeg',
-        quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."'
+        quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."'
 
     }
 ];
@@ -787,9 +787,8 @@ function renderTestimonials() {
         item.innerHTML = `
             <div class="testimonial-item d-flex align-items-center">
                 <div class="testimonial-image-container text-center">
-                    <img src="${testimonial.image}" alt="Client ${index + 1}" class="rounded-circle mb-3">
-                    <h5>${testimonial.name}</h5>
-                    <p class="text-muted">${testimonial.position}</p>
+                    <img src="${testimonial.image}" alt="Client ${index + 1}" class="rounded-circle mb-3">  
+                     <div class="author">${testimonial.name}</div>                
                 </div>
                 <div class="testimonial-content ml-4">
                     <p class="lead">${testimonial.quote}</p>
