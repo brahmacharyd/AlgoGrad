@@ -728,3 +728,77 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // slider-Ends
+
+const testimonials = [
+    {
+        name: 'John Doe',
+        position: 'CEO, Company A',
+        image: './assets/img/source1.jpeg',
+        quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."'
+    },
+    {
+        name: 'Jane Smith',
+        position: 'Founder, Company B',
+        image: './assets/img/source2.jpeg',
+        quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."'
+
+    },
+    {
+        name: 'Sam Johnson',
+        position: 'CTO, Company C',
+        image: './assets/img/source3.jpeg',
+        quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."'
+
+    },
+    {
+        name: 'Sam Johnson',
+        position: 'CTO, Company C',
+        image: './assets/img/source4.jpeg',
+        quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."'
+
+    }
+];
+
+// Function to render the testimonials dynamically
+function renderTestimonials() {
+    const indicatorsContainer = document.getElementById('carouselIndicators');
+    const itemsContainer = document.getElementById('carouselItems');
+
+    // Clear existing content
+    indicatorsContainer.innerHTML = '';
+    itemsContainer.innerHTML = '';
+
+    // Loop through the testimonials and generate the markup
+    testimonials.forEach((testimonial, index) => {
+        // Carousel Indicators (Navigation Dots)
+        const indicator = document.createElement('button');
+        indicator.type = 'button';
+        indicator.setAttribute('data-bs-target', '#testimonialCarousel');
+        indicator.setAttribute('data-bs-slide-to', index);
+        if (index === 0) indicator.classList.add('active');
+        indicator.setAttribute('aria-label', `Slide ${index + 1}`);
+        indicatorsContainer.appendChild(indicator);
+
+        // Carousel Item
+        const item = document.createElement('div');
+        item.classList.add('carousel-item');
+        if (index === 0) item.classList.add('active');
+
+        item.innerHTML = `
+            <div class="testimonial-item d-flex align-items-center">
+                <div class="testimonial-image-container text-center">
+                    <img src="${testimonial.image}" alt="Client ${index + 1}" class="rounded-circle mb-3">
+                    <h5>${testimonial.name}</h5>
+                    <p class="text-muted">${testimonial.position}</p>
+                </div>
+                <div class="testimonial-content ml-4">
+                    <p class="lead">${testimonial.quote}</p>
+                </div>
+            </div>
+        `;
+        itemsContainer.appendChild(item);
+    });
+}
+
+// Call the function to render the testimonials
+renderTestimonials();
