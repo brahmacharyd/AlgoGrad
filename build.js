@@ -1,6 +1,9 @@
 const fs = require("fs-extra");
 const { execSync } = require("child_process");
 const path = require("path");
+const JavaScriptObfuscator = require("javascript-obfuscator");
+const cssnano = require("cssnano");
+const postcss = require("postcss");
 
 const dist = path.join("dist", "AlgoGrad");
 const filesToCopy = ["index.html"];
@@ -16,17 +19,52 @@ fs.mkdirpSync(dist); // Ensure all necessary directories are created
 filesToCopy.forEach((file) => fs.copySync(file, path.join(dist, file)));
 foldersToCopy.forEach((folder) => fs.copySync(folder, path.join(dist, folder)));
 
-// Minify JS
+// Minify and Obfuscate JS
 jsFiles.forEach((file) => {
   const output = path.join(dist, file);
   fs.ensureDirSync(path.dirname(output)); // Ensure directory exists
-  execSync(`terser ${file} -o ${output} --compress --mangle`);
+
+  // Read the JS file
+  const jsContent = fs.readFileSync(file, "utf8");
+
+  // Minify and obfuscate
+  const obfuscatedCode = JavaScriptObfuscator.obfuscate(jsContent, {
+    compact: true,
+    controlFlowFlattening: true,
+    controlFlowFlatteningThreshold: 0.75,
+    deadCodeInjection: true,
+    debugProtection: true,
+    selfDefending: true,
+    stringArray: true,
+    stringArrayEncoding: ['base64'],
+    stringArrayThreshold: 0.75
+  }).getObfuscatedCode();
+
+  // Save the obfuscated and minified JS file
+  fs.writeFileSync(output, obfuscatedCode);
 });
 
-// Minify CSS
+// Minify and Optimize CSS with cssnano
 cssFiles.forEach((file) => {
   const output = path.join(dist, file);
-  execSync(`cleancss -o ${output} ${file}`);
+  
+  fs.readFile(file, "utf8", (err, cssContent) => {
+    if (err) throw err;
+
+    // Use cssnano to optimize and minify CSS
+    postcss([cssnano])
+      .process(cssContent, { from: file, to: output })
+      .then((result) => {
+        // Save the optimized CSS
+        fs.writeFileSync(output, result.css);
+        if (result.map) {
+          fs.writeFileSync(output + ".map", result.map);
+        }
+      })
+      .catch((error) => {
+        console.error("CSS Minification Error:", error);
+      });
+  });
 });
 
 // Minify HTML
@@ -37,4 +75,4 @@ execSync(
   )} index.html`
 );
 
-console.log("✅ Minified build created in 'dist/AlgoGrad' folder!");
+console.log("✅ Minified and obfuscated build created in 'dist/AlgoGrad' folder!");
