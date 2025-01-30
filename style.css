@@ -3610,3 +3610,12 @@ button.content-button.apply-btn:hover {
 .callback-button:hover {
     background: #1b77b9;
 }
+@media (max-width: 768px) {
+    .callback-modal-box {
+        width: 80%; 
+        padding: 20px;
+    }
+    .callback-button {
+        width: 91%;
+    }
+}
