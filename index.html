@@ -604,6 +604,49 @@
         </div>
     </div>
     <!-- modal -->
+
+
+    <!-- callback-modal -->
+    <div id="callback-modal" class="callback-modal-overlay">
+        <div class="callback-modal-box">
+            <span class="callback-close-modal">&times;</span>
+            <h2>Your Gateway for IT Career</h2>
+            <form id="callback-form" action="https://formspree.io/f/xqaebkej" method="POST">
+                <!-- Name -->
+                <div class="callback-form-group">
+                    <input type="text" name="name" id="callback-name" placeholder="Your Name">
+                    <small class="callback-error-message" id="callback-name-error"></small>
+                </div>
+
+                <!-- Phone -->
+                <div class="callback-form-group">
+                    <input type="tel" name="phone" id="callback-phone" placeholder="Your Phone Number">
+                    <small class="callback-error-message" id="callback-phone-error"></small>
+                </div>
+
+                <!-- Email -->
+                <div class="callback-form-group">
+                    <input type="email" name="email" id="callback-email" placeholder="Your Email">
+                    <small class="callback-error-message" id="callback-email-error"></small>
+                </div>
+
+                <!-- Select Program -->
+                <div class="callback-form-group">
+                    <select id="callback-program" name="_optin">
+                        <option value="" disabled selected>Select a Program</option>
+                        <option value="program1">Program 1</option>
+                        <option value="program2">Program 2</option>
+                    </select>
+                    <small class="callback-error-message" id="callback-program-error"></small>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="callback-button">Call Back Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- callback-modal -->
     <!-- copyright-main-container -->
     <div class="copyright-main-container">
         <div class="copyright-container">
