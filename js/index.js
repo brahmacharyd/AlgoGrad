@@ -753,33 +753,54 @@ document.addEventListener("DOMContentLoaded", function () {
 // testimonials---------------------
 const testimonials = [
   {
-    name: "- John Doe",
+    name: "- Sravya",
     // position: 'CEO, Company A',
     image: "./assets/img/source1.jpeg",
     quote:
-      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."',
+      '"Algograd\'s Data Science program gave me real-world skills and the confidence to succeed. Thanks to their expert training and placement support, I’m now a Data Analyst. Highly recommended!"',
   },
   {
-    name: "- Jane Smith",
+    name: "- Sruti",
     // position: 'Founder, Company B',
     image: "./assets/img/source2.jpeg",
     quote:
-      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."',
+      '"The structured curriculum and hands-on projects at Algograd made learning easy and exciting. Today, I’m proud to be a Data Scientist. Thank you, Algograd!"',
   },
   {
-    name: "- Sam Johnson",
+    name: "- Shivani",
     // position: 'CTO, Company C',
     image: "./assets/img/source3.jpeg",
     quote:
-      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."',
+      '"Switching careers felt easy with Algograd’s personalized training and placement help. Now, I’m living my dream as a Data Scientist!"',
   },
   {
-    name: "- Sam Johnson",
+    name: "- Divya",
     // position: 'CTO, Company C',
     image: "./assets/img/source4.jpeg",
     quote:
-      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."',
+      '"The offline learning and real-world projects at Algograd prepared me perfectly for the industry. I’m now a successful Data Engineer—thank you, Algograd!"',
   },
+  {
+    name: "- Sriram Krishna",
+    // position: 'CTO, Company C',
+    image: "./assets/img/source5.jpg",
+    quote:
+      '"The personalized guidance and career support at Algograd helped me secure a great job in IT. Thank you, team!"',
+  },
+  {
+    name: "- Harsha Vardhan",
+    // position: 'CTO, Company C',
+    image: "./assets/img/source6.jpg",
+    quote:
+      '"The practical training and real-world projects at Algograd prepared me perfectly for the industry. Highly recommended!"',
+  },
+  {
+    name: "- Chaitanya Prasad",
+    // position: 'CTO, Company C',
+    image: "./assets/img/source7.jpg",
+    quote:
+      '"Algograd gave me the skills and confidence to excel in Data Science. I’m now working in IT and loving my journey!"',
+  }
 ];
 
 // Function to render the testimonials dynamically
