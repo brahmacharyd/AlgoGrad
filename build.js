@@ -47,7 +47,7 @@ jsFiles.forEach((file) => {
 // Minify and Optimize CSS with cssnano
 cssFiles.forEach((file) => {
   const output = path.join(dist, file);
-  
+
   fs.readFile(file, "utf8", (err, cssContent) => {
     if (err) throw err;
 
@@ -67,12 +67,18 @@ cssFiles.forEach((file) => {
   });
 });
 
-// Minify HTML
-execSync(
-  `html-minifier-terser --collapse-whitespace --remove-comments --minify-js true --minify-css true -o ${path.join(
-    dist,
-    "index.html"
-  )} index.html`
-);
+// Define absolute path to cli.js for html-minifier-terser
+const htmlMinifierCliPath = path.join(__dirname, 'node_modules', 'html-minifier-terser', 'cli.js');
 
-console.log("✅ Minified and obfuscated build created in 'dist/AlgoGrad' folder!");
+try {
+  // Minify HTML
+  execSync(
+    `node ${htmlMinifierCliPath} --collapse-whitespace --remove-comments --minify-js true --minify-css true -o ${path.join(
+      __dirname, dist, "index.html"
+    )} index.html`
+  );
+
+  console.log("✅ Minified and obfuscated build created in 'dist/AlgoGrad' folder!");
+} catch (error) {
+  console.error("Error minifying HTML:", error);
+}
