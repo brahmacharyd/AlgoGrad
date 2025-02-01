@@ -3610,6 +3610,19 @@ button.content-button.apply-btn:hover {
 .callback-button:hover {
     background: #1b77b9;
 }
+
+#callback-modal {
+    visibility: hidden; /* Start as hidden */
+    opacity: 0; /* Start with invisible */
+    transition: opacity 0.5s ease-in-out, visibility 0s 0.5s; /* Smooth fade-in and fade-out */
+  }
+  
+  #callback-modal.show {
+    visibility: visible; /* Show modal */
+    opacity: 1; /* Fully visible */
+    transition: opacity 0.5s ease-in-out; /* Fade in smoothly */
+  }
+  
 @media (max-width: 768px) {
     .callback-modal-box {
         width: 80%; 

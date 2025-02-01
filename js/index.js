@@ -850,23 +850,28 @@ function renderTestimonials() {
 // Call the function to render the testimonials
 renderTestimonials();
 // testimonials---------------------
-
-// <!-- callback-modal -->
+// call back modelpopUp
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("callback-modal");
   const closeModal = document.querySelector(".callback-close-modal");
   const form = document.getElementById("callback-form");
 
+  // Initially hide the modal
+  modal.classList.remove("show");
+
   // Check if form was already submitted (using localStorage)
   if (localStorage.getItem("formSubmitted") === "true") {
-    modal.style.display = "none"; // Hide modal if form already submitted
+    modal.classList.remove("show"); // Hide modal if form already submitted
   } else {
-    modal.style.display = "flex"; // Show modal if form is not yet submitted
+    // Delay modal display by 10 seconds
+    setTimeout(function() {
+      modal.classList.add("show"); // Show modal with smooth transition after 7 seconds
+    }, 7000);
   }
 
   // Close modal when clicking close button
   closeModal.addEventListener("click", function () {
-    modal.style.display = "none";
+    modal.classList.remove("show"); // Hide with transition
   });
 
   form.addEventListener("submit", function (event) {
@@ -922,7 +927,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isValid) {
       form.submit();
       form.reset();
-      modal.style.display = "none"; // Hide modal after submission
+      modal.classList.remove("show"); // Hide with transition after submission
 
       // Store the flag in localStorage to prevent modal from opening on refresh or revisit
       localStorage.setItem("formSubmitted", "true");
@@ -945,4 +950,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-// <!-- callback-modal -->
+// call back modelpopUp
+
