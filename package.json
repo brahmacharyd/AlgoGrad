@@ -1,4 +1,9 @@
 {
+  "name": "AlgoGrad",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node build.js"
+  },
   "dependencies": {
     "cssnano": "^7.0.6",
     "fs-extra": "^11.3.0",
