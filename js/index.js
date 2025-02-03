@@ -1109,7 +1109,7 @@ const privacyPolicyData = {
             "<strong>Object</strong> to or restrict processing.",
             "<strong>Withdraw consent</strong> at any time.",
         ],
-        ExtraContent: "To exercise these rights, please contact us at <strong>[insert contact information].</strong>"
+        ExtraContent: "To exercise these rights, please contact us at <strong>info@algograd.com.</strong>"
       },
       {
           heading: "Children’s Privacy",
@@ -1130,51 +1130,6 @@ const privacyPolicyData = {
   ]
 };
 
-// Function to populate the Privacy Policy with numbering
-// function loadPrivacyPolicy(data) {
-//   // Title and last updated date
-//   document.getElementById('policy-title').textContent = data.title;
-//   document.getElementById('last-updated').innerHTML = data.lastUpdated;
-//   document.getElementById('intro-content').innerHTML = data.introContent;
-
-//   // Policy content sections
-//   const policyContent = document.getElementById('policy-content');
-//   data.sections.forEach((section, index) => {
-//       const sectionElement = document.createElement('div');
-//       sectionElement.classList.add('section');
-
-//       const heading = document.createElement('div');
-//       heading.classList.add('heading');
-      
-//       // Prepend number to heading
-//       heading.textContent = `${index + 1}. ${section.heading}`;
-
-//       const content = document.createElement('div');
-//       content.classList.add('content');
-//       content.innerHTML = section.content;
-
-//       const ExtraContent = document.createElement('div');
-//       ExtraContent.classList.add('ExtraContent');
-//       ExtraContent.innerHTML = section.ExtraContent;
-
-//       // If the section has listItems, create a <ul> and populate it with <li>
-//       if (section.listItems && section.listItems.length > 0) {
-//           const ul = document.createElement('ul');
-//           section.listItems.forEach(item => {
-//               const li = document.createElement('li');
-//               li.innerHTML = item;
-//               ul.appendChild(li);
-//           });
-//           content.appendChild(ul);  // Append the list to the content
-//       }
-
-//       sectionElement.appendChild(heading);
-//       sectionElement.appendChild(content);
-//       sectionElement.appendChild(ExtraContent);
-
-//       policyContent.appendChild(sectionElement);
-//   });
-// }
 function loadPrivacyPolicy(data) {
   // Title and last updated date
   document.getElementById('policy-title').textContent = data.title;
@@ -1197,15 +1152,7 @@ function loadPrivacyPolicy(data) {
       content.classList.add('content');
       content.innerHTML = section.content;
 
-      // Only create and append ExtraContent if it exists
-      if (section.ExtraContent) {
-          const ExtraContent = document.createElement('div');
-          ExtraContent.classList.add('ExtraContent');
-          ExtraContent.innerHTML = section.ExtraContent;
-          sectionElement.appendChild(ExtraContent);  // Append ExtraContent only if it exists
-      }
-
-      // If the section has listItems, create a <ul> and populate it with <li>
+      // Append list items if available
       if (section.listItems && section.listItems.length > 0) {
           const ul = document.createElement('ul');
           section.listItems.forEach(item => {
@@ -1213,14 +1160,24 @@ function loadPrivacyPolicy(data) {
               li.innerHTML = item;
               ul.appendChild(li);
           });
-          content.appendChild(ul);  // Append the list to the content
+          content.appendChild(ul);
       }
 
       sectionElement.appendChild(heading);
       sectionElement.appendChild(content);
+
+      // Append ExtraContent only if it exists
+      if (section.ExtraContent) {
+          const extraContent = document.createElement('div');
+          extraContent.classList.add('ExtraContent');
+          extraContent.innerHTML = section.ExtraContent;
+          sectionElement.appendChild(extraContent);
+      }
+
       policyContent.appendChild(sectionElement);
   });
 }
+
 
 // Load the policy on page load
 document.addEventListener("DOMContentLoaded", function() {
