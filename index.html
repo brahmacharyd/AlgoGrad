@@ -566,96 +566,7 @@
     </div>
     <!-- sticky-course-info-container -->
     <!-- scroll-to-top-container -->
-    <div class="scroll-to-top-container">
-        <span>
-            <span class="" style="display: none;">
-                <div class="popper">
-                    <div class="heading">Scroll to Top</div>
-                    <div class="text">
-                        Click the button below to quickly return to the top of the page.
-                    </div>
-                    <button class="button-container default filled primary" onclick="scrollToTop()">
-                        <div class="left-icon"><img src="./assets/img/scroll_to_top_icon.svg" alt="icon" class="icon">
-                        </div>
-                        <div>Scroll to Top</div>
-                    </button>
-                </div>
-            </span>
-            <a class="popper-trigger" onclick="scrollToTop()">
-                <img src="./assets/img/icons8-scroll-up-50.png" alt="" class="scroll-to-top-icon">
-            </a>
-        </span>
-    </div>
-    <!-- scroll-to-top-container -->
-    <!-- modal -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span id="close-btn" class="close-btn">&times;</span>
-                <h2>Sign Up</h2>
-            </div>
-            <div class="modal-body">
-                <form id="signup-form" action="https://formspree.io/f/meoozblv" method="POST">
-                    <div class="input-container">
-                        <input type="text" name="name" class="input-field" id="name" placeholder="Name">
-                        <p class="error-message" id="name-error"></p>
-                    </div>
-                    <div class="input-container">
-                        <input type="email" name="email" class="input-field" id="email" placeholder="E-mail">
-                        <p class="error-message" id="email-error"></p>
-                    </div>
-                    <div class="input-container">
-                        <input type="tel" name="phone" class="input-field" id="phone" placeholder="Phone">
-                        <p class="error-message" id="phone-error"></p>
-                    </div>
-                    <button id="submit-btn" class="purple-filled">Let's go</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- modal -->
-
-
-    <!-- callback-modal -->
-    <div id="callback-modal" class="callback-modal-overlay">
-        <div class="callback-modal-box">
-            <span class="callback-close-modal">&times;</span>
-            <h2>Your Gateway for IT Career</h2>
-            <form id="callback-form" action="https://formspree.io/f/xqaebkej" method="POST">
-                <!-- Name -->
-                <div class="callback-form-group">
-                    <input type="text" name="name" id="callback-name" placeholder="Your Name">
-                    <small class="callback-error-message" id="callback-name-error"></small>
-                </div>
-
-                <!-- Phone -->
-                <div class="callback-form-group">
-                    <input type="tel" name="phone" id="callback-phone" placeholder="Your Phone Number">
-                    <small class="callback-error-message" id="callback-phone-error"></small>
-                </div>
-
-                <!-- Email -->
-                <div class="callback-form-group">
-                    <input type="email" name="email" id="callback-email" placeholder="Your Email">
-                    <small class="callback-error-message" id="callback-email-error"></small>
-                </div>
-
-                <!-- Select Program -->
-                <div class="callback-form-group">
-                    <select id="callback-program" name="_optin">
-                        <option value="" disabled selected>Select a Program</option>
-                        <option value="program1">Web/App Development</option>
-                        <option value="program2">DevOps</option>
-                        <option value="program2">Data Science</option>
-                    </select>
-                    <small class="callback-error-message" id="callback-program-error"></small>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit" class="callback-button">Call Back Request</button>
-            </form>
-        </div>
-    </div>
+    
 </div>
 
 <div id="privacy-policy" class="page" style="display: none;">
@@ -671,6 +582,94 @@
     </div>
 </div>
 
+<div class="scroll-to-top-container">
+    <span>
+        <span class="" style="display: none;">
+            <div class="popper">
+                <div class="heading">Scroll to Top</div>
+                <div class="text">
+                    Click the button below to quickly return to the top of the page.
+                </div>
+                <button class="button-container default filled primary" onclick="scrollToTop()">
+                    <div class="left-icon"><img src="./assets/img/scroll_to_top_icon.svg" alt="icon" class="icon">
+                    </div>
+                    <div>Scroll to Top</div>
+                </button>
+            </div>
+        </span>
+        <a class="popper-trigger" onclick="scrollToTop()">
+            <img src="./assets/img/icons8-scroll-up-50.png" alt="" class="scroll-to-top-icon">
+        </a>
+    </span>
+</div>
+<!-- scroll-to-top-container -->
+<!-- modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span id="close-btn" class="close-btn">&times;</span>
+            <h2>Sign Up</h2>
+        </div>
+        <div class="modal-body">
+            <form id="signup-form" action="https://formspree.io/f/meoozblv" method="POST">
+                <div class="input-container">
+                    <input type="text" name="name" class="input-field" id="name" placeholder="Name">
+                    <p class="error-message" id="name-error"></p>
+                </div>
+                <div class="input-container">
+                    <input type="email" name="email" class="input-field" id="email" placeholder="E-mail">
+                    <p class="error-message" id="email-error"></p>
+                </div>
+                <div class="input-container">
+                    <input type="tel" name="phone" class="input-field" id="phone" placeholder="Phone">
+                    <p class="error-message" id="phone-error"></p>
+                </div>
+                <button id="submit-btn" class="purple-filled">Let's go</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- modal -->
+<!-- callback-modal -->
+<div id="callback-modal" class="callback-modal-overlay">
+    <div class="callback-modal-box">
+        <span class="callback-close-modal">&times;</span>
+        <h2>Your Gateway for IT Career</h2>
+        <form id="callback-form" action="https://formspree.io/f/xqaebkej" method="POST">
+            <!-- Name -->
+            <div class="callback-form-group">
+                <input type="text" name="name" id="callback-name" placeholder="Your Name">
+                <small class="callback-error-message" id="callback-name-error"></small>
+            </div>
+
+            <!-- Phone -->
+            <div class="callback-form-group">
+                <input type="tel" name="phone" id="callback-phone" placeholder="Your Phone Number">
+                <small class="callback-error-message" id="callback-phone-error"></small>
+            </div>
+
+            <!-- Email -->
+            <div class="callback-form-group">
+                <input type="email" name="email" id="callback-email" placeholder="Your Email">
+                <small class="callback-error-message" id="callback-email-error"></small>
+            </div>
+
+            <!-- Select Program -->
+            <div class="callback-form-group">
+                <select id="callback-program" name="_optin">
+                    <option value="" disabled selected>Select a Program</option>
+                    <option value="program1">Web/App Development</option>
+                    <option value="program2">DevOps</option>
+                    <option value="program2">Data Science</option>
+                </select>
+                <small class="callback-error-message" id="callback-program-error"></small>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="callback-button">Call Back Request</button>
+        </form>
+    </div>
+</div>
     <!-- callback-modal -->
     <!-- copyright-main-container -->
     <div class="copyright-main-container">
