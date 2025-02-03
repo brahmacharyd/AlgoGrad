@@ -37,7 +37,7 @@
     <div class="home-header-container non-sticky top-margin">
         <div class="header-container">
             <div class="main-logo-container">
-                <a href="#" class="logo nuxt-link-active">
+                <a href="#home" class="logo nuxt-link-active">
                     <img alt="logo" src="./assets/img/AlgoLogo.png" class="main-logo">
                     <span class="hide-on-mobile">AlgoGrad</span>
                 </a>
@@ -89,6 +89,7 @@
         </div>
     </div>
     <!-- Side Menu -->
+     <div id="home" class="page">
     <!-- container Transform-Your-Career -->
     <div class="Transform-Your-Career">
         <div class="urgency-nudge-container">
@@ -655,6 +656,20 @@
             </form>
         </div>
     </div>
+</div>
+
+<div id="privacy-policy" class="page" style="display: none;">
+    <div class="privacy-policy-container">
+        <div class="restrict-width">
+            <div class="heading-container">
+                <h1 id="policy-title"></h1>
+                <p id="last-updated"></p>
+                <p id="intro-content"></p>
+            </div>
+            <div id="policy-content"></div>
+        </div>
+    </div>
+</div>
 
     <!-- callback-modal -->
     <!-- copyright-main-container -->
@@ -664,16 +679,25 @@
                 © 2024 All Rights Reserved.<br> Made with <i class="fa-solid text-danger fa-heart"></i> by AlgoGrad
                 Team.
             </div>
-            <!-- <div class="legal-links"><a href="/terms-conditions" target="_blank" class="link"><span>
+            <div class="legal-links">
+                <!-- <a href="/terms-conditions" target="_blank" class="link">
+                    <span>
                         Terms &amp; Conditions
-                    </span> <span class="separator"></span></a><a href="/privacy-policy" target="_blank" class="link"><span>
+                    </span> 
+                    <span class="separator"></span></a> -->
+                    <a href="#privacy-policy"class="link"><span>
                         Privacy Policy
-                    </span> <span class="separator"></span></a><a href="/refund-policy" target="_blank" class="link"><span>
+                    </span>
+                     <!-- <span class="separator"></span> -->
+                    </a>
+                      <!-- <a href="/refund-policy" target="_blank" class="link">
+                        <span>
                         Refund Policy
-                    </span></a>
-                </div> -->
-        </div>
-    </div>
+                    </span>
+                </a> -->
+            </div>
+            </div>
+            </div>
     <!-- copyright-main-container -->
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

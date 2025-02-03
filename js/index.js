@@ -1,3 +1,69 @@
+function navigate(event, route) {
+  event.preventDefault();
+  history.pushState({ page: route }, "", `/${route}`);
+  loadContent(route);
+}
+
+// Remove "index.html" from the URL
+if (location.pathname.endsWith("index.html")) {
+  history.replaceState(null, "", location.origin + "/");
+}
+
+// Function to load content and scroll smoothly
+function loadContent() {
+  const route = location.hash.substring(1) || "home"; // Get hash, default to home
+
+  // Hide all pages
+  document.querySelectorAll('.page').forEach(page => page.style.display = 'none');
+
+  // Show the selected page
+  const section = document.getElementById(route);
+  if (section) {
+      section.style.display = 'block';
+
+      // Smooth scroll to the section
+      window.scrollTo({
+          top: section.offsetTop - 50, // Adjust this value if needed
+          behavior: 'smooth'
+      });
+  }
+}
+
+// Listen for hash changes and page load
+window.addEventListener("hashchange", loadContent);
+window.addEventListener("load", loadContent);
+
+// function loadContent() {
+//   const route = location.hash.substring(1) || "home"; // Get hash, default to home
+
+//   // Hide all pages
+//   document.querySelectorAll('.page').forEach(page => page.style.display = 'none');
+
+//   // Show the selected page
+//   const section = document.getElementById(route);
+//   if (section) {
+//       section.style.display = 'block';
+      
+//       // Smooth scroll to the section
+//       window.scrollTo({
+//           top: section.offsetTop - 50, // Adjust this value if needed
+//           behavior: 'smooth'
+//       });
+//   }
+// }
+
+// // Listen for hash changes and page load
+// window.addEventListener("hashchange", loadContent);
+// window.addEventListener("load", loadContent);
+
+
+window.onpopstate = function (event) {
+  loadContent(event.state?.page || "home");
+};
+
+// Load content on first visit
+loadContent(location.pathname.substring(1) || "home");
+
 // Form elements
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
@@ -951,4 +1017,216 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 // call back modelpopUp
+
+// privacyPolicyData
+const privacyPolicyData = {
+  title: "Privacy Policy",
+  lastUpdated: "<strong>Last Updated:</strong> 3rd February, 2025",
+  introContent: "Welcome to <strong>Algograd LLP</strong> (referred to as \"Algograd,\" \"Company,\" \"we,\" \"us,\" or \"our\"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. Please read this policy carefully to understand our practices regarding your data.",
+  sections: [
+      {
+          heading: "Purpose of This Privacy Policy",
+          content: "This Privacy Policy applies to personal data collected through:",
+          listItems: [
+            "Our website and applications managed by Algograd.",
+            "Online and offline interactions, including emails, phone calls, and social media platforms.",
+            "Participation in Algograd’s events, programs, and services."
+        ],
+        ExtraContent: "By accessing or using our services, you agree to the collection and use of information in accordance with this policy.",
+      },
+      {
+          heading: "What Personal Data We Collect",
+          content: "We collect the following types of personal data:",
+          listItems: [
+              "<strong>Identity Data:</strong> Full name, date of birth, gender, and photograph.",
+              "<strong>Contact Data:</strong> Email address, phone number, and mailing address.",
+              "<strong>Profile Data:</strong> Educational background, employment details, interests, feedback, and communication preferences.",
+              "<strong>Financial Data:</strong> Payment information, if you make transactions with us.",
+              "<strong>Technical Data:</strong> IP address, browser type, operating system, and usage data.",
+              "<strong>Usage Data:</strong> Information about how you interact with our website and services."
+          ]
+      },
+      {
+          heading: "How We Collect Your Data",
+          content: "We collect data directly from you, automatically through cookies, and from third parties.",
+          listItems: [
+            "<strong>Directly from You:</strong> When you register, apply for programs, participate in events, or communicate with us.",
+            "<strong>Automatically:</strong> Through cookies, server logs, and similar technologies.",
+            "<strong>From Third Parties:</strong>  Business partners, service providers, and publicly available sources."
+        ]
+      },
+      {
+          heading: "How We Use Your Personal Data",
+          content: "We process your personal data for the following purposes:",
+          listItems: [
+            "To provide, operate, and maintain our services.",
+            "To communicate with you about updates, promotions, and offers.",
+            "To process transactions and manage payments.",
+            "To improve our website, products, and customer experience.",
+            "To comply with legal obligations."
+        ]
+      },
+      {
+          heading: "Legal Basis for Processing Data",
+          content: "We process your data based on:",
+          listItems: [
+            "Your <strong>consent.</strong>",
+            "The necessity to <strong>perform a contract.</strong>",
+            "<strong>Legal obligations</strong> we must comply with.",
+            "<strong>Legitimate interests</strong> that do not override your data protection rights."
+          ]
+      },
+      {
+          heading: "Sharing of Your Data",
+          content: "We do <strong>NOT</strong> sell your personal data. However, we may share it with:",
+          listItems: [
+            "<strong>Service Providers:</strong>  For hosting, IT support, and payment processing.",
+            "<strong>Business Partners:</strong> For events or collaborations, with your consent.",
+            "<strong>Legal Authorities:</strong>   To comply with legal obligations or protect our rights."
+        ]
+      },
+      {
+          heading: "Data Security",
+          content: "We implement strong security measures to protect your data, including:",
+          listItems: [
+            "Encryption of sensitive information.",
+            "Access controls to restrict data to authorized personnel only.",
+            "Regular security audits and monitoring."
+        ],
+        ExtraContent:"However, no system is 100% secure. Please contact us immediately if you believe your data has been compromised."
+      },
+      {
+          heading: "Data Retention",
+          content: "We retain your personal data only as long as necessary to fulfill the purposes outlined in this policy or as required by law."
+      },
+      {
+          heading: "Your Rights",
+          content: "You have the right to:",
+          listItems: [
+            "<strong>Access</strong> your data.",
+            "<strong>Correct</strong> inaccurate data.",
+            "<strong>Delete</strong> your data under certain conditions.",
+            "<strong>Object</strong> to or restrict processing.",
+            "<strong>Withdraw consent</strong> at any time.",
+        ],
+        ExtraContent: "To exercise these rights, please contact us at <strong>[insert contact information].</strong>"
+      },
+      {
+          heading: "Children’s Privacy",
+          content: "Our services are <strong>not intended for children under the age of 18.</strong> We do not knowingly collect data from minors without parental consent."
+      },
+      {
+          heading: "Cookies and Tracking Technologies",
+          content: "We use cookies to enhance user experience. You can control cookie preferences through your browser settings.",
+            },
+      {
+          heading: "Changes to This Policy",
+          content: "We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date. We encourage you to review this policy periodically."
+      },
+      {
+          heading: "Contact Us",
+          content: "For any questions or concerns about this Privacy Policy, please contact:<br><strong>Algograd LLP</strong><br>Email:<strong>info@algograd.com</strong>"
+      }
+  ]
+};
+
+// Function to populate the Privacy Policy with numbering
+// function loadPrivacyPolicy(data) {
+//   // Title and last updated date
+//   document.getElementById('policy-title').textContent = data.title;
+//   document.getElementById('last-updated').innerHTML = data.lastUpdated;
+//   document.getElementById('intro-content').innerHTML = data.introContent;
+
+//   // Policy content sections
+//   const policyContent = document.getElementById('policy-content');
+//   data.sections.forEach((section, index) => {
+//       const sectionElement = document.createElement('div');
+//       sectionElement.classList.add('section');
+
+//       const heading = document.createElement('div');
+//       heading.classList.add('heading');
+      
+//       // Prepend number to heading
+//       heading.textContent = `${index + 1}. ${section.heading}`;
+
+//       const content = document.createElement('div');
+//       content.classList.add('content');
+//       content.innerHTML = section.content;
+
+//       const ExtraContent = document.createElement('div');
+//       ExtraContent.classList.add('ExtraContent');
+//       ExtraContent.innerHTML = section.ExtraContent;
+
+//       // If the section has listItems, create a <ul> and populate it with <li>
+//       if (section.listItems && section.listItems.length > 0) {
+//           const ul = document.createElement('ul');
+//           section.listItems.forEach(item => {
+//               const li = document.createElement('li');
+//               li.innerHTML = item;
+//               ul.appendChild(li);
+//           });
+//           content.appendChild(ul);  // Append the list to the content
+//       }
+
+//       sectionElement.appendChild(heading);
+//       sectionElement.appendChild(content);
+//       sectionElement.appendChild(ExtraContent);
+
+//       policyContent.appendChild(sectionElement);
+//   });
+// }
+function loadPrivacyPolicy(data) {
+  // Title and last updated date
+  document.getElementById('policy-title').textContent = data.title;
+  document.getElementById('last-updated').innerHTML = data.lastUpdated;
+  document.getElementById('intro-content').innerHTML = data.introContent;
+
+  // Policy content sections
+  const policyContent = document.getElementById('policy-content');
+  data.sections.forEach((section, index) => {
+      const sectionElement = document.createElement('div');
+      sectionElement.classList.add('section');
+
+      const heading = document.createElement('div');
+      heading.classList.add('heading');
+      
+      // Prepend number to heading
+      heading.textContent = `${index + 1}. ${section.heading}`;
+
+      const content = document.createElement('div');
+      content.classList.add('content');
+      content.innerHTML = section.content;
+
+      // Only create and append ExtraContent if it exists
+      if (section.ExtraContent) {
+          const ExtraContent = document.createElement('div');
+          ExtraContent.classList.add('ExtraContent');
+          ExtraContent.innerHTML = section.ExtraContent;
+          sectionElement.appendChild(ExtraContent);  // Append ExtraContent only if it exists
+      }
+
+      // If the section has listItems, create a <ul> and populate it with <li>
+      if (section.listItems && section.listItems.length > 0) {
+          const ul = document.createElement('ul');
+          section.listItems.forEach(item => {
+              const li = document.createElement('li');
+              li.innerHTML = item;
+              ul.appendChild(li);
+          });
+          content.appendChild(ul);  // Append the list to the content
+      }
+
+      sectionElement.appendChild(heading);
+      sectionElement.appendChild(content);
+      policyContent.appendChild(sectionElement);
+  });
+}
+
+// Load the policy on page load
+document.addEventListener("DOMContentLoaded", function() {
+  loadPrivacyPolicy(privacyPolicyData);
+});
+// privacyPolicyData
+
+
 

@@ -3117,7 +3117,7 @@ body.no-scroll {
 
 .copyright-main-container .copyright-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 1.25rem min(6.25rem, 7%);
     max-width: 90rem;
@@ -3632,3 +3632,77 @@ button.content-button.apply-btn:hover {
         width: 91%;
     }
 }
+
+/* Privacy Policy Container */
+.privacy-policy-container {
+    background: #fff;
+    padding: 6.25rem 0;
+}
+
+.privacy-policy-container .restrict-width {
+    padding: 0 min(6.25rem, 7%);
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+/* Heading Section */
+.privacy-policy-container .heading-container {
+    margin-bottom: 2.5rem;
+}
+
+.privacy-policy-container .heading-container .heading {
+    font-weight: 650;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.privacy-policy-container .section {
+    margin-bottom: 2rem;
+}
+
+.privacy-policy-container .section .heading {
+    font-weight: 650;
+    font-size: 1.1rem;
+}
+.privacy-policy-container .section .ExtraContent {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.privacy-policy-container .section .content {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.privacy-policy-container .section .content ul {
+    margin-left: 1rem;
+    list-style-type: disc;
+}
+
+.privacy-policy-container .section .content ul li {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Styling for Lists */
+.privacy-policy-container .section .content ul li {
+    padding-left: 1rem;
+}
+
+/* Style for Last Updated Text */
+#last-updated {
+    font-size: 1rem;    
+}
+#intro-content {
+    font-size: 1rem;    
+}
+/* General Text Styling */
+#policy-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* privacy-policy-container */
