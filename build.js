@@ -4,6 +4,7 @@ const path = require("path");
 const JavaScriptObfuscator = require("javascript-obfuscator");
 const cssnano = require("cssnano");
 const postcss = require("postcss");
+const { minify } = require("html-minifier");
 
 const dist = path.join("dist", "AlgoGrad");
 const src = __dirname;  // Get the current project root dynamically
@@ -25,7 +26,31 @@ fs.removeSync(dist);
 fs.mkdirpSync(dist);
 
 // Copy static files
-filesToCopy.forEach((file) => fs.copySync(file, path.join(dist, file)));
+filesToCopy.forEach((file) => {
+  const srcFilePath = path.join(src, file);
+  const distFilePath = path.join(dist, file);
+
+  if (file.endsWith(".html")) {
+    // Minify HTML files
+    const htmlContent = fs.readFileSync(srcFilePath, "utf8");
+    const minifiedHtml = minify(htmlContent, {
+      collapseWhitespace: true,
+      removeComments: true,
+      removeRedundantAttributes: true,
+      useShortDoctype: true,
+      removeEmptyAttributes: true,
+      removeScriptTypeAttributes: true,
+      removeStyleLinkTypeAttributes: true,
+      minifyJS: true,
+      minifyCSS: true
+    });
+    fs.writeFileSync(distFilePath, minifiedHtml);
+  } else {
+    // Just copy other files as is
+    fs.copySync(srcFilePath, distFilePath);
+  }
+});
+
 foldersToCopy.forEach((folder) => fs.copySync(folder, path.join(dist, folder)));
 
 // Minify and Obfuscate JS

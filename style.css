@@ -3706,3 +3706,91 @@ button.content-button.apply-btn:hover {
 }
 
 /* privacy-policy-container */
+
+/* General Page Styling */
+#about-us {
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+    color: #fff;
+}
+
+/* Programs Section */
+.aboutus-programs-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.aboutus-programs-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+.aboutus-programs-description {
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Team Section */
+.aboutus-team-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.aboutus-team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.aboutus-team-member {
+    text-align: center;
+    max-width: 200px;
+}
+.aboutus-team-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.aboutus-team-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+.aboutus-team-role {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Location Section */
+.aboutus-location-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.aboutus-location-map {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Contact Us Section */
+.aboutus-contactus-section {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+.aboutus-contactus-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #555;
+}
+.aboutus-contactus-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+.aboutus-contactus-email, .aboutus-contactus-phone {
+    font-size: 14px;
+    color: #555;
+}
