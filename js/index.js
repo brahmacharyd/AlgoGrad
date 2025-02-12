@@ -753,34 +753,25 @@ dropdownLinks.forEach((link) => {
       `.content-button[data-content="${contentType}"]`
     );
     if (contentButton) {
-      // Remove active class from all buttons
-      document
-        .querySelectorAll(".content-button")
-        .forEach((btn) => btn.classList.remove("active"));
-
-      // Add active class to the clicked button
+      document.querySelectorAll(".content-button").forEach((btn) => btn.classList.remove("active"));
       contentButton.classList.add("active");
-
-      // Add the fade-out class to current content and fade-in the new content
-      const currentContent = document.querySelector(".content");
-      currentContent.classList.add("fade-out");
-
-      setTimeout(() => {
-        // Set the default content for the selected content type
-        setDefaultContent(contentType);
-
-        // Remove fade-out class and trigger fade-in
-        currentContent.classList.remove("fade-out");
-        currentContent.classList.add("fade-in");
-      }, 300); // Allow time for fade-out to complete before changing content
-
-      // Set the default week (Week 1) when changing between sections
-      const firstWeek = document.querySelector('.week[data-week="1"]');
-      if (firstWeek) {
-        firstWeek.click();
+  
+      // Set the default content for the selected content type
+      setDefaultContent(contentType);
+  
+      // Set the default week (Week 1 or Day 1 for Bootcamp)
+      let firstElementToClick;
+      if (contentType === "bootcamp") {
+          firstElementToClick = document.querySelector('.week[data-week="1"][data-bootcamp]');
+      } else {
+          firstElementToClick = document.querySelector('.week[data-week="1"]:not([data-bootcamp])');
       }
-    }
-
+  
+      if (firstElementToClick) {
+          firstElementToClick.classList.add("active"); // Highlight the selected item
+          firstElementToClick.click();
+      }
+  }
     // Smoothly scroll to the content section
     contentContainer.scrollIntoView({ behavior: "smooth", block: "start" });
   });
