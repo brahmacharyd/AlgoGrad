@@ -791,7 +791,7 @@ footer {
     .Transform-Your-Career {
         max-width: 90rem;
         margin: 0 auto;
-        padding: 0 calc(min(11rem, 12%)) 4.1%
+        padding: 0 calc(min(11rem, 12%)) 1.5%
     }
 }
 
@@ -1013,11 +1013,11 @@ footer {
 .program-curriculum-container .content-container {
     max-width: 90rem;
     margin: 0 auto;
-    padding: 3.75rem calc(min(7.5rem, 8.34%))
+    padding: 0rem calc(min(7.5rem, 8.34%))
 }
 
 .program-curriculum-container .section-heading {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 2.5rem;
     line-height: 130%;
     margin-bottom: 3.5rem;
@@ -1026,8 +1026,7 @@ footer {
 }
 
 .program-curriculum-container .weeks-container {
-    display: flex;
-    min-height: 25rem;
+    display: flex;    
     overflow: hidden
 }
 
@@ -1723,7 +1722,7 @@ footer {
 .the-program-at-a-glance-container .content-container {
     max-width: 90rem;
     margin: 0 auto;
-    padding: 5rem calc(min(5rem, 5.6%)) 5rem calc(min(6.25rem, 6.94%))
+    padding: 0rem calc(min(5rem, 5.6%)) 5rem calc(min(6.25rem, 6.94%))
 }
 
 .the-program-at-a-glance-container .mobile {
@@ -1732,7 +1731,7 @@ footer {
 
 .the-program-at-a-glance-container .main-heading {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 2.5rem;
     line-height: 130%;
     margin-bottom: 2.5rem;
@@ -2027,7 +2026,7 @@ footer {
 .preparation-of-interview-container .content-container {
     max-width: 90rem;
     margin: 0 auto;
-    padding: 0 calc(min(6.25rem, 6.94%)) 8.5rem
+    padding: 0 calc(min(6.25rem, 6.94%)) 2.5rem
 }
 
 .preparation-of-interview-container .separator {
@@ -2052,7 +2051,7 @@ footer {
 .preparation-of-interview-container .heading {
     text-align: center;
     font-size: 2.5rem;
-    font-weight: 800;
+    font-weight: 500;
     line-height: 130%;
     margin-bottom: 3rem;
     color: #fff
@@ -3186,7 +3185,7 @@ body.no-scroll {
 .what-sets-us-apart-container .content-container {
     max-width: 90rem;
     margin: 0 auto;
-    padding: 0 calc(min(6.25rem, 6.94%)) 8.5rem
+    padding: 0 calc(min(6.25rem, 6.94%)) 3.5rem
 }
 
 .what-sets-us-apart-container .separator {
@@ -3201,7 +3200,7 @@ body.no-scroll {
 .what-sets-us-apart-container .heading {
     text-align: center;
     font-size: 2.5rem;
-    font-weight: 800;
+    font-weight: 500;
     line-height: 130%;
     margin-bottom: 3rem;
     color: #fff
@@ -3413,7 +3412,7 @@ button.content-button.apply-btn:hover {
 }
 
 /* Custom styles for the testimonial slider */
-.testimonial-item {
+/* .testimonial-item {
     padding: 20px;
     background-color: #3b609e;
     border-radius: 10px;
@@ -3546,7 +3545,7 @@ button.content-button.apply-btn:hover {
     .testimonial-item p {
         font-size: 1rem;
     }
-}
+} */
 .callback-modal-overlay {
     display: flex;
     align-items: center;
@@ -3801,4 +3800,145 @@ button.content-button.apply-btn:hover {
 .aboutus-contactus-email, .aboutus-contactus-phone {
     font-size: 14px;
     color: #555;
+}
+
+
+/* ------------------------------------------------------------------------- */
+    /* General Styling */
+.testimonials-container {
+    padding: 0px 0px 50px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+/* Carousel */
+.testimonials-carousel {
+    position: relative;
+}
+
+.testimonials-inner {
+    display: flex;
+    align-items: center;
+}
+
+/* Testimonial Grid */
+.testimonial-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px;
+    padding: 0 calc(min(5.25rem, 6.94%)) 1.5rem;
+}
+
+@media (max-width: 992px) {
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 516px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .testimonials-title {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+        color: #fff;
+    }
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background: #3b609e;
+    /* padding: 15px; */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    display: none !important;
+}
+
+.testimonial-overlay {
+    background: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.testimonial-card:hover .testimonial-overlay {
+    opacity: 1;
+}
+
+.testimonial-text {
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.testimonial-content {
+    padding: 15px;
+    text-align: center;
+    font-weight: 100;
+    color: #fff;
+    font-style: italic;
+}
+
+.testimonial-name {
+    font-size: 1.1rem;
+    font-weight: 100;
+    text-align: center;
+    color: #fff;
+    font-style: italic;
+}
+
+.testimonial-role {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.testimonial-icon {
+    font-size: 1.5rem;
+    color: #3b609e;
+}
+
+/* Carousel Indicators */
+.testimonials-indicators {
+    bottom: -3rem;
+}
+
+.testimonials-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #3b609e;
+    opacity: 0.5;
+}
+
+.testimonials-indicators .active {
+    opacity: 1;
 }
