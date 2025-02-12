@@ -3523,6 +3523,12 @@ button.content-button.apply-btn:hover {
         text-align: center;
     }
 
+    .testimonials-heading {       
+        font-size: 1.5rem;
+        
+    }
+    
+
     .testimonial-image-container img {
         width: 100%;
         height: auto;
