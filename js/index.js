@@ -577,21 +577,21 @@ const devOpsContent = {
 
 const bootcampContent = {
   1: {
-      heading: "Day 1 - Fundamentals & Setup",
+      heading: "Foundations of Web Development",
       points: [
-          "Introduction to Web Development",
-          "HTML & CSS Basics",
-          "JavaScript Essentials",
-          "Setting Up Development Environment",
+          "HTML & CSS: Learn how to structure and style websites.",
+          "JavaScript Basics: Make web pages interactive with JS fundamentals.",
+          "Responsive Design: Create mobile-friendly, adaptive layouts.",
+          "Version Control (Git & GitHub): Collaborate & manage code efficiently.",
       ],
   },
   2: {
-      heading: "Day 2 - Hands-on Project",
+      heading: "Advanced Concepts & Live Deployment",
       points: [
-          "Building a Responsive Web Page",
-          "JavaScript Interactivity",
-          "Deploying Your First Website",
-          "Next Steps in Learning Web Development",
+          "React Basics: Build dynamic, interactive web applications.",
+          "API Integration: Connect your website with real-world data.",
+          "Debugging & Optimization: Improve performance and fix issues.",
+          "Deployment & Hosting (GitHub & AWS): Make your site live!",
       ],
   },
 };
