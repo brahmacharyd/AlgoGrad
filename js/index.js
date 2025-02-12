@@ -600,104 +600,137 @@ const devOpsContent = {
   },
 };
 
+const bootcampContent = {
+  1: {
+      heading: "Day 1 - Fundamentals & Setup",
+      points: [
+          "Introduction to Web Development",
+          "HTML & CSS Basics",
+          "JavaScript Essentials",
+          "Setting Up Development Environment",
+      ],
+  },
+  2: {
+      heading: "Day 2 - Hands-on Project",
+      points: [
+          "Building a Responsive Web Page",
+          "JavaScript Interactivity",
+          "Deploying Your First Website",
+          "Next Steps in Learning Web Development",
+      ],
+  },
+};
+
+
 // Function to update content based on week number and content type
 function updateContent(contentData, weekNumber) {
   const content = contentData[weekNumber];
   if (content) {
     contentHeading.textContent = content.heading;
     contentPoints.innerHTML = content.points
-      .map((point) => {
-        return `<div class="point"><img src="./assets/img/download_check.svg" alt="tick"> ${point}</div>`;
-      })
+      .map((point) => `<div class="point"><img src="./assets/img/download_check.svg" alt="tick"> ${point}</div>`)
       .join("");
   }
 }
 
 // Set the default content for Program Overview or Guidance & Mentorship
 function setDefaultContent(contentType) {
-  // Make sure the content buttons are updated
+  document.querySelectorAll(".content-button").forEach(btn => btn.classList.remove("active"));
+  document.querySelector(`.content-button[data-content="${contentType}"]`).classList.add("active");
+
   if (contentType === "overview") {
-    document
-      .querySelector('.content-button[data-content="overview"]')
-      .classList.add("active");
-    document
-      .querySelector('.content-button[data-content="dataScience"]')
-      .classList.remove("active");
-    document
-      .querySelector('.content-button[data-content="devOps"]')
-      .classList.remove("active");
-    updateContent(weekContent, 1); // Set default Week 1 content for Program Overview
+      updateContent(weekContent, 1);
   } else if (contentType === "dataScience") {
-    document
-      .querySelector('.content-button[data-content="dataScience"]')
-      .classList.add("active");
-    document
-      .querySelector('.content-button[data-content="overview"]')
-      .classList.remove("active");
-    document
-      .querySelector('.content-button[data-content="devOps"]')
-      .classList.remove("active");
-    updateContent(dataScienceContent, 1); // Set default Week 1 content for Guidance & Mentorship
+      updateContent(dataScienceContent, 1);
   } else if (contentType === "devOps") {
-    document
-      .querySelector('.content-button[data-content="devOps"]')
-      .classList.add("active");
-    document
-      .querySelector('.content-button[data-content="overview"]')
-      .classList.remove("active");
-    document
-      .querySelector('.content-button[data-content="dataScience"]')
-      .classList.remove("active");
-    updateContent(devOpsContent, 1); // Set default Week 1 content for Projects
+      updateContent(devOpsContent, 1);
+  } else if (contentType === "bootcamp") {
+      updateContent(bootcampContent, 1); // Set default Bootcamp Day 1 content
+  }
+
+  // Show or hide weeks based on the selected content
+  document.querySelectorAll(".week").forEach(week => {
+      if (contentType === "bootcamp") {
+          week.style.display = week.hasAttribute("data-bootcamp") ? "block" : "none";
+      } else {
+          week.style.display = week.hasAttribute("data-bootcamp") ? "none" : "block";
+      }
+  });
+
+  // Default to the first "week" (or Day 1 for Bootcamp)
+  const firstWeek = document.querySelector(`.week[data-week="1"]`);
+  if (firstWeek) {
+      firstWeek.click();
   }
 }
 
+
+
 weeks.forEach((week) => {
   week.addEventListener("click", () => {
-    // Remove active class from all weeks
-    weeks.forEach((w) => w.classList.remove("active"));
+      weeks.forEach((w) => w.classList.remove("active"));
+      week.classList.add("active");
 
-    // Add active class to clicked week
-    week.classList.add("active");
-
-    // Get the week number
-    const weekNumber = week.getAttribute("data-week");
-
-    // Check which content type is currently active and update accordingly
-    const activeButton = document.querySelector(".content-button.active");
-    if (activeButton) {
-      const contentType = activeButton.getAttribute("data-content");
-      if (contentType === "overview") {
-        updateContent(weekContent, weekNumber); // Update Program Overview
-      } else if (contentType === "dataScience") {
-        updateContent(dataScienceContent, weekNumber); // Update Guidance & Mentorship
-      } else if (contentType === "devOps") {
-        updateContent(devOpsContent, weekNumber); // Update Projects
+      const weekNumber = week.getAttribute("data-week");
+      const activeButton = document.querySelector(".content-button.active");
+      if (activeButton) {
+          const contentType = activeButton.getAttribute("data-content");
+          if (contentType === "overview") {
+              updateContent(weekContent, weekNumber);
+          } else if (contentType === "dataScience") {
+              updateContent(dataScienceContent, weekNumber);
+          } else if (contentType === "devOps") {
+              updateContent(devOpsContent, weekNumber);
+          } else if (contentType === "bootcamp") {
+              updateContent(bootcampContent, weekNumber);
+          }
       }
-    }
   });
 });
 
+document.querySelector('[data-content="bootcamp"]').addEventListener("click", () => {
+  setDefaultContent("bootcamp");
+});
 document.addEventListener("DOMContentLoaded", () => {
   setDefaultContent("overview"); // Default content is Program Overview (Week 1)
 });
 
-const contentButtons = document.querySelectorAll(".content-button");
-
-contentButtons.forEach((button) => {
+document.querySelectorAll(".content-button").forEach((button) => {
   button.addEventListener("click", () => {
-    const contentType = button.getAttribute("data-content");
+      const contentType = button.getAttribute("data-content");
+      setDefaultContent(contentType);
 
-    // Set default content for the selected type
-    setDefaultContent(contentType);
+      // Remove active class from all weeks before applying new selection
+      document.querySelectorAll(".week").forEach(week => {
+          week.classList.remove("active");
+      });
 
-    // Set the default week (Week 1) when changing between sections
-    const firstWeek = document.querySelector('.week[data-week="1"]');
-    if (firstWeek) {
-      firstWeek.click();
-    }
+      // Show or hide weeks based on the selected content
+      document.querySelectorAll(".week").forEach(week => {
+          if (contentType === "bootcamp") {
+              week.style.display = week.hasAttribute("data-bootcamp") ? "block" : "none";
+          } else {
+              week.style.display = week.hasAttribute("data-bootcamp") ? "none" : "block";
+          }
+      });
+
+      let firstElementToClick;
+      if (contentType === "bootcamp") {
+          firstElementToClick = document.querySelector('.week[data-week="1"][data-bootcamp]');
+      } else {
+          firstElementToClick = document.querySelector('.week[data-week="1"]:not([data-bootcamp])');
+      }
+
+      // Default to the first "week" (or Day 1 for Bootcamp)
+      if (firstElementToClick) {
+          firstElementToClick.classList.add("active"); // Highlight the selected item
+          firstElementToClick.click();
+      }
   });
 });
+
+
+
 
 // Select all the links inside the dropdown
 const dropdownLinks = document.querySelectorAll(".dropdown-menu li a");
