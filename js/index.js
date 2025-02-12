@@ -32,31 +32,6 @@ function loadContent() {
 // Listen for hash changes and page load
 window.addEventListener("hashchange", loadContent);
 window.addEventListener("load", loadContent);
-
-// function loadContent() {
-//   const route = location.hash.substring(1) || "home"; // Get hash, default to home
-
-//   // Hide all pages
-//   document.querySelectorAll('.page').forEach(page => page.style.display = 'none');
-
-//   // Show the selected page
-//   const section = document.getElementById(route);
-//   if (section) {
-//       section.style.display = 'block';
-      
-//       // Smooth scroll to the section
-//       window.scrollTo({
-//           top: section.offsetTop - 50, // Adjust this value if needed
-//           behavior: 'smooth'
-//       });
-//   }
-// }
-
-// // Listen for hash changes and page load
-// window.addEventListener("hashchange", loadContent);
-// window.addEventListener("load", loadContent);
-
-
 window.onpopstate = function (event) {
   loadContent(event.state?.page || "home");
 };
