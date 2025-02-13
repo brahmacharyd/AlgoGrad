@@ -1308,3 +1308,95 @@ document.addEventListener('DOMContentLoaded', () => {
   lucide.createIcons();
   new bootstrap.Carousel(document.getElementById('TestimonialsContainer'));
 });
+// Testimonials Data
+
+//About-Us Content
+const aboutUsData = {
+  intro: {
+      title: "About Us",
+      description: "At Algograd, we don’t just teach—we transform. In a world where competition is fierce and opportunities favor the bold, we believe that success is built on more than just education. It’s about <strong>mindset, confidence, and relentless growth<strong>."
+  },
+  mission: {
+      title: "Our Mission",
+      description: "We are on a mission to shape individuals into confident, highly motivated professionals who don’t just adapt to change—they drive it. At Algograd, we empower learners with the right skills, the right mindset, and the fire to take on any challenge."
+  },
+  offerings: {
+      title: "What We Offer",
+      list: [
+          "Industry-Focused Learning – Practical, real-world skills that matter.",
+          "Expert Mentorship – Learn from top professionals who’ve walked the path.",
+          "Hands-on Training – Experience-based learning that builds confidence.",
+          "Career Acceleration – Land opportunities, break barriers, and achieve greatness."
+      ],
+      potential: "At Algograd, we believe that your potential is limitless—and we’re here to help you unlock it.",
+      cta: "Are you ready to take control of your future? Let’s build your success story together."
+  },
+  programs: {
+      title: "Our Programs",
+      description: "We offer a variety of programs focused on skill development, mentorship, and hands-on projects."
+  },
+  team: {
+      title: "Meet Our Team",
+      members: [
+          { imgSrc: "./assets/img/team1.jpg", altText: "Team Member 1" },
+          { imgSrc: "./assets/img/team2.jpg", altText: "Team Member 2" },
+          { imgSrc: "./assets/img/team3.jpg", altText: "Team Member 2" },
+          { imgSrc: "./assets/img/team4.jpg", altText: "Team Member 2" },
+          { imgSrc: "./assets/img/team5.jpg", altText: "Team Member 2" },
+      ]
+  },
+  location: {
+      title: "Our Location",
+      description: "We are located in the heart of the city, easily accessible to everyone.",
+      mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4292379445847!2d78.3725816751661!3d17.439157883456883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93e679aaaaab%3A0xf58ed1b260e11bad!2sSira%20Consulting%20Pvt%20LTD!5e0!3m2!1sen!2sin!4v1738679998702!5m2!1sen!2sin"
+  },
+  contact: {
+      title: "Contact Us",
+      description: "Feel free to reach out to us for any queries or collaborations.",
+      email: "Email: info@algograd.com",
+      website: 'Website: <a href="https://www.algograd.com" target="_blank">www.algograd.com</a>',
+  }
+};
+// Function to inject content dynamically
+function loadAboutUsContent() {
+  document.querySelector(".aboutus-intro-title").innerHTML = aboutUsData.intro.title;
+  document.querySelector(".aboutus-intro-description").innerHTML = aboutUsData.intro.description;
+
+  document.querySelector(".aboutus-mission-title").innerHTML = aboutUsData.mission.title;
+  document.querySelector(".aboutus-mission-description").innerHTML = aboutUsData.mission.description;
+
+  document.querySelector(".aboutus-offerings-title").innerHTML = aboutUsData.offerings.title;
+  const offeringsList = document.querySelector(".aboutus-offerings-list");
+  aboutUsData.offerings.list.forEach(item => {
+      const li = document.createElement("li");
+      li.innerHTML = item;
+      offeringsList.appendChild(li);
+  });
+  document.querySelector(".aboutus-potential").innerHTML = aboutUsData.offerings.potential;
+  document.querySelector(".aboutus-cta").innerHTML = aboutUsData.offerings.cta;
+  document.querySelector(".aboutus-team-title").innerHTML = aboutUsData.team.title;
+  const teamContainer = document.querySelector(".aboutus-team-container");
+  aboutUsData.team.members.forEach(member => {
+      const img = document.createElement("img");
+      img.src = member.imgSrc;
+      img.alt = member.altText;
+      img.classList.add("aboutus-team-image");
+      const div = document.createElement("div");
+      div.classList.add("aboutus-team-member");
+      div.appendChild(img);
+      teamContainer.appendChild(div);
+  });
+
+  document.querySelector(".aboutus-location-title").innerHTML = aboutUsData.location.title;
+  document.querySelector(".aboutus-location-description").innerHTML = aboutUsData.location.description;
+  document.querySelector(".aboutus-location-map").src = aboutUsData.location.mapSrc;
+
+  document.querySelector(".aboutus-contactus-title").innerHTML = aboutUsData.contact.title;
+  document.querySelector(".aboutus-contactus-description").innerHTML = aboutUsData.contact.description;
+  document.querySelector(".aboutus-contactus-email").innerHTML = aboutUsData.contact.email;
+  document.querySelector(".aboutus-contactus-website").innerHTML = aboutUsData.contact.website;
+}
+
+// Call the function on page load
+document.addEventListener("DOMContentLoaded", loadAboutUsContent);
+//About-Us Content
