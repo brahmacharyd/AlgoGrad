@@ -2768,7 +2768,7 @@ footer {
 }
 
 .modal-open {
-    overflow: hidden
+    overflow: hidden;
 }
 
 .modal-open .modal {
@@ -2807,7 +2807,8 @@ footer {
 }
 
 .modal.show .modal-dialog {
-    transform: none
+    transform: none;
+    transition: opacity 0.5s ease-in-out; /* Fade in smoothly */
 }
 
 .modal.modal-static .modal-dialog {

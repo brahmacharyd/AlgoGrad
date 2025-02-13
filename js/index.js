@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function () {
+  lucide.createIcons();
+});
+
 function navigate(event, route) {
   event.preventDefault();
   history.pushState({ page: route }, "", `/${route}`);
