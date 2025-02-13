@@ -3717,8 +3717,8 @@ button.content-button.apply-btn:hover {
 /* General Page Styling */
 #about-us {
     padding: 40px;
-    max-width: 1000px;
-    margin: auto;
+    max-width: 100%;
+    margin: 4%;
     color: #fff;
 }
 
