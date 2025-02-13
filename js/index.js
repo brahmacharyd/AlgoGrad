@@ -1193,7 +1193,7 @@ const testimonials = [
   {
         name: "- Sravya",
         // designation: 'CEO, Company A',
-        image: "./assets/img/source1.jpeg",
+        image: "./assets/img/source1.jpg",
         description:
           '"Algograd\'s Data Science program gave me real-world skills and the confidence to succeed. Thanks to their expert training and placement support, I’m now a Data Analyst. Highly recommended!"',
       },
