@@ -1251,7 +1251,7 @@ const aboutUsData = {
   location: {
       title: "Our Location",
       description: "We are located in the heart of the city, easily accessible to everyone.",
-      mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4292379445847!2d78.3725816751661!3d17.439157883456883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93e679aaaaab%3A0xf58ed1b260e11bad!2sSira%20Consulting%20Pvt%20LTD!5e0!3m2!1sen!2sin!4v1738679998702!5m2!1sen!2sin"
+      mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5824141500248!2d78.37086467516593!3d17.431816583462936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93004eab50c9%3A0x79462ff4bd5b0eb3!2sAlgoGrad!5e0!3m2!1sen!2sin!4v1739604652067!5m2!1sen!2sin"
   },
   contact: {
       title: "Contact Us",
