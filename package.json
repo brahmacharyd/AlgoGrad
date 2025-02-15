@@ -12,6 +12,7 @@
     "postcss": "^8.5.1"
   },
   "devDependencies": {
+    "html-minifier": "^4.0.0",
     "open": "^10.1.0"
   }
 }
