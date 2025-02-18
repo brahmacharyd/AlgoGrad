@@ -1303,7 +1303,7 @@ function loadAboutUsContent() {
 // Call the function on page load
 document.addEventListener("DOMContentLoaded", loadAboutUsContent);
 //About-Us Content
-
+//gtag
 // Ensure gtag is initialized at the very start
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -1364,3 +1364,5 @@ document.querySelector('.callback-close-modal')?.addEventListener('click', funct
     });
     console.log('Callback Modal Close event sent to GA');
 });
+//gtag
+
