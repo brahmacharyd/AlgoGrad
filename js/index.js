@@ -1303,3 +1303,92 @@ function loadAboutUsContent() {
 // Call the function on page load
 document.addEventListener("DOMContentLoaded", loadAboutUsContent);
 //About-Us Content
+
+// Ensure gtag is initialized
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+// Initialize GA (Universal Analytics)
+gtag('config', 'G-LKWQ9955X2');  // Replace with your actual GA tracking ID
+
+// Track Sign-Up Form Submission
+document.getElementById('signup-form')?.addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent default form submission for debugging
+    console.log('Sign-Up Form Submitted');  // Debugging line to check form submission
+    gtag('event', 'sign_up_submit', {
+        'event_category': 'modal',
+        'event_label': 'Sign Up Form',
+        'value': 1
+    });
+    console.log('Sign-Up event sent to GA');  // Debugging line to confirm event sent
+});
+
+// Track Callback Form Submission
+document.getElementById('callback-form')?.addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent default form submission for debugging
+    console.log('Callback Form Submitted');  // Debugging line to check form submission
+    gtag('event', 'callback_request', {
+        'event_category': 'modal',
+        'event_label': 'Callback Form',
+        'value': 1
+    });
+    console.log('Callback Request event sent to GA');  // Debugging line to confirm event sent
+});
+
+// Track Program Selection in Callback Form
+document.getElementById('callback-program')?.addEventListener('change', function() {
+    var selectedProgram = this.value;
+    console.log('Program Selected:', selectedProgram);  // Debugging line to check selected program
+    gtag('event', 'program_selected', {
+        'event_category': 'callback_modal',
+        'event_label': selectedProgram,
+        'value': 1
+    });
+    console.log('Program Selected event sent to GA');  // Debugging line to confirm event sent
+});
+
+// Track Modal Open Event (Example: You can customize how the modal is opened)
+document.getElementById('open-modal')?.addEventListener('click', function() {
+    console.log('Sign Up Modal Opened');  // Debugging line to check modal open
+    gtag('event', 'modal_open', {
+        'event_category': 'modal',
+        'event_label': 'Sign Up Modal',
+        'value': 1
+    });
+    console.log('Modal Open event sent to GA');  // Debugging line to confirm event sent
+});
+
+// Track Modal Close Event for Sign-Up Modal
+document.getElementById('close-btn')?.addEventListener('click', function() {
+    console.log('Sign-Up Modal Close Button Clicked');  // Debugging line to check Sign-Up modal close
+    gtag('event', 'modal_close', {
+        'event_category': 'modal',
+        'event_label': 'Sign Up Modal',
+        'value': 1
+    });
+    console.log('Sign-Up Modal Close event sent to GA');  // Debugging line to confirm event sent
+});
+
+// Track Callback Modal Close Event for Callback Close Button
+document.querySelector('.callback-close-modal')?.addEventListener('click', function() {
+    console.log('Callback Modal Close Button Clicked');  // Debugging line to check callback modal close button click
+    gtag('event', 'modal_close', {
+        'event_category': 'callback_modal',
+        'event_label': 'Callback Modal',
+        'value': 1
+    });
+    console.log('Callback Modal Close event sent to GA');  // Debugging line to confirm event sent
+});
+
+// Optional: Implement Consent Mode (For privacy and GDPR compliance)
+function setConsent() {
+    // Example: If user consents to cookies
+    gtag('consent', 'update', {
+        'ad_storage': 'granted',  // Allow ads
+        'analytics_storage': 'granted'  // Allow analytics
+    });
+    console.log('Consent Mode Updated');  // Debugging line to confirm consent update
+}
+
+// Call setConsent() after user has accepted cookies (e.g., through a banner)
